@@ -5,14 +5,14 @@
 
 ## 2026-11-07 公开资料包
 
-- **展示站：**[琶洲 A 赛道资料与验证面板](https://pazhou-a-embodied-showcase.estimated-cheese.workers.dev/)
+- **展示站：**[琶洲 A 赛道资料与验证面板](https://lemonbaby2.github.io/pazhou-a-track-showcase/)
 - **三分钟视频：**[普通话旁白 MP4](site/downloads/pazhou_a_showcase_3min.mp4)
 - **数据资料：**[`data_registry/`](data_registry/) 收录 ALOHA Mobile Wipe Wine 与 ALOHA Static Coffee 的固定 revision、SHA-256 清单、下载脚本、质量检查脚本和训练日志。
 - **实验记录：**[`docs/开源真机数据与赛题适配_20261107.md`](docs/开源真机数据与赛题适配_20261107.md) 与 [`docs/赛题本地规则测试记录_20261107.md`](docs/赛题本地规则测试记录_20261107.md)。
 - **验证范围：**GPU 回归实验使用外部 ALOHA 状态—动作数据，不是比赛策略或真机成绩；任务仿真为 CPU 2D mock，不是 Isaac Sim 或官方计分器。
 - **数据体积：**原始公开数据约 2.86 GB，不纳入 Git 仓库；使用 `data_registry/download_datasets.py` 在本地按固定 revision 下载并校验。数据来源及许可说明见数据目录的 README。
 
-> 展示站当前托管于 Cloudflare 临时预览账户；需在认领时限内完成 claim 才能保留。仓库内的 GitHub Pages workflow 可用于后续稳定托管。
+> 展示站已通过 GitHub Pages workflow 部署。Cloudflare 临时预览仍可能在未认领时过期。
 
 ---
 

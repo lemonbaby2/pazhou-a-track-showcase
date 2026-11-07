@@ -14,4 +14,4 @@
 
 ## 部署
 
-该目录可作为静态资源部署。项目根目录的 `wrangler.jsonc` 指向 `./site`。永久部署需 Cloudflare 登录；未认证情况下 Wrangler 提供的 temporary account 需要用户先接受 Cloudflare 服务条款和隐私政策，并在 60 分钟内通过 claim URL 认领。也可用项目的 GitHub Pages workflow，但需把仓库推到已授权的 GitHub 账户并启用 Pages 的 GitHub Actions 发布源。
+公开站点由仓库根目录的 `.github/workflows/pages.yml` 部署到 GitHub Pages。配置为 GitHub Actions 发布源；推送 `main` 分支的 `site/**` 更新会触发重新部署。根目录 `wrangler.jsonc` 另保留 Cloudflare Workers Static Assets 配置。
