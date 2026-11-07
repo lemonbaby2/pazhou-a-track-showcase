@@ -1,0 +1,64 @@
+{
+  "repo_id": "lerobot/aloha_static_coffee",
+  "revision": "b144896feb1f37398a862927b22cd3abdf005a6b",
+  "downloaded_at": "2026-11-07T04:06:04+0800",
+  "file_count": 11,
+  "total_bytes": 1566268108,
+  "files": [
+    {
+      "path": "aloha_static_coffee/.gitattributes",
+      "bytes": 2419,
+      "sha256": "a2bdf429c1bc3858213bb4b7a748fa36a71536a5a1ff98861281853c3c2be1f2"
+    },
+    {
+      "path": "aloha_static_coffee/data/chunk-000/file-000.parquet",
+      "bytes": 3328560,
+      "sha256": "ed62be90cd794f6672b26485be2b01af47409ba4cd31042fe261ddc79090bcc1"
+    },
+    {
+      "path": "aloha_static_coffee/meta/episodes/chunk-000/file-000.parquet",
+      "bytes": 130265,
+      "sha256": "171893969f80829430ee6e91c4a92a0a07cb2ebf57ae14a93bc103eaf91a2524"
+    },
+    {
+      "path": "aloha_static_coffee/meta/info.json",
+      "bytes": 4481,
+      "sha256": "b01266672ae75793cfc0ad4d769ae8601a194ec009b0cac4b443df70b517757e"
+    },
+    {
+      "path": "aloha_static_coffee/meta/stats.json",
+      "bytes": 13071,
+      "sha256": "af2a2878202a471d947001071891eb4659e2a53ebccc6c28ca78a94793dbcded"
+    },
+    {
+      "path": "aloha_static_coffee/meta/tasks.parquet",
+      "bytes": 2819,
+      "sha256": "47a2c7bbf780465f2486ce35f44f9b2e6be23d4c58c6798b09d753b7f581a74c"
+    },
+    {
+      "path": "aloha_static_coffee/README.md",
+      "bytes": 6505,
+      "sha256": "da783ef780c38b7a85c85db2a03dad304adfcd1de48b69b0618cf1eeab4024c8"
+    },
+    {
+      "path": "aloha_static_coffee/videos/observation.images.cam_high/chunk-000/file-000.mp4",
+      "bytes": 502453985,
+      "sha256": "ee637bd6e56353ecc762bc7408f76c430674b0536e5a0a2eb51bf4e3640942f0"
+    },
+    {
+      "path": "aloha_static_coffee/videos/observation.images.cam_left_wrist/chunk-000/file-000.mp4",
+      "bytes": 333836002,
+      "sha256": "bf10204005842592c87018e32df6dc1a097dfc671b793292ad87fd4ab467d260"
+    },
+    {
+      "path": "aloha_static_coffee/videos/observation.images.cam_low/chunk-000/file-000.mp4",
+      "bytes": 392323816,
+      "sha256": "7bc5160efe32df5725bab7486434755c8feeff5d6769a17b4a41ff7f994db04a"
+    },
+    {
+      "path": "aloha_static_coffee/videos/observation.images.cam_right_wrist/chunk-000/file-000.mp4",
+      "bytes": 334166185,
+      "sha256": "3ad72030af4e9d718910fe1481f8f1558f9d64e4428a39a35ff063def2c613df"
+    }
+  ]
+}

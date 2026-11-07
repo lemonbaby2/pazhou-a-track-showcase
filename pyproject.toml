@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bev-beverage-service"
+version = "0.2.0"
+description = "琶洲算法大赛 2026 A 赛道：平台无关的商业饮品服务任务层（状态机 + 异常恢复 + 示教数据采集与质检）"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "li-zipeng123" }]
+dependencies = ["pyyaml>=6.0"]
+
+[project.optional-dependencies]
+render = ["pillow>=10.0"]
+dev = ["pytest>=7.0"]
+
+[project.scripts]
+bev-record = "scripts.record_episode:main"
+bev-qc = "scripts.check_dataset:main"
+
+[tool.setuptools.packages.find]
+include = ["bev*", "sim*", "scripts*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

@@ -1,0 +1,45 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.9", "3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 设置 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: 安装依赖
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install pytest pillow
+
+      - name: 单元测试
+        run: python -m pytest -q
+
+      - name: 端到端冒烟（仿真跑完 + 采集 + 质检）
+        run: |
+          python -m sim.run_sim --no-gif
+          python -m scripts.record_episode --out data/raw --episodes 2 --seed 1 --min-frames 4
+          python -m scripts.check_dataset --root data/raw --min-episodes 5
+
+      - name: 上传质检报告
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: qc-report-py${{ matrix.python-version }}
+          path: out/qc_report.json
+          if-no-files-found: warn

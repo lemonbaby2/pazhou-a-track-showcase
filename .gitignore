@@ -1,0 +1,20 @@
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.venv/
+venv/
+.idea/
+.vscode/
+*.log
+
+# 数据不进 git：轨迹、视频、质检报告都按需重生成
+data/
+out/qc_report.json
+out/verify/
+out/pazhou_video_voice_20261107/
+
+# 构建产物
+build/
+dist/
+*.egg-info/

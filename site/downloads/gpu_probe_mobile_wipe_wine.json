@@ -1,0 +1,131 @@
+{
+  "purpose": "external_dataset_gpu_pipeline_smoke_test_only",
+  "dataset": "lerobot/aloha_mobile_wipe_wine",
+  "dataset_revision": "b57bde2a10c343cbc2be9a0052f126854c4bb091",
+  "dataset_task": "mobile bimanual wipe wine; not the Pazhou A-track task",
+  "robot_type": "aloha",
+  "fps": 50,
+  "rows": 65000,
+  "episodes": 50,
+  "train_episodes": [
+    0,
+    1,
+    2,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    12,
+    13,
+    14,
+    16,
+    18,
+    20,
+    21,
+    22,
+    24,
+    25,
+    26,
+    27,
+    29,
+    32,
+    33,
+    34,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49
+  ],
+  "validation_episodes": [
+    3,
+    11,
+    15,
+    17,
+    19,
+    23,
+    28,
+    30,
+    31,
+    35
+  ],
+  "input_dim": 14,
+  "target_dim": 14,
+  "device": "cuda:0",
+  "gpu_name": "NVIDIA GeForce RTX 5060 Ti",
+  "torch": "2.11.0+cu128",
+  "cuda": "12.8",
+  "python_platform": "Windows-10-10.0.19045-SP0",
+  "epochs": 10,
+  "elapsed_seconds": 15.46,
+  "history": [
+    {
+      "epoch": 1,
+      "train_mse_normalized": 0.224333589275678,
+      "heldout_episode_mse_normalized": 0.035760410130023956
+    },
+    {
+      "epoch": 2,
+      "train_mse_normalized": 0.017634710762649775,
+      "heldout_episode_mse_normalized": 0.014865241013467312
+    },
+    {
+      "epoch": 3,
+      "train_mse_normalized": 0.010479257633800016,
+      "heldout_episode_mse_normalized": 0.011419286020100117
+    },
+    {
+      "epoch": 4,
+      "train_mse_normalized": 0.008569762804636769,
+      "heldout_episode_mse_normalized": 0.009968076832592487
+    },
+    {
+      "epoch": 5,
+      "train_mse_normalized": 0.007741560342301633,
+      "heldout_episode_mse_normalized": 0.009504958987236023
+    },
+    {
+      "epoch": 6,
+      "train_mse_normalized": 0.007226943449281594,
+      "heldout_episode_mse_normalized": 0.008980100974440575
+    },
+    {
+      "epoch": 7,
+      "train_mse_normalized": 0.0068697784616447545,
+      "heldout_episode_mse_normalized": 0.008735786192119122
+    },
+    {
+      "epoch": 8,
+      "train_mse_normalized": 0.006605009347492573,
+      "heldout_episode_mse_normalized": 0.008437717333436012
+    },
+    {
+      "epoch": 9,
+      "train_mse_normalized": 0.006373868497344209,
+      "heldout_episode_mse_normalized": 0.008309810422360897
+    },
+    {
+      "epoch": 10,
+      "train_mse_normalized": 0.0062088272397351615,
+      "heldout_episode_mse_normalized": 0.008049311116337776
+    }
+  ],
+  "limitations": [
+    "held-out episode regression is not task success",
+    "no images used",
+    "different robot and task",
+    "not an official competition evaluation"
+  ]
+}

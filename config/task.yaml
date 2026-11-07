@@ -1,0 +1,39 @@
+task:
+  name: "A赛道 · 商业饮品服务"
+  time_limit_s: 300        # 单轮规定用时 5 分钟
+  total_budget_s: 5400     # 每队总赛时 90 分钟
+  require_offline: true    # 比赛现场离线，禁用云端 AI
+
+layout:
+  standby: { x: 0.0, y: 0.0, yaw: 0.0 }
+  prep:    { x: 2.0, y: 0.0, yaw: 0.0 }
+  guest:   { x: 4.0, y: 2.0, yaw: 1.5708 }
+  prep_bottles: [ [2.25, -0.16], [2.25, 0.16] ]
+  guest_table:  [4.55, 2.0]
+
+tray:
+  tilt_limit_deg: 8.0      # 超过即判定"托盘倾斜"，需恢复
+  tilt_warn_deg: 5.0
+
+recovery:
+  nav_max_retry: 2
+  pick_max_retry: 3
+  place_max_retry: 2
+  step_timeout_s: 45
+
+sim:
+  seed: 1                  # 1=倾角恢复样本；7=抓取失败恢复样本
+  time_scale: 10.0         # 演示加速倍率（真实比赛为 1.0）
+  pick_fail_prob: 0.12
+  place_fail_prob: 0.08
+  nav_fail_prob: 0.05
+  tilt_noise_deg: 1.5
+  tilt_spike_prob: 0.35    # 端盘导航中出现倾角尖峰的概率（用于验证恢复）
+  render_fps: 12
+
+voice:
+  backend: mock            # mock | sapi
+  offline_only: true
+
+log:
+  path: out/run.jsonl

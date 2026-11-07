@@ -1,0 +1,94 @@
+{
+  "datasets": [
+    {
+      "name": "aloha_mobile_wipe_wine",
+      "revision": "b57bde2a10c343cbc2be9a0052f126854c4bb091",
+      "manifest_files": 11,
+      "manifest_hash_and_size_all_match": true,
+      "rows": 65000,
+      "metadata_rows": 65000,
+      "episode_count": 50,
+      "metadata_episode_count": 50,
+      "episode_lengths_min": 1300,
+      "episode_lengths_max": 1300,
+      "state_shape": [
+        65000,
+        14
+      ],
+      "action_shape": [
+        65000,
+        14
+      ],
+      "finite_state_action": true,
+      "timestamp_strictly_monotonic_per_episode": true,
+      "video_count": 4,
+      "video_decode_checks": [
+        {
+          "file": "videos\\observation.images.cam_high\\chunk-000\\file-000.mp4",
+          "first_two_seconds_decoded": true,
+          "stderr": ""
+        },
+        {
+          "file": "videos\\observation.images.cam_high\\chunk-000\\file-001.mp4",
+          "first_two_seconds_decoded": true,
+          "stderr": ""
+        },
+        {
+          "file": "videos\\observation.images.cam_left_wrist\\chunk-000\\file-000.mp4",
+          "first_two_seconds_decoded": true,
+          "stderr": ""
+        },
+        {
+          "file": "videos\\observation.images.cam_right_wrist\\chunk-000\\file-000.mp4",
+          "first_two_seconds_decoded": true,
+          "stderr": ""
+        }
+      ]
+    },
+    {
+      "name": "aloha_static_coffee",
+      "revision": "b144896feb1f37398a862927b22cd3abdf005a6b",
+      "manifest_files": 11,
+      "manifest_hash_and_size_all_match": true,
+      "rows": 55000,
+      "metadata_rows": 55000,
+      "episode_count": 50,
+      "metadata_episode_count": 50,
+      "episode_lengths_min": 1100,
+      "episode_lengths_max": 1100,
+      "state_shape": [
+        55000,
+        14
+      ],
+      "action_shape": [
+        55000,
+        14
+      ],
+      "finite_state_action": true,
+      "timestamp_strictly_monotonic_per_episode": true,
+      "video_count": 4,
+      "video_decode_checks": [
+        {
+          "file": "videos\\observation.images.cam_high\\chunk-000\\file-000.mp4",
+          "first_two_seconds_decoded": true,
+          "stderr": ""
+        },
+        {
+          "file": "videos\\observation.images.cam_left_wrist\\chunk-000\\file-000.mp4",
+          "first_two_seconds_decoded": true,
+          "stderr": ""
+        },
+        {
+          "file": "videos\\observation.images.cam_low\\chunk-000\\file-000.mp4",
+          "first_two_seconds_decoded": true,
+          "stderr": ""
+        },
+        {
+          "file": "videos\\observation.images.cam_right_wrist\\chunk-000\\file-000.mp4",
+          "first_two_seconds_decoded": true,
+          "stderr": ""
+        }
+      ]
+    }
+  ]
+}

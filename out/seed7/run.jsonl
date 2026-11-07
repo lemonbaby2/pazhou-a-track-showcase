@@ -1,0 +1,30 @@
+{"t": 0.001, "step": "BOOT", "event": "config", "msg": "配置载入", "seed": 7, "time_limit_s": 300}
+{"t": 0.002, "step": "BOOT", "event": "enter", "msg": "进入 BOOT"}
+{"t": 0.003, "step": "BOOT", "event": "selfcheck", "msg": "自检：托盘已夹稳，2 瓶饮品就位", "tray_limit_deg": 8.0, "step_timeout_s": 45.0}
+{"t": 0.004, "step": "ANNOUNCE", "event": "enter", "msg": "进入 ANNOUNCE"}
+{"t": 0.005, "step": "VOICE", "event": "say", "msg": "您好，开始为您服务，请稍候。"}
+{"t": 0.011, "step": "ANNOUNCE", "event": "announce", "msg": "已播报开始服务"}
+{"t": 0.013, "step": "NAV_PREP", "event": "enter", "msg": "进入 NAV_PREP"}
+{"t": 0.014, "step": "NAV_PREP", "event": "nav_ok", "msg": "到达 prep"}
+{"t": 0.019, "step": "DETECT", "event": "enter", "msg": "进入 DETECT"}
+{"t": 0.02, "step": "DETECT", "event": "detect", "msg": "检测到 2 瓶饮品"}
+{"t": 0.021, "step": "PICK_PLACE_1", "event": "enter", "msg": "进入 PICK_PLACE_1"}
+{"t": 0.021, "step": "PICK_PLACE_1", "event": "grasp_fail", "msg": "夹爪闭合未夹住饮品"}
+{"t": 0.022, "step": "PICK_PLACE_1", "event": "grasp_fail", "msg": "第 1/3 次抓取第 1 瓶失败"}
+{"t": 0.023, "step": "PICK_PLACE_1", "event": "detect", "msg": "检测到 2 瓶饮品"}
+{"t": 0.023, "step": "PICK_PLACE_1", "event": "grasp_ok", "msg": "已夹住第 1 瓶"}
+{"t": 0.024, "step": "PICK_PLACE_1", "event": "place_ok", "msg": "第 1 瓶已放入托盘"}
+{"t": 0.025, "step": "PICK_PLACE_2", "event": "enter", "msg": "进入 PICK_PLACE_2"}
+{"t": 0.025, "step": "PICK_PLACE_2", "event": "grasp_ok", "msg": "已夹住第 2 瓶"}
+{"t": 0.026, "step": "PICK_PLACE_2", "event": "place_ok", "msg": "第 2 瓶已放入托盘"}
+{"t": 0.027, "step": "NAV_GUEST", "event": "enter", "msg": "进入 NAV_GUEST"}
+{"t": 0.028, "step": "NAV_GUEST", "event": "nav_ok", "msg": "到达 guest"}
+{"t": 0.029, "step": "SERVE_1", "event": "enter", "msg": "进入 SERVE_1"}
+{"t": 0.029, "step": "VOICE", "event": "say", "msg": "这是您的第 1 瓶水，请慢用。"}
+{"t": 0.03, "step": "SERVE_1", "event": "served", "msg": "第 1 瓶已上桌"}
+{"t": 0.031, "step": "SERVE_2", "event": "enter", "msg": "进入 SERVE_2"}
+{"t": 0.032, "step": "VOICE", "event": "say", "msg": "这是您的第 2 瓶水，请慢用。"}
+{"t": 0.032, "step": "SERVE_2", "event": "served", "msg": "第 2 瓶已上桌"}
+{"t": 0.033, "step": "DONE", "event": "enter", "msg": "进入 DONE"}
+{"t": 0.034, "step": "VOICE", "event": "say", "msg": "您的饮品已全部送达，祝您用餐愉快。"}
+{"t": 0.035, "step": "DONE", "event": "done", "msg": "任务完成", "nav_retries": 0, "grasp_attempts": 3, "grasp_failures": 1, "place_retries": 0, "tilt_recoveries": 0, "served": 2, "max_tilt_deg": 3.0215457370653946}
