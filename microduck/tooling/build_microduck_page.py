@@ -23,7 +23,8 @@ style = re.search(r"<style>.*?</style>", src, re.S).group(0)
 
 GH = "https://github.com/lemonbaby2/pazhou-a-track-showcase/tree/main/microduck"
 GITEE_RAW = "https://gitee.com/li-zipeng123/duckf--the-playful-duck/raw/master"
-GH_MEDIA = "https://media.githubusercontent.com/media/lemonbaby2/pazhou-a-track-showcase/main/microduck"
+# 注意：media.githubusercontent.com 在本仓库返回 404，改用 raw.githubusercontent.com（实测 206 + Range）
+GH_RAW = "https://raw.githubusercontent.com/lemonbaby2/pazhou-a-track-showcase/main/microduck"
 
 body = f"""<!doctype html>
 <html lang="zh-CN">
@@ -73,7 +74,7 @@ body = f"""<!doctype html>
 <div class="two" style="margin-top:16px"><article class="card"><div class="label">负结果 ①</div><p><strong>提速无效</strong>：v_max 0.30 → 0.55，官方住宅轨迹到小数点后 12 位完全一致，命令在上游就被裁掉。</p></article><article class="card"><div class="label">负结果 ②</div><p><strong>冻结轨迹更差</strong>：客厅 −10.8%，切断视觉闭环后原地打转。反向证明视觉反馈不能断。</p></article></div></section>
 
 <section id="videos"><div class="section-head"><h2>可视化 MP4</h2><p>视频托管在仓库与 Gitee，不占用展示站体积；点击播放或下载。若浏览器不自动播放，请用下载链接。</p></div>
-<div class="media"><video controls preload="none" poster="microduck/fig6_v1_v2_curves.png"><source src="{GH_MEDIA}/videos/sprint_progression.mp4" type="video/mp4">浏览器不支持 MP4 播放。</video><div class="media-cap"><span>短跑训练进程合辑 · 60 秒 · v1 失败 → v2 收敛 → 3000 轮退化</span><a href="{GITEE_RAW}/videos/sprint_progression.mp4">下载 MP4（备用源）</a></div></div>
+<div class="media"><video controls preload="none" poster="microduck/fig6_v1_v2_curves.png"><source src="{GH_RAW}/videos/sprint_progression.mp4" type="video/mp4"><source src="{GITEE_RAW}/videos/sprint_progression.mp4" type="video/mp4">浏览器不支持 MP4 播放，请用下方下载链接。</video><div class="media-cap"><span>短跑训练进程合辑 · 60 秒 · v1 失败 → v2 收敛 → 3000 轮退化</span><span><a href="{GH_RAW}/videos/sprint_progression.mp4">下载 MP4（仓库源）</a> · <a href="{GITEE_RAW}/videos/sprint_progression.mp4">备用源</a></span></div></div>
 <div class="files" style="margin-top:16px">
 <a class="file" href="{GITEE_RAW}/course/videos/lightnav_corridor_latest.mp4">LightNav 走廊 · 课程原版<span>model_stop，残余 1.218 m</span></a>
 <a class="file" href="{GITEE_RAW}/course/videos/basketball_gpu_latest.mp4">Task1 篮球平衡<span>1500 步 0 重置</span></a>

@@ -124,6 +124,8 @@
 | **Gitee / GitHub 推送通道** | GitHub HTTPS 无凭据，走 `git@github.com:lemonbaby2/...`（SSH）；Gitee HTTPS 走系统凭据助手 |
 | **`.gitignore` 陷阱** | 本仓库原 `data/` 与 `*.log` 会吞掉归档指标和运行日志，已改为 `/data/` 并加 `!microduck/**/*.log`；以后新增证据文件要复核 |
 | **`site/` 5 MiB 硬限制** | `scripts/verify_public_package.py` 会检查 `site/` 下任何 >5 MiB 文件并直接失败。大视频一律放仓库其他目录，页面用外链 |
+| **GitHub 视频外链别用 media 域名** | 本仓库实测 `media.githubusercontent.com/media/.../sprint_progression.mp4` 返回 **404**；`raw.githubusercontent.com/.../main/...`（206 + Range）与 Gitee raw（`video/mp4`）均可用。展示页已改为 **GitHub raw 主源 + Gitee raw 备用源双 `<source>`** |
+| **归档自检入口** | `python scripts/verify_microduck_archive.py`：检查两个 HTML 与 11 份 Markdown 的本地引用、`site/` 超限文件、MANIFEST 与磁盘一致性。改完归档务必跑一次 |
 
 ---
 

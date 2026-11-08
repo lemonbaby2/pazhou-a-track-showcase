@@ -201,7 +201,7 @@ papers/README.md,1434,a6fb6afc0f343a4ce9194e55796c0d9c0aa08fc9b91cabacf5869a1d23
 README.en.md,8382,d48b4b61cb1ec64b4cdac89dbb3568f1af980d6fded2c6b69b7b4e8faabde797,[模块根],本轮封装新增（总索引 / 指标 / 建议 / 清单）
 README.md,9787,ab933c86431977cc91adb9603c23a8c8850eff717a9ad31ecf17fa54c8a2e1eb,[模块根],本轮封装新增（总索引 / 指标 / 建议 / 清单）
 README_sprint.md,17191,060ef5a1514c5b9c3756630093878fcf17df5e1785e802fa2ec73578853d6dff,[模块根],本轮封装新增（总索引 / 指标 / 建议 / 清单）
-RECOMMENDATIONS.md,10322,b5ef44401933d3728ca328406811c6f77d6114a82dd31074f8b76a7e85ad50ec,[模块根],本轮封装新增（总索引 / 指标 / 建议 / 清单）
+RECOMMENDATIONS.md,10856,d0b4faea42e869e1865d5189aea194249ba90bf65a114057558510b9cb871d65,[模块根],本轮封装新增（总索引 / 指标 / 建议 / 清单）
 scripts/build_paper.py,40153,8a45062aa3a75147b42826383c9c7f19b92314fdd24bf60f9f2b3df2670e3687,scripts,Gitee duckf--the-playful-duck / 实验脚本
 scripts/duck_queue.sh,2380,fe310f647fe21b746165f7fe1baccda90a0f4aeb9cce9af696f3e71787b4cb5f,scripts,Gitee duckf--the-playful-duck / 实验脚本
 scripts/export_sprint_metrics.py,2718,2043a02fe972530afde307c1625f206ea0c0b6aec1af418f531b868e72ec0a1e,scripts,Gitee duckf--the-playful-duck / 实验脚本
@@ -269,7 +269,7 @@ src/upstream_snapshot/src/mjlab_microduck/tasks/symmetry.py,7348,e37980389773f2f
 src/upstream_snapshot/src/mjlab_microduck/tasks/testbench_env_cfg.py,9481,d254218ca3f491e52d471ad033ebd1cb39a339f1f21394ea55e2bec4f3dc2776,src,Gitee duckf--the-playful-duck / 短跑任务配置
 src/upstream_snapshot/src/mjlab_microduck/train_cli.py,1092,ab210a1ee8eaf56ab8499eaf3b71b60f2d32935db7a041db621f3975ec7120aa,src,Gitee duckf--the-playful-duck / 短跑任务配置
 tooling/build_manifest.py,3027,aa591aec5c4d66eeb3aacc406ebdd700e696169a3a87b30e2f8e84a3b5897f98,tooling,本轮封装新增（总索引 / 指标 / 建议 / 清单）
-tooling/build_microduck_page.py,14032,4ed63af6b2d889b9557801976075abe89523c00f46d516f92608b6df4a2b9c96,tooling,本轮封装新增（总索引 / 指标 / 建议 / 清单）
+tooling/build_microduck_page.py,14320,3ff7e0f5af15c28f7b37a79ae8aa7974894f48789da6006a7230607f53c330b7,tooling,本轮封装新增（总索引 / 指标 / 建议 / 清单）
 tooling/lesson-scripts/build_master.py,826,f93c4f2bb4c16d2f206635ec982805958eb17b96446a47158c841633b235dfa1,tooling,本机 microduck_task 执行与修补脚本
 tooling/lesson-scripts/export_onnx_shim.py,564,6d95f1ce97a911a07f266c20214f39fa369c5426ee2816e35e70054eef7d7e6b,tooling,本机 microduck_task 执行与修补脚本
 tooling/lesson-scripts/fetch120.sh,1425,b88984ca43d2e2bdb64d19b4d3a300cb03b1eaaf1ab3e91800431be083ddbc3e,tooling,本机 microduck_task 执行与修补脚本
