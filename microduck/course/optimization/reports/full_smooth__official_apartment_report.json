@@ -1,0 +1,31 @@
+{
+  "scene": "official_apartment",
+  "arm": "full_smooth",
+  "instruction": "Walk to the table on your left and stop.",
+  "v_max": 0.4,
+  "stop_mode": "ignore",
+  "stop_confirm": 2,
+  "tail_seconds": 0.0,
+  "seconds_budget": 24.0,
+  "prediction_count": 97,
+  "termination": "time_limit",
+  "sim_seconds": 25.00499999999921,
+  "wall_seconds": 121.6507116141729,
+  "median_latency_ms": 1211.0385589767247,
+  "initial_target_distance_m": 2.946494745031797,
+  "final_target_distance_m": 1.6509216075385622,
+  "final_trunk_height_m": 0.1176585051978207,
+  "path_length_m": 1.5982872626615783,
+  "straight_displacement_m": 1.2936254529209865,
+  "path_efficiency": 0.8093823201511048,
+  "actual_path_speed_mps": 0.06391870676511213,
+  "mean_v_cmd": 0.12891223731846072,
+  "max_v_cmd": 0.4,
+  "progress_m": 1.2955731374932349,
+  "video": "/home/nvidia/microduck-course-run/recordings/lightnav_opt/full_smooth/official_apartment_latest.mp4",
+  "command_shape": {
+    "MAX_LINEAR_COMMAND": 0.4,
+    "MIN_LINEAR_COMMAND": 0.1,
+    "LINEAR_DEADBAND": 0.03
+  }
+}

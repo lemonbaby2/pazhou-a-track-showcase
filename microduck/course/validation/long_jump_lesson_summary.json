@@ -1,0 +1,91 @@
+{
+  "source_revision": "b6aed572587b52e41a452a9b2be517c95d2b3d96",
+  "model_revision": "fdcdc787e72b8784bb842159ee70607859cd17ed",
+  "seed": 28,
+  "training": {
+    "profile": "long-jump",
+    "recipe_sha256": "7b6b5da6937ab3f9be7ac394433473bb380ce6ae328ac60b8d4c647ec8c96fff",
+    "checkpoint_sha256": "114ab38724b1bea789b0d3f12a1a18a5981b40572863117e212a2a0601f9ed4a",
+    "original_release_checkpoint": true,
+    "optional_bank_sha256": null,
+    "initial_bank_matches": null,
+    "effective_environment": {
+      "MICRODUCK_PJ_ENTROPY": "0.005",
+      "MICRODUCK_PJ_CURRICULUM_SHIFT": "0",
+      "MICRODUCK_PJ_FLIGHT_PROB": "0.30"
+    },
+    "exact_actor_critic_normalizer_optimizer_counter_restore": true,
+    "restored_counter": 366120,
+    "final_counter": 366360,
+    "additional_iterations": 10,
+    "checked_steps": 240,
+    "num_envs": 64,
+    "seed": 42,
+    "actor_obs": 61,
+    "actions": 14,
+    "finite_all_training_steps": true,
+    "restored_learning_rate": 0.00044444444444444436,
+    "continuation_checkpoint_sha256": "a8323c920a1a9c582b478429026ffd532b8a6e909e7b9be82313ef87baf790fc",
+    "note": "Fresh simulator/RNG and reverse-curriculum episodes; see recipe provenance. Not bit-exact historical replay.",
+    "normalized_export": true,
+    "max_abs_onnx_error": 6.616115570068359e-06,
+    "parity_observations": 192
+  },
+  "deployment_selection": {
+    "candidate_accepted": true,
+    "selected": "continued",
+    "checkpoint": "/home/nvidia/microduck-course-run/topic/03-Notebook/outputs/long_jump/training/continued.pt",
+    "onnx": "/home/nvidia/microduck-course-run/topic/03-Notebook/outputs/long_jump/training/policy.onnx",
+    "reason": "candidate_task_passed"
+  },
+  "episodes": {
+    "pretrained": {
+      "backend": "PyTorch CUDA",
+      "video_seconds": 12.0,
+      "termination": [
+        "time_out"
+      ],
+      "checkpoint_sha256": "114ab38724b1bea789b0d3f12a1a18a5981b40572863117e212a2a0601f9ed4a",
+      "final_position_m": [
+        0.44053444266319275,
+        0.0065956865437328815,
+        0.2104416936635971
+      ],
+      "landed_on_target": true,
+      "final_target_support": true,
+      "final_upright_cos": 0.994808554649353
+    },
+    "continued": {
+      "backend": "PyTorch CUDA",
+      "video_seconds": 12.0,
+      "termination": [
+        "time_out"
+      ],
+      "checkpoint_sha256": "a8323c920a1a9c582b478429026ffd532b8a6e909e7b9be82313ef87baf790fc",
+      "final_position_m": [
+        0.47224506735801697,
+        0.04557038098573685,
+        0.2134193629026413
+      ],
+      "landed_on_target": true,
+      "final_target_support": true,
+      "final_upright_cos": 0.998071014881134
+    },
+    "onnx": {
+      "backend": "ONNX Runtime CPU",
+      "video_seconds": 12.0,
+      "termination": [
+        "time_out"
+      ],
+      "checkpoint_sha256": "a8323c920a1a9c582b478429026ffd532b8a6e909e7b9be82313ef87baf790fc",
+      "final_position_m": [
+        0.44870805740356445,
+        0.0601746030151844,
+        0.21388337016105652
+      ],
+      "landed_on_target": true,
+      "final_target_support": true,
+      "final_upright_cos": 0.998738169670105
+    }
+  }
+}

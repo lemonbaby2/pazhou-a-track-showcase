@@ -1,0 +1,12 @@
+{
+  "checkpoint": "model_250.pt",
+  "task": "Mjlab-SprintV2-Flat-MicroDuck",
+  "cmd_mps": 1.6,
+  "steps": 1000,
+  "num_envs": 32,
+  "forward_speed_mean_mps": 0.4572,
+  "forward_speed_median_mps": 0.456,
+  "forward_speed_p95_mps": 0.6988,
+  "forward_speed_peak_frame_mps": 0.9335,
+  "forward_speed_peak_env_mps": 1.8246
+}

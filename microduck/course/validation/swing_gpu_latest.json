@@ -1,0 +1,32 @@
+{
+  "task": "swing",
+  "run_id": "06ae6d5d-e69a-4034-96f1-482cad3fae88",
+  "generated_at_utc": "2026-10-18T13:20:01.202663+00:00",
+  "policy_validation": {
+    "inference_calls": 500,
+    "real_observation_parity_checks": 32,
+    "max_abs_output_error": 8.344650268554688e-07,
+    "parity_atol": 0.0001,
+    "parity_rtol": 0.0001
+  },
+  "task_id": "Mjlab-SwingPump-MicroDuck",
+  "display_name": "swing-pump",
+  "backend": "GPU ONNX via Torch CUDA",
+  "policy_device": "GPU",
+  "onnx_file": "/home/nvidia/microduck-course-run/topic/01-任务资料/04-MicroDuck摆动旋转强化学习复现/assets/microduck_swing_alpha050.onnx",
+  "onnx_sha256": "037bd16888b1e292eaf63147141445a2512df6ee5b221a318a1aaa17ca166009",
+  "observation_dim": 61,
+  "action_dim": 14,
+  "recurrent": false,
+  "steps": 500,
+  "requested_steps": 500,
+  "terminated_or_truncated_resets": 0,
+  "reset_steps": [],
+  "first_termination_step": null,
+  "longest_uninterrupted_steps": 500,
+  "longest_uninterrupted_time_s": 10.0,
+  "video_nominal_time_s": 10.0,
+  "mean_inference_ms": 0.6612094652373344,
+  "p95_inference_ms": 0.3642463561845943,
+  "note": "Ubuntu runs the MuJoCo physics and renderer; the task actor is evaluated by Torch on GPU."
+}

@@ -1,0 +1,61 @@
+[IPKernelApp] WARNING | Kernel is running over TCP without encryption. All communication (including code and outputs) is sent in plain text and is susceptible to eavesdropping. Use IPC transport or launch with kernel manager-provisioned CurveZMQ keys to enable transport encryption.
+Training startup: resolving train backend for motrix/fastsac
+Training startup: resolved train backend 'torch' in 0.270s (env=microduck-ball-balance, num_envs=64)
+Training startup: created run context in 0.010s (run_dir=runs/microduck-ball-balance/motrix/torch/fastsac/26-10-21_19-12-51-101991)
+Motphys profiler initialized: disabled
+Training startup: trainer handle ready in 0.495s
+[motrix.fastsac sync] training 'microduck-ball-balance' on cuda num_envs=64 iters=10 (from 0)
+Manager env 'ManagerEnv' startup begin: num_envs=64
+Manager startup ManagerEnv: build plan finished in 0.007s (evaluate=88af89fc6e98 observe=64da59bb2f48 reset=c1303ce383c0)
+Manager startup ManagerEnv: evaluate kernel cache found, loading (cache=disk, plan_key=88af89fc6e98)
+Manager startup ManagerEnv: evaluate kernel dispatcher prepared in 0.000s (cache=disk)
+Manager startup ManagerEnv: observe kernel cache found, loading (cache=disk, plan_key=64da59bb2f48)
+Manager startup ManagerEnv: observe kernel dispatcher prepared in 0.000s (cache=disk)
+Manager startup ManagerEnv: reset kernel cache found, loading (cache=disk, plan_key=c1303ce383c0)
+Manager startup ManagerEnv: reset kernel dispatcher prepared in 0.000s (cache=disk)
+Manager startup ManagerEnv: reset specialization finished in 0.195s
+Manager startup ManagerEnv: evaluate specialization finished in 0.012s
+Manager startup ManagerEnv: observe specialization finished in 0.013s
+Manager startup ManagerEnv: reset specialization finished in 0.000s
+Manager startup ManagerEnv: term specializations finished in 0.028s
+Manager startup ManagerEnv: warmup execution finished in 0.000s
+Manager env 'ManagerEnv' startup complete in 0.248s
+------------------------------------------------------------------------------------
+ microduck-ball-balance/motrix.fastsac - iter 0/10 (0.0%) - 0 env-steps/s - 0m00s
+------------------------------------------------------------------------------------
+ rollout     return       nan   ep_len     nan   episodes      0
+ system      cpu  24.9% (5.0/20T, 20C)   iowait 0.0%   steal 0.0%
+ system      gpu 11%  n/a
+ train       warmup - filling replay buffer (0/512)
+ reward(dt)  action_rate_l2 -19.8164     upright +0.0757
+             ball_under_feet +0.0525     base_height +0.0299
+             alive +0.0200               dof_default +0.0097
+             limits_dof_pos +0.0000      undesired_contacts +0.0000
+ metrics     bad_base_z +0.000   bad_dof_pos +0.000   bad_dof_vel +0.000   bad_orientation +0.000   ball_escaped +0.000   ball_feet_distance +3.462e-04   base_tilt +0.002   base_z +0.400   dof_limit_violation_max +0.000   dof_vel_abs_max +7.907
+ timing      collect 89.5ms   learn 0.0ms
+------------------------------------------------------------------------------------
+[motrix.fastsac sync] saved checkpoint to runs/microduck-ball-balance/motrix/torch/fastsac/26-10-21_19-12-51-101991/checkpoints/latest.pt
+[0;93m2026-10-21 19:12:55.314329884 [W:onnxruntime:Default, device_discovery.cc:164 DiscoverDevicesForPlatform] GPU device discovery failed: device_discovery.cc:89 ReadFileContents Failed to open file: "/sys/class/drm/card0/device/vendor"[m
+{
+  "input": {
+    "dtype": "float32",
+    "name": "obs",
+    "shape": [
+      null,
+      54
+    ]
+  },
+  "max_abs_error": 2.384185791015625e-07,
+  "max_rel_error": 3.173667209921405e-05,
+  "output": "outputs/motrix_ball_balance_latest.onnx",
+  "output_tensor": {
+    "dtype": "float32",
+    "name": "actions",
+    "shape": [
+      null,
+      14
+    ]
+  },
+  "validation_samples": 32
+}
+{"task": "05", "status": "executed", "error": null, "started_utc": "2026-10-21T11:12:48.030883+00:00", "duration_seconds": 41.55291771888733, "executed_code_cells": 11, "total_code_cells": 11, "source_commit": "b11ee54ad51260abbe230446c22e528133e05ab9", "bpu": "not_run_no_board"}

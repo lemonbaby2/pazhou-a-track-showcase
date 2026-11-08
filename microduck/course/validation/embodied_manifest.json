@@ -1,0 +1,81 @@
+{
+  "source": "DGX Spark GB10 / embodied-harvest",
+  "count": 15,
+  "videos": [
+    {
+      "name": "go2_flat",
+      "duration_s": 120.0,
+      "size_bytes": 13027295
+    },
+    {
+      "name": "go2_rough",
+      "duration_s": 120.0,
+      "size_bytes": 1736897
+    },
+    {
+      "name": "anymal_rough",
+      "duration_s": 120.0,
+      "size_bytes": 1736897
+    },
+    {
+      "name": "h1_rough",
+      "duration_s": 120.0,
+      "size_bytes": 3294248
+    },
+    {
+      "name": "g1_flat",
+      "duration_s": 120.0,
+      "size_bytes": 3294248
+    },
+    {
+      "name": "allegro_reorient",
+      "duration_s": 120.0,
+      "size_bytes": 3294248
+    },
+    {
+      "name": "cassie_rough",
+      "duration_s": 120.0,
+      "size_bytes": 3294248
+    },
+    {
+      "name": "franka_lift",
+      "duration_s": 120.0,
+      "size_bytes": 7357248
+    },
+    {
+      "name": "h1_flat",
+      "duration_s": 120.0,
+      "size_bytes": 32812486
+    },
+    {
+      "name": "g1_rough",
+      "duration_s": 120.0,
+      "size_bytes": 1884939
+    },
+    {
+      "name": "anymal_flat",
+      "duration_s": 120.0,
+      "size_bytes": 12695133
+    },
+    {
+      "name": "cassie_flat",
+      "duration_s": 120.0,
+      "size_bytes": 15641888
+    },
+    {
+      "name": "franka_reach",
+      "duration_s": 120.0,
+      "size_bytes": 5567053
+    },
+    {
+      "name": "franka_drawer",
+      "duration_s": 120.0,
+      "size_bytes": 2390458
+    },
+    {
+      "name": "shadow_reorient",
+      "duration_s": 120.0,
+      "size_bytes": 15969371
+    }
+  ]
+}

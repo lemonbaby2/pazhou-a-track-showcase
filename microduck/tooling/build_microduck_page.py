@@ -1,0 +1,106 @@
+"""从 site/index.html 复用内联 CSS，生成 site/microduck.html 展示页。
+
+视频一律外链到仓库文件 / Gitee raw，不往 site/ 放 >5 MiB 资源，
+以免 scripts/verify_public_package.py 判失败。
+"""
+from __future__ import annotations
+
+import re
+import shutil
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[2]
+SITE = ROOT / "site"
+MOD = ROOT / "microduck"
+ASSETS = SITE / "microduck"
+ASSETS.mkdir(exist_ok=True)
+
+for name in ["fig4_speed_compare.png", "fig6_v1_v2_curves.png", "fig7_checkpoint_decay.png"]:
+    shutil.copy2(MOD / "figs" / name, ASSETS / name)
+
+src = (SITE / "index.html").read_text(encoding="utf-8")
+style = re.search(r"<style>.*?</style>", src, re.S).group(0)
+
+GH = "https://github.com/lemonbaby2/pazhou-a-track-showcase/tree/main/microduck"
+GITEE_RAW = "https://gitee.com/li-zipeng123/duckf--the-playful-duck/raw/master"
+GH_MEDIA = "https://media.githubusercontent.com/media/lemonbaby2/pazhou-a-track-showcase/main/microduck"
+
+body = f"""<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="MicroDuck 具身智能技术储备：短跑策略 PPO、8 本 Notebook 复现、Task8 视觉语言导航优化的全量归档与实测指标。">
+<meta name="theme-color" content="#101821"><title>MicroDuck 技术储备 · 实测指标与归档</title>
+{style}
+</head>
+<body>
+<header class="top"><div class="wrap nav"><div class="brand">MICRODUCK · ARCHIVE</div><nav class="links"><a href="index.html">← A 赛道主页</a><a href="#sprint">短跑策略</a><a href="#course">8 本课程</a><a href="#nav">导航优化</a><a href="#videos">可视化</a><a href="#files">全部文件</a></nav></div></header>
+<main class="wrap">
+
+<section class="hero"><div><div class="eyebrow">Embodied AI · capability archive</div><h1>MicroDuck<br>技术储备归档</h1><p>短跑策略自训 PPO、Datawhale 8 本 Notebook 复现、Task8 视觉语言导航控制层优化、双栏论文稿与写作知识库。362 个文件、144.29 MB，全部实测数据可复核。</p><span class="badge">不是 A 赛道比赛成绩</span></div>
+<div class="hero-card"><div class="label">三条最有价值的结论</div><div class="flow" style="grid-template-columns:1fr 1fr"><div><b>奖励失衡</b>v1 站着踮脚刷腾空分，0.09 m/s</div><div><b>命令二值化</b>上游只有「停 / 0.28–0.30」两档</div><div><b>model_stop ≠ 到达</b>三场全停，残余 1.17–1.87 m</div><div><b>训练越久越慢</b>iter 250 最佳，2999 轮掉到 0.132</div></div></div></section>
+
+<div class="stats"><div class="stat"><div class="n">0.4572</div><small>m/s · v2 平均速度（同口径）</small></div><div class="stat"><div class="n">3.09×</div><small>v2 相对 v1 提升</small></div><div class="stat"><div class="n">21.7%</div><small>Task8 三场景平均改善</small></div><div class="stat"><div class="n">8 / 8</div><small>课程 Task 心得全部完成</small></div></div>
+
+<section><div class="section-head"><h2>读数字前先看边界</h2><p>这一页是能力佐证与技术储备，不是比赛策略，也不是官方计分结果。</p></div><div class="two"><article class="card"><div class="label">口径纪律</div><h3>不做跨口径比较</h3><p>社区公开 2.07 m/s（4090D / 512 环境 / 13500 轮 / 瞬时读数）与本项目 0.4572 m/s（32 env × 1200 步 / 命令锁 1.6 m/s / 平均速度）不是同一个测量，<strong>本项目未复现 2.07 m/s</strong>。此外「自行训练」与「官方权重复现」两部分数字不能混着比。</p><div class="callout" style="margin-top:12px">回合奖励 16.8 对应实测速度仅 0.132 m/s —— <code>mean_reward</code> 不能当性能指标。</div></article><article class="card"><div class="label">验证范围</div><h3>全部为仿真，无真机</h3><p>训练与评测在 DGX Spark（GB10 / aarch64 / CUDA 13.0）上用 MuJoCo Warp 完成；Task7 因无 RDK X5 硬件，记录为 <code>bpu: not_run_no_board</code>。Task8 三场景在最优组下<strong>仍然全部没有走到目标</strong>，残余 0.783–1.651 m。</p><div><span class="chip">PPO / rsl_rl</span><span class="chip">LightNav-0</span><span class="chip">MPC · Ipopt</span><span class="chip">FastSAC</span><span class="chip">ONNX</span></div></article></div></section>
+
+<section id="sprint"><div class="section-head"><h2>① 短跑策略（自训 PPO）</h2><p>32 环境 × 1200 步、命令锁 1.6 m/s、丢前 100 步暖机。字段见 <code>data/*.json</code>。</p></div>
+<div class="table-wrap"><table><tr><th>配方 / 检查点</th><th>命令</th><th>平均</th><th>中位</th><th>P95</th><th>单帧峰值</th></tr>
+<tr><td>Sprint v1（奖励失衡）</td><td>1.6</td><td>0.1481</td><td>0.1539</td><td>0.2058</td><td>0.2507</td></tr>
+<tr><td><strong>Sprint v2 · model_250</strong></td><td>1.6</td><td><strong>0.4572</strong></td><td><strong>0.4560</strong></td><td><strong>0.6988</strong></td><td><strong>0.9335</strong></td></tr>
+<tr><td>Sprint v2 · 命令 2.6（超课程上限）</td><td>2.6</td><td>0.1797</td><td>0.1780</td><td>0.3264</td><td>0.5457</td></tr>
+<tr><td>Sprint v2 · model_2999</td><td>1.6</td><td>0.1321</td><td>0.1215</td><td>0.2756</td><td>0.4103</td></tr></table></div>
+<div class="two" style="margin-top:16px"><article class="card"><div class="label">最重要的负结果</div><h3>训练到 3000 轮反而退化</h3><div class="metric"><span>iter 250</span><strong>0.4572 m/s</strong></div><div class="metric"><span>iter 1000</span><strong>0.1872 m/s</strong></div><div class="metric"><span>iter 2999</span><strong>0.1321 m/s（28.9%）</strong></div><p style="margin-top:12px">偏航跟踪误差 <code>error_vel_yaw</code> 0.053 → 0.712（13 倍）。策略后期学会的是「原地小幅扭动 + 高频腾空」。<strong>最佳检查点在 40 分钟左右，必须做事中评测。</strong></p></article><div class="gallery"><img src="microduck/fig7_checkpoint_decay.png" alt="检查点退化曲线"><img src="microduck/fig4_speed_compare.png" alt="速度对比"></div></div></section>
+
+<section id="course"><div class="section-head"><h2>② Datawhale 8 本 Notebook 复现</h2><p>官方权重，不训练、不连板。10 本 notebook（00–09）全部执行过，15 份验收 JSON + 10 份运行日志可查。</p></div>
+<div class="table-wrap"><table><tr><th>Task</th><th>机制</th><th>硬指标</th><th>必须说清的坑</th></tr>
+<tr><td>1 篮球平衡</td><td>PPO + LSTM，61 维 → 14 关节</td><td>1500 步 / 30 s，0 重置，parity 1.19e-6</td><td>官方权重，不是重训</td></tr>
+<tr><td>2 浏览器扰动</td><td><code>xfrc_applied</code> 真实施力</td><td>63 MB / 48 文件，Pull 200 N/m，48.8 s</td><td>定性 smoke test</td></tr>
+<tr><td>3 高跷 / 4 摆动</td><td>换腿长 = 换任务 / 自激摆动</td><td>9/9 单元格通过</td><td><strong>日志 <code>Invalid choice</code>，任务未注册</strong></td></tr>
+<tr><td>5 球平衡 FastSAC</td><td>off-policy + 54 维观测</td><td>900 步，推理 4.16 ms 均值</td><td><strong>59 次失败重置</strong>（约每 15 步摔一次）</td></tr>
+<tr><td>6 梯面攀爬</td><td>climber → getup 双策略交接</td><td>992.1 s，climber 调用 1500 次</td><td><strong>getup 调用 0 次</strong>，只跑了一套</td></tr>
+<tr><td>7 RDK X5 / BPU</td><td>ONNX → HBM</td><td><code>not_run_no_board</code></td><td>无硬件，板端未做</td></tr>
+<tr><td>8 LightNav-0</td><td>图 + 词 → 10×3 轨迹 → MPC → 14 关节</td><td>三场全 <code>model_stop</code></td><td>残余 1.866 / 1.171 / 1.218 m，全部没走到</td></tr></table></div>
+<div class="callout" style="margin-top:14px">三条通用教训：<strong>executed ≠ 成功</strong>（9/9 全绿但任务没注册）·<strong>视频是必要证据不是充分证据</strong>（爬梯 getup 零调用、球平衡 59 次重置）·<strong>没做的部分要单独列</strong>（Task7 无板）。</div></section>
+
+<section id="nav"><div class="section-head"><h2>③ Task8 控制层优化（18 组真实运行）</h2><p>不训练、不改权重、不用目标真值参与控制。下表为残余距离，越小越好。</p></div>
+<div class="table-wrap"><table><tr><th>场景</th><th>原版 base</th><th>提速 fast</th><th>走满 full</th><th>冻结 tail</th><th>放开低速 smooth</th><th>最优 full_smooth</th></tr>
+<tr><td>官方住宅</td><td>1.921</td><td>1.947</td><td>1.690</td><td>1.910</td><td>1.997</td><td><strong>1.651 (+14.0%)</strong></td></tr>
+<tr><td>自建客厅</td><td>1.301</td><td>1.341</td><td>1.095</td><td>1.442</td><td>1.378</td><td><strong>1.096 (+15.8%)</strong></td></tr>
+<tr><td>自建走廊</td><td>1.209</td><td>1.074</td><td>0.825</td><td>1.200</td><td>1.260</td><td><strong>0.783 (+35.2%)</strong></td></tr>
+<tr><td>平均改善</td><td>—</td><td>+2.2%</td><td>+19.9%</td><td>−3.1%</td><td>−4.8%</td><td><strong>+21.7%</strong></td></tr></table></div>
+<div class="two" style="margin-top:16px"><article class="card"><div class="label">根因</div><h3>上游把线速度二值化了</h3><p><code>MAX_LINEAR_COMMAND=0.30 / MIN_LINEAR_COMMAND=0.28 / LINEAR_DEADBAND=0.08</code>：小于 0.08 归零，0.08–0.28 直接抬到 0.28，大于 0.30 裁到 0.30。机器人只有「停」和「0.28–0.30」两档，MPC 无法微调 → 客厅绕路效率只有 49%。</p><p><strong>命令顶格 0.300，实际只跑 0.155 m/s，转化率 52%。</strong></p></article><article class="card"><div class="label">为什么仍然没走到</div><h3>0.14 m/s 是步态上限</h3><p>最优组实际速度仅 0.064–0.108 m/s。即使一秒不停、效率 100%，24 s 最多走 2.6 m，而官方住宅需要 2.95 m。出厂 <code>alpha_walking</code>（<code>obs[1,61] → actions[1,14]</code>，纯前馈）在 0.30 命令下的物理速度上限就是 0.14–0.15 m/s。</p><div class="callout" style="margin-top:12px">控制层已穷尽，要突破必须重训行走策略。</div></article></div>
+<div class="two" style="margin-top:16px"><article class="card"><div class="label">负结果 ①</div><p><strong>提速无效</strong>：v_max 0.30 → 0.55，官方住宅轨迹到小数点后 12 位完全一致，命令在上游就被裁掉。</p></article><article class="card"><div class="label">负结果 ②</div><p><strong>冻结轨迹更差</strong>：客厅 −10.8%，切断视觉闭环后原地打转。反向证明视觉反馈不能断。</p></article></div></section>
+
+<section id="videos"><div class="section-head"><h2>可视化 MP4</h2><p>视频托管在仓库与 Gitee，不占用展示站体积；点击播放或下载。若浏览器不自动播放，请用下载链接。</p></div>
+<div class="media"><video controls preload="none" poster="microduck/fig6_v1_v2_curves.png"><source src="{GH_MEDIA}/videos/sprint_progression.mp4" type="video/mp4">浏览器不支持 MP4 播放。</video><div class="media-cap"><span>短跑训练进程合辑 · 60 秒 · v1 失败 → v2 收敛 → 3000 轮退化</span><a href="{GITEE_RAW}/videos/sprint_progression.mp4">下载 MP4（备用源）</a></div></div>
+<div class="files" style="margin-top:16px">
+<a class="file" href="{GITEE_RAW}/course/videos/lightnav_corridor_latest.mp4">LightNav 走廊 · 课程原版<span>model_stop，残余 1.218 m</span></a>
+<a class="file" href="{GITEE_RAW}/course/videos/basketball_gpu_latest.mp4">Task1 篮球平衡<span>1500 步 0 重置</span></a>
+<a class="file" href="{GITEE_RAW}/course/videos/ball_balance_slow120.mp4">Task5 球平衡 120 s 慢放<span>59 次失败重置</span></a>
+<a class="file" href="{GITEE_RAW}/course/videos/ladder_120.mp4">Task6 梯面攀爬 120 s<span>getup 调用 0 次</span></a>
+<a class="file" href="{GH}/course/optimization/videos">Task8 优化 6 段对比视频<span>base vs full_smooth × 3 场景</span></a>
+<a class="file" href="{GH}/videos">全部短跑录像与 144 段训练片段<span>合辑 + zip</span></a>
+</div></section>
+
+<section id="files"><div class="section-head"><h2>全量归档与文档</h2><p>362 文件 / 144.29 MB，逐文件 SHA-256 清单可核对。</p></div><div class="files">
+<a class="file" href="{GH}/README.md">模块总索引<span>结论 / 目录 / 边界</span></a>
+<a class="file" href="{GH}/METRICS.md">全部性能指标<span>短跑 / 8 本 / 18 组优化</span></a>
+<a class="file" href="{GH}/RECOMMENDATIONS.md">建议与决策台账<span>已完成 / 待决策 / 阻塞 / 否决</span></a>
+<a class="file" href="{GH}/MANIFEST.csv">逐文件清单<span>路径 / 字节 / SHA-256</span></a>
+<a class="file" href="{GH}/course/Task1-8_学习心得全集.md">Task1-8 学习心得全集<span>约 1.2 万字，可直接打卡</span></a>
+<a class="file" href="{GH}/course/optimization/README.md">Task8 优化报告<span>诊断 / 6 臂 / 负结果 / 复现命令</span></a>
+<a class="file" href="{GH}/papers">双栏论文稿 docx<span>宋体 + Times New Roman</span></a>
+<a class="file" href="{GH}/paper-agent">论文写作 agent 知识库<span>风格指南 / 实验日志 / 脚本</span></a>
+<a class="file" href="{GH}/docs/HARDWARE_BOM.md">硬件清单与 BOM<span>配置清单，非采购凭证</span></a>
+<a class="file" href="{GH}/course/notebooks">00-09 notebook 源文件<span>含执行输出</span></a>
+</div></section>
+
+<footer class="foot"><strong>MicroDuck 具身智能技术储备 · 2026-11-09 归档</strong><br>上游 microduck_rl / LightNav-0 / Datawhale 课程材料各遵循其原协议。全部数字来自真实运行落盘的 JSON / trace，不是事后估计。<br>本页面属于琶洲 A 赛道展示站的<strong>独立技术储备板块</strong>，不代表比赛成绩或官方计分。<span>source repo: pazhou-a-track-showcase / microduck</span></footer>
+</main></body></html>
+"""
+
+(SITE / "microduck.html").write_text(body, encoding="utf-8")
+print("wrote site/microduck.html", (SITE / "microduck.html").stat().st_size, "bytes")
+for p in sorted(ASSETS.iterdir()):
+    print("  asset", p.name, p.stat().st_size, "bytes")

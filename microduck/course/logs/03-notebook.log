@@ -1,0 +1,12 @@
+[IPKernelApp] WARNING | Kernel is running over TCP without encryption. All communication (including code and outputs) is sent in plain text and is susceptible to eavesdropping. Use IPC transport or launch with kernel manager-provisioned CurveZMQ keys to enable transport encryption.
+╭─ Invalid choice ─────────────────────────────────────────────────────────────╮
+│ invalid choice 'Mjlab-Stilt-Flat-MicroDuck' for argument 'value'. Expected   │
+│ one of ('Mjlab-Cartpole-Balance', 'Mjlab-Cartpole-Swingup',                  │
+│ 'Mjlab-Lift-Cube-Yam', 'Mjlab-Lift-Cube-Yam-Depth',                          │
+│ 'Mjlab-Lift-Cube-Yam-Rgb', 'Mjlab-Multi-Cube-Seg-Yam',                       │
+│ 'Mjlab-Tracking-Flat-Unitree-G1',                                            │
+│ 'Mjlab-Tracking-Flat-Unitree-G1-No-State-Estimation',                        │
+│ 'Mjlab-Velocity-Flat-Unitree-G1', 'Mjlab-Velocity-Flat-Unitree-Go1',         │
+│ 'Mjlab-Velocity-Rough-Unitree-G1', 'Mjlab-Velocity-Rough-Unitree-Go1').      │
+╰──────────────────────────────────────────────────────────────────────────────╯
+{"task": "03", "status": "executed", "error": null, "started_utc": "2026-10-18T13:19:02.496918+00:00", "duration_seconds": 26.4531672000885, "executed_code_cells": 9, "total_code_cells": 9, "source_commit": "b11ee54ad51260abbe230446c22e528133e05ab9", "bpu": "not_run_no_board"}

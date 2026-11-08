@@ -1,0 +1,32 @@
+{
+  "task": "stilt",
+  "run_id": "e7252866-cb92-4842-ac38-6914b338ae21",
+  "generated_at_utc": "2026-10-18T13:19:27.252725+00:00",
+  "policy_validation": {
+    "inference_calls": 500,
+    "real_observation_parity_checks": 32,
+    "max_abs_output_error": 5.960464477539062e-07,
+    "parity_atol": 0.0001,
+    "parity_rtol": 0.0001
+  },
+  "task_id": "Mjlab-Stilt-Flat-MicroDuck",
+  "display_name": "stilts-25cm",
+  "backend": "GPU ONNX via Torch CUDA",
+  "policy_device": "GPU",
+  "onnx_file": "/home/nvidia/microduck-course-run/models/stilt/25cm/policy.onnx",
+  "onnx_sha256": "04eb9e3cf42f08fc15500ef08b0c5c8524c75383ae13aeed0a5c85247efeb393",
+  "observation_dim": 61,
+  "action_dim": 14,
+  "recurrent": false,
+  "steps": 500,
+  "requested_steps": 500,
+  "terminated_or_truncated_resets": 0,
+  "reset_steps": [],
+  "first_termination_step": null,
+  "longest_uninterrupted_steps": 500,
+  "longest_uninterrupted_time_s": 10.0,
+  "video_nominal_time_s": 10.0,
+  "mean_inference_ms": 0.3009200068190694,
+  "p95_inference_ms": 0.29885085532441735,
+  "note": "Ubuntu runs the MuJoCo physics and renderer; the task actor is evaluated by Torch on GPU."
+}

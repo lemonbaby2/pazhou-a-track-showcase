@@ -14,6 +14,23 @@
 
 > 展示站已通过 GitHub Pages workflow 部署。Cloudflare 临时预览仍可能在未认领时过期。
 
+## 2026-11-09 新增：MicroDuck 技术储备全量归档
+
+- **展示页：**[MicroDuck 技术储备 · 实测指标与归档](https://lemonbaby2.github.io/pazhou-a-track-showcase/microduck.html)（已从本站导航进入）
+- **全量归档：**[`microduck/`](microduck/) —— **362 文件 / 144.29 MB**，逐文件 SHA-256 清单见 [`microduck/MANIFEST.csv`](microduck/MANIFEST.csv)
+- **内容边界：**这是**独立于 A 赛道赛题的具身智能能力储备**，不是比赛策略、不是官方计分结果。A 赛道使用统一轮式人形平台，与 25 cm 双足 MicroDuck 不同构，两套数字不得混用。
+
+| 板块 | 关键结果 | 最重要的负面结论 |
+|---|---|---|
+| 短跑策略（自训 PPO / MuJoCo Warp） | 同口径 0.1481 → **0.4572 m/s（3.09 倍）** | 训练到 3000 轮**退化到 0.1321 m/s**，最佳在 iter 250 |
+| Datawhale 8 本 Notebook 复现 | 10 本 notebook 全部执行、8 篇心得全集 | 9/9 全绿但任务未注册；球平衡 59 次重置；爬梯 `getup` 零调用 |
+| Task8 LightNav-0 控制层优化 | 18 组实验，平均残余距离**改善 21.7%** | 三场景**仍然全部没走到**，根因是出厂策略 0.14–0.15 m/s 步态上限 |
+| 双栏论文稿与写作知识库 | A4 双栏 docx（4 表 5 图 13 式 17 引用） | 定稿于 10-30，**未含**退化实验与 Task8 优化两节 |
+
+三份必读文档：[总索引](microduck/README.md) · [全部性能指标](microduck/METRICS.md) · [建议与决策台账](microduck/RECOMMENDATIONS.md)。
+
+> 归档内含大体积 MP4，但**不放在 `site/` 下**（`scripts/verify_public_package.py` 对站点单文件有 5 MiB 限制）；展示页的视频走仓库外链。仓库原有 CI（pytest + 仿真冒烟）不受影响。
+
 ---
 
 ## 0. 结论先行：本机哪个项目最适合？

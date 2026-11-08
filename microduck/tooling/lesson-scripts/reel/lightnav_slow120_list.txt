@@ -1,0 +1,3 @@
+file 'C:/Users/lzp/Documents/xwechat_files/wxid_zmxb0wapngqm22_00d0/msg/file/2026-10/microduck-task2/datawhale_microduck/task3/videos/lightnav_official_apartment_latest.mp4'
+file 'C:/Users/lzp/Documents/xwechat_files/wxid_zmxb0wapngqm22_00d0/msg/file/2026-10/microduck-task2/datawhale_microduck/task3/videos/lightnav_living_room_latest.mp4'
+file 'C:/Users/lzp/Documents/xwechat_files/wxid_zmxb0wapngqm22_00d0/msg/file/2026-10/microduck-task2/datawhale_microduck/task3/videos/lightnav_corridor_latest.mp4'

@@ -1,0 +1,21 @@
+{
+  "scene": "official_apartment",
+  "instruction": "Walk to the table on your left and stop.",
+  "navigation_backend": "LightNav-0 / vllm_local / GPU",
+  "walking_backend": "pretrained alpha_walking / ONNX Runtime CPU",
+  "time_mode": "simulation pauses during inference",
+  "training": false,
+  "prediction_count": 37,
+  "trajectory_shape": [
+    10,
+    3
+  ],
+  "termination": "model_stop",
+  "sim_seconds": 10.000000000000242,
+  "wall_seconds": 59.21207427000627,
+  "median_latency_ms": 1466.7487079859711,
+  "initial_target_distance_m": 2.946494745031797,
+  "final_target_distance_m": 1.8664372313569628,
+  "final_trunk_height_m": 0.11731605395074475,
+  "video": "/home/nvidia/microduck-course-run/recordings/lightnav/official_apartment_latest.mp4"
+}

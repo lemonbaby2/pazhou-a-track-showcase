@@ -1,0 +1,33 @@
+{
+  "task": "06 · ladder 梯面攀爬",
+  "task_id": "Mjlab-FloorDeskBlind-MicroDuck",
+  "backend": "gpu",
+  "physics_device": "cuda:0",
+  "policy": {
+    "climber_onnx": "models/ladder/models/climber.onnx",
+    "getup_onnx": "converted/official_ladder_getup.opset11.onnx",
+    "real_observation_parity_checks": 32,
+    "max_abs_output_error": 8.940696716308594e-07,
+    "parity_atol": 0.0001
+  },
+  "scene_fixes": {
+    "terrain_entity": "injected TerrainEntityCfg(terrain_type='plane'); previously absent so foot_on_floor was always False",
+    "airborne_grace_steps": 120,
+    "nconmax": 768,
+    "njmax": 3072,
+    "contact_sensor_maxmatch": 400,
+    "spawn": "start_tread=2, floor_spawn_prob=0.0"
+  },
+  "recording": {
+    "method": "8 段独立 rollout 拼接（每段 15.0s，取前 7.5s 真实起爬窗口，2x 慢放）",
+    "parts": 8,
+    "seeds": [123, 456, 789, 1011, 1213, 1415, 1617, 1819],
+    "record_envs": [3, 4, 5, 6, 7, 8, 9, 10],
+    "resolution": "960x720",
+    "fps": 50,
+    "reel_seconds": 120.0,
+    "slow_motion_factor": 2.0
+  },
+  "known_limitation": "官方 climber 权重在本环境每次起爬约 1-3 踏后失稳滑落；视频按多次真实起爬剪辑，未做动作伪造。",
+  "generated_at_utc": "2026-10-22T05:40:00Z"
+}

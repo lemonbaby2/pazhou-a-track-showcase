@@ -1,0 +1,20 @@
+| 场景 | 实验臂 | 终止 | 最终距离(m) | 相对原版 | 路径效率 | 实际速度(m/s) | 平均命令 |
+|---|---|---|---:|---:|---:|---:|---:|
+| official_apartment | base | model_stop | 1.921 | — | 76.4% | 0.144 | 0.288 |
+| official_apartment | fast | model_stop | 1.947 | -1.4% | 75.1% | 0.142 | 0.495 |
+| official_apartment | full | time_limit | 1.690 | +12.0% | 72.3% | 0.070 | 0.203 |
+| official_apartment | tail | model_stop_tail | 1.910 | +0.6% | 75.1% | 0.091 | 0.168 |
+| official_apartment | smooth | model_stop | 1.997 | -4.0% | 76.5% | 0.141 | 0.287 |
+| official_apartment | full_smooth | time_limit | 1.651 | +14.0% | 80.9% | 0.064 | 0.129 |
+| living_room | base | model_stop | 1.301 | — | 48.5% | 0.137 | 0.227 |
+| living_room | fast | model_stop | 1.341 | -3.1% | 44.2% | 0.136 | 0.339 |
+| living_room | full | time_limit | 1.095 | +15.9% | 43.5% | 0.081 | 0.196 |
+| living_room | tail | model_stop_tail | 1.442 | -10.8% | 36.0% | 0.096 | 0.125 |
+| living_room | smooth | model_stop | 1.378 | -6.0% | 76.6% | 0.120 | 0.297 |
+| living_room | full_smooth | time_limit | 1.096 | +15.8% | 26.7% | 0.108 | 0.184 |
+| corridor | base | model_stop | 1.209 | — | 77.5% | 0.152 | 0.299 |
+| corridor | fast | model_stop | 1.074 | +11.2% | 76.8% | 0.153 | 0.546 |
+| corridor | full | time_limit | 0.825 | +31.8% | 73.4% | 0.103 | 0.320 |
+| corridor | tail | model_stop_tail | 1.200 | +0.8% | 76.7% | 0.106 | 0.196 |
+| corridor | smooth | model_stop | 1.260 | -4.3% | 76.8% | 0.152 | 0.299 |
+| corridor | full_smooth | time_limit | 0.783 | +35.2% | 74.4% | 0.103 | 0.182 |

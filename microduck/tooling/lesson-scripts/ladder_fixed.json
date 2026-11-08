@@ -1,0 +1,3361 @@
+{
+  "task": "ladder-official-policy-pair",
+  "run_id": null,
+  "seed": 123,
+  "spawn_noise_scale": 1.0,
+  "handoff_contact_steps": 1,
+  "physics_device": "cpu",
+  "initial_observation": [
+    -0.020504597574472427,
+    0.020113585516810417,
+    0.029336290434002876,
+    0.000585914240218699,
+    -0.11133599281311035,
+    -0.9907850623130798,
+    -0.014811132103204727,
+    0.0001594427740201354,
+    0.03263843059539795,
+    0.03033607266843319,
+    -0.014605998992919922,
+    -0.02067442238330841,
+    0.009467503055930138,
+    -0.005581261590123177,
+    -0.03281831741333008,
+    0.008031129837036133,
+    0.013157090172171593,
+    -0.005135771818459034,
+    0.008418558165431023,
+    -0.02466914989054203,
+    -0.023626059293746948,
+    0.08396515250205994,
+    -0.13744205236434937,
+    -0.20868507027626038,
+    -0.0576213002204895,
+    -0.12847453355789185,
+    -0.2114260196685791,
+    -0.1474362015724182,
+    0.0038680434226989746,
+    -0.007555723190307617,
+    -0.10731008648872375,
+    -0.07968878746032715,
+    0.04497566819190979,
+    0.21313467621803284,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "generated_at_utc": "2026-10-22T04:27:30.677277+00:00",
+  "inference_calls": 750,
+  "policy_validation": {
+    "climber": {
+      "inference_calls": 750,
+      "real_observation_parity_checks": 32,
+      "max_abs_output_error": 1.1920928955078125e-06,
+      "parity_atol": 0.0001,
+      "parity_rtol": 0.0001
+    },
+    "getup": {
+      "inference_calls": 0,
+      "real_observation_parity_checks": 0,
+      "max_abs_output_error": 0.0,
+      "parity_atol": 0.0001,
+      "parity_rtol": 0.0001
+    }
+  },
+  "task_id": "Mjlab-FloorDeskBlind-MicroDuck",
+  "backend": "GPU ONNX via Torch CUDA",
+  "policy_device": "GPU",
+  "bpu_host": "192.168.8.128",
+  "climber_port": 8875,
+  "getup_port": 8876,
+  "climber_hbm": null,
+  "getup_hbm": null,
+  "climber_hbm_sha256": null,
+  "getup_hbm_sha256": null,
+  "climber_onnx": "/home/nvidia/microduck-course-run/models/ladder/models/climber.onnx",
+  "getup_onnx": "/home/nvidia/microduck-course-run/converted/official_ladder_getup.opset11.onnx",
+  "climber_onnx_sha256": "9d8872e3cc32c7e75f3ac84d5e47b404769d4762043a1e45b3418b3b14bff9a4",
+  "getup_onnx_sha256": "11a9693ed87f550c6f6859caaad69c9e86890692c4b6f046a41eaa3ec77d20ad",
+  "trace_output": "/tmp/ladder_fixed.trace.npz",
+  "official_onnx_contract": {
+    "observation_dim": 61,
+    "action_dim": 14,
+    "command_slots_zero": true
+  },
+  "runtime_contract": {
+    "climber_filter": "none",
+    "getup_filter_alpha_head": 0.5,
+    "getup_filter_alpha_legs": 0.7,
+    "getup_kp_ratio": 0.8
+  },
+  "steps": 750,
+  "num_envs": 32,
+  "record_env": 5,
+  "nominal_video_seconds": 15.0,
+  "switch_events": [],
+  "termination_steps": [
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    457,
+    458,
+    459,
+    460,
+    461,
+    462,
+    463,
+    464,
+    465,
+    466,
+    467,
+    468,
+    469,
+    470,
+    471,
+    472,
+    473,
+    474,
+    475,
+    476,
+    477,
+    478,
+    479,
+    480,
+    481,
+    482,
+    483,
+    484,
+    485,
+    486,
+    487,
+    488,
+    489,
+    490,
+    491,
+    492,
+    493,
+    494,
+    495,
+    496,
+    497,
+    498,
+    499,
+    500,
+    501,
+    502,
+    503,
+    504,
+    505,
+    506,
+    507,
+    508,
+    509,
+    510,
+    511,
+    512,
+    513,
+    514,
+    515,
+    516,
+    517,
+    518,
+    519,
+    520,
+    521,
+    522,
+    523,
+    524,
+    525,
+    526,
+    527,
+    528,
+    529,
+    530,
+    531,
+    532,
+    533,
+    534,
+    535,
+    536,
+    537,
+    538,
+    539,
+    540,
+    541,
+    542,
+    543,
+    544,
+    545,
+    546,
+    547,
+    548,
+    549,
+    550,
+    551,
+    552,
+    553,
+    554,
+    555,
+    556,
+    557,
+    558,
+    559,
+    560,
+    561,
+    562,
+    563,
+    564,
+    565,
+    566,
+    567,
+    568,
+    569,
+    570,
+    571,
+    572,
+    573,
+    574,
+    575,
+    576,
+    577,
+    578,
+    579,
+    580,
+    581,
+    582,
+    583,
+    584,
+    585,
+    586,
+    587,
+    588,
+    589,
+    590,
+    591,
+    592,
+    593,
+    594,
+    595,
+    596,
+    597,
+    598,
+    599,
+    600,
+    601,
+    602,
+    603,
+    604,
+    605,
+    606,
+    607,
+    608,
+    609,
+    610,
+    611,
+    612,
+    613,
+    614,
+    615,
+    616,
+    617,
+    618,
+    619,
+    620,
+    621,
+    622,
+    623,
+    624,
+    625,
+    626,
+    627,
+    628,
+    629,
+    630,
+    631,
+    632,
+    633,
+    634,
+    635,
+    636,
+    637,
+    638,
+    639,
+    640,
+    641,
+    642,
+    643,
+    644,
+    645,
+    646,
+    647,
+    648,
+    649,
+    650,
+    651,
+    652,
+    653,
+    654,
+    655,
+    656,
+    657,
+    658,
+    659,
+    660,
+    661,
+    662,
+    663,
+    664,
+    665,
+    666,
+    667,
+    668,
+    669,
+    670,
+    671,
+    672,
+    673,
+    674,
+    675,
+    676,
+    677,
+    678,
+    679,
+    680,
+    681,
+    682,
+    683,
+    684,
+    685,
+    686,
+    687,
+    688,
+    689,
+    690,
+    691,
+    692,
+    693,
+    694,
+    695,
+    696,
+    697,
+    698,
+    699,
+    700,
+    701,
+    702,
+    703,
+    704,
+    705,
+    706,
+    707,
+    708,
+    709,
+    710,
+    711,
+    712,
+    713,
+    714,
+    715,
+    716,
+    717,
+    718,
+    719,
+    720,
+    721,
+    722,
+    723,
+    724,
+    725,
+    726,
+    727,
+    728,
+    729,
+    730,
+    731,
+    732,
+    733,
+    734,
+    735,
+    736,
+    737,
+    738,
+    739,
+    740,
+    741,
+    742,
+    743,
+    744,
+    745,
+    746,
+    747,
+    748,
+    749,
+    750
+  ],
+  "termination_terms": [
+    {
+      "step": 81,
+      "terms": [
+        "airborne"
+      ]
+    },
+    {
+      "step": 82,
+      "terms": [
+        "airborne"
+      ]
+    },
+    {
+      "step": 83,
+      "terms": [
+        "airborne"
+      ]
+    },
+    {
+      "step": 84,
+      "terms": [
+        "airborne"
+      ]
+    },
+    {
+      "step": 85,
+      "terms": [
+        "airborne"
+      ]
+    },
+    {
+      "step": 86,
+      "terms": [
+        "airborne"
+      ]
+    },
+    {
+      "step": 87,
+      "terms": [
+        "airborne"
+      ]
+    },
+    {
+      "step": 88,
+      "terms": [
+        "airborne"
+      ]
+    },
+    {
+      "step": 89,
+      "terms": [
+        "airborne"
+      ]
+    },
+    {
+      "step": 90,
+      "terms": [
+        "airborne"
+      ]
+    },
+    {
+      "step": 91,
+      "terms": [
+        "airborne"
+      ]
+    },
+    {
+      "step": 457,
+      "terms": [
+        "airborne"
+      ]
+    },
+    {
+      "step": 458,
+      "terms": [
+        "airborne"
+      ]
+    },
+    {
+      "step": 459,
+      "terms": [
+        "airborne"
+      ]
+    },
+    {
+      "step": 460,
+      "terms": [
+        "airborne"
+      ]
+    },
+    {
+      "step": 461,
+      "terms": [
+        "airborne"
+      ]
+    },
+    {
+      "step": 462,
+      "terms": [
+        "airborne"
+      ]
+    },
+    {
+      "step": 463,
+      "terms": [
+        "airborne"
+      ]
+    },
+    {
+      "step": 464,
+      "terms": [
+        "airborne"
+      ]
+    },
+    {
+      "step": 465,
+      "terms": [
+        "airborne"
+      ]
+    },
+    {
+      "step": 466,
+      "terms": [
+        "airborne"
+      ]
+    },
+    {
+      "step": 467,
+      "terms": [
+        "airborne"
+      ]
+    },
+    {
+      "step": 468,
+      "terms": [
+        "airborne"
+      ]
+    },
+    {
+      "step": 469,
+      "terms": [
+        "airborne"
+      ]
+    },
+    {
+      "step": 470,
+      "terms": [
+        "airborne"
+      ]
+    },
+    {
+      "step": 471,
+      "terms": [
+        "airborne"
+      ]
+    },
+    {
+      "step": 472,
+      "terms": [
+        "airborne"
+      ]
+    },
+    {
+      "step": 473,
+      "terms": [
+        "airborne"
+      ]
+    },
+    {
+      "step": 474,
+      "terms": [
+        "airborne"
+      ]
+    },
+    {
+      "step": 475,
+      "terms": [
+        "airborne"
+      ]
+    },
+    {
+      "step": 476,
+      "terms": [
+        "airborne"
+      ]
+    },
+    {
+      "step": 477,
+      "terms": [
+        "airborne"
+      ]
+    },
+    {
+      "step": 478,
+      "terms": [
+        "airborne"
+      ]
+    },
+    {
+      "step": 479,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 480,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 481,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 482,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 483,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 484,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 485,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 486,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 487,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 488,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 489,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 490,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 491,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 492,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 493,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 494,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 495,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 496,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 497,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 498,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 499,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 500,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 501,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 502,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 503,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 504,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 505,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 506,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 507,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 508,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 509,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 510,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 511,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 512,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 513,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 514,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 515,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 516,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 517,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 518,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 519,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 520,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 521,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 522,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 523,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 524,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 525,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 526,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 527,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 528,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 529,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 530,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 531,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 532,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 533,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 534,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 535,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 536,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 537,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 538,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 539,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 540,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 541,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 542,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 543,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 544,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 545,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 546,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 547,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 548,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 549,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 550,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 551,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 552,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 553,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 554,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 555,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 556,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 557,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 558,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 559,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 560,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 561,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 562,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 563,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 564,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 565,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 566,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 567,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 568,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 569,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 570,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 571,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 572,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 573,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 574,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 575,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 576,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 577,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 578,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 579,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 580,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 581,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 582,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 583,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 584,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 585,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 586,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 587,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 588,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 589,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 590,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 591,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 592,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 593,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 594,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 595,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 596,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 597,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 598,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 599,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 600,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 601,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 602,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 603,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 604,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 605,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 606,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 607,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 608,
+      "terms": [
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 609,
+      "terms": [
+        "bad_orientation",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 610,
+      "terms": [
+        "bad_orientation",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 611,
+      "terms": [
+        "bad_orientation",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 612,
+      "terms": [
+        "bad_orientation",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 613,
+      "terms": [
+        "bad_orientation",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 614,
+      "terms": [
+        "bad_orientation",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 615,
+      "terms": [
+        "bad_orientation",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 616,
+      "terms": [
+        "bad_orientation",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 617,
+      "terms": [
+        "bad_orientation",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 618,
+      "terms": [
+        "bad_orientation",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 619,
+      "terms": [
+        "bad_orientation",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 620,
+      "terms": [
+        "bad_orientation",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 621,
+      "terms": [
+        "bad_orientation",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 622,
+      "terms": [
+        "bad_orientation",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 623,
+      "terms": [
+        "bad_orientation",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 624,
+      "terms": [
+        "bad_orientation",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 625,
+      "terms": [
+        "bad_orientation",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 626,
+      "terms": [
+        "bad_orientation",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 627,
+      "terms": [
+        "bad_orientation",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 628,
+      "terms": [
+        "bad_orientation",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 629,
+      "terms": [
+        "bad_orientation",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 630,
+      "terms": [
+        "bad_orientation",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 631,
+      "terms": [
+        "bad_orientation",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 632,
+      "terms": [
+        "bad_orientation",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 633,
+      "terms": [
+        "bad_orientation",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 634,
+      "terms": [
+        "bad_orientation",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 635,
+      "terms": [
+        "bad_orientation",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 636,
+      "terms": [
+        "bad_orientation",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 637,
+      "terms": [
+        "bad_orientation",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 638,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 639,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 640,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 641,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 642,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 643,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 644,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 645,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 646,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 647,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 648,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 649,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 650,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 651,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 652,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 653,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 654,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 655,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 656,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 657,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 658,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 659,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 660,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 661,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 662,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 663,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 664,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 665,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 666,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 667,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 668,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 669,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 670,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 671,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 672,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 673,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 674,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 675,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 676,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 677,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 678,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 679,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 680,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 681,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 682,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 683,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 684,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 685,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 686,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 687,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 688,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 689,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 690,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 691,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 692,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 693,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 694,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 695,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 696,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 697,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 698,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 699,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 700,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 701,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 702,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 703,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 704,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 705,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 706,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 707,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 708,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 709,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 710,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 711,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 712,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 713,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 714,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 715,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 716,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 717,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 718,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 719,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 720,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 721,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 722,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 723,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 724,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 725,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 726,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 727,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 728,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 729,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 730,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 731,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 732,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 733,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 734,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 735,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 736,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 737,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 738,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 739,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 740,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 741,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 742,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 743,
+      "terms": [
+        "bad_orientation",
+        "fallen",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 744,
+      "terms": [
+        "bad_orientation",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 745,
+      "terms": [
+        "bad_orientation",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 746,
+      "terms": [
+        "bad_orientation",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 747,
+      "terms": [
+        "bad_orientation",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 748,
+      "terms": [
+        "bad_orientation",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 749,
+      "terms": [
+        "bad_orientation",
+        "foot_fling",
+        "airborne"
+      ]
+    },
+    {
+      "step": 750,
+      "terms": [
+        "bad_orientation",
+        "foot_fling",
+        "airborne"
+      ]
+    }
+  ],
+  "stable_start_step": null,
+  "max_stable_frames": 0,
+  "stable_seconds": 0.0,
+  "handoff_success": false,
+  "stable_trace": [],
+  "contact_trace": [
+    {
+      "step": 0,
+      "recovering": false,
+      "root": [
+        4.061310291290283,
+        -4.000470161437988,
+        0.12199999392032623
+      ],
+      "feet_on_desktop": [
+        false,
+        false
+      ],
+      "root_ladder_relative": [
+        -0.034238845109939575,
+        -0.0028671168256551027,
+        0.12199999392032623
+      ],
+      "inside_desktop": false
+    },
+    {
+      "step": 25,
+      "recovering": false,
+      "root": [
+        4.061310291290283,
+        -4.000470161437988,
+        0.12195272743701935
+      ],
+      "feet_on_desktop": [
+        false,
+        false
+      ],
+      "root_ladder_relative": [
+        -0.034238845109939575,
+        -0.0028671168256551027,
+        0.121957927942276
+      ],
+      "inside_desktop": false
+    },
+    {
+      "step": 50,
+      "recovering": false,
+      "root": [
+        4.061310291290283,
+        -4.000470161437988,
+        0.12164808064699173
+      ],
+      "feet_on_desktop": [
+        false,
+        false
+      ],
+      "root_ladder_relative": [
+        -0.034238845109939575,
+        -0.0028671168256551027,
+        0.12166827917098999
+      ],
+      "inside_desktop": false
+    },
+    {
+      "step": 75,
+      "recovering": false,
+      "root": [
+        4.061310291290283,
+        -4.000470161437988,
+        0.12084107846021652
+      ],
+      "feet_on_desktop": [
+        false,
+        false
+      ],
+      "root_ladder_relative": [
+        -0.034238845109939575,
+        -0.0028671168256551027,
+        0.12088607996702194
+      ],
+      "inside_desktop": false
+    },
+    {
+      "step": 100,
+      "recovering": false,
+      "root": [
+        4.061310291290283,
+        -4.000470161437988,
+        0.11928892135620117
+      ],
+      "feet_on_desktop": [
+        false,
+        false
+      ],
+      "root_ladder_relative": [
+        -0.034238845109939575,
+        -0.0028671168256551027,
+        0.11936791986227036
+      ],
+      "inside_desktop": false
+    },
+    {
+      "step": 125,
+      "recovering": false,
+      "root": [
+        4.061310291290283,
+        -4.000446796417236,
+        0.1168433353304863
+      ],
+      "feet_on_desktop": [
+        false,
+        false
+      ],
+      "root_ladder_relative": [
+        -0.034238845109939575,
+        -0.002845659153535962,
+        0.11695834249258041
+      ],
+      "inside_desktop": false
+    },
+    {
+      "step": 150,
+      "recovering": false,
+      "root": [
+        4.061291217803955,
+        -4.000345706939697,
+        0.11352972686290741
+      ],
+      "feet_on_desktop": [
+        false,
+        false
+      ],
+      "root_ladder_relative": [
+        -0.03425601124763489,
+        -0.002750291721895337,
+        0.11367766559123993
+      ],
+      "inside_desktop": false
+    },
+    {
+      "step": 175,
+      "recovering": false,
+      "root": [
+        4.0611891746521,
+        -4.000052452087402,
+        0.10948364436626434
+      ],
+      "feet_on_desktop": [
+        false,
+        false
+      ],
+      "root_ladder_relative": [
+        -0.03435233235359192,
+        -0.0024665736127644777,
+        0.10965666174888611
+      ],
+      "inside_desktop": false
+    },
+    {
+      "step": 200,
+      "recovering": false,
+      "root": [
+        4.060813903808594,
+        -3.999458074569702,
+        0.10497826337814331
+      ],
+      "feet_on_desktop": [
+        false,
+        false
+      ],
+      "root_ladder_relative": [
+        -0.03471091389656067,
+        -0.0018862627912312746,
+        0.10516214370727539
+      ],
+      "inside_desktop": false
+    },
+    {
+      "step": 225,
+      "recovering": false,
+      "root": [
+        4.059844970703125,
+        -3.9984383583068848,
+        0.10049726814031601
+      ],
+      "feet_on_desktop": [
+        false,
+        false
+      ],
+      "root_ladder_relative": [
+        -0.03564980626106262,
+        -0.0008856200147420168,
+        0.10066729038953781
+      ],
+      "inside_desktop": false
+    },
+    {
+      "step": 250,
+      "recovering": false,
+      "root": [
+        4.058011531829834,
+        -3.996898889541626,
+        0.09681226313114166
+      ],
+      "feet_on_desktop": [
+        false,
+        false
+      ],
+      "root_ladder_relative": [
+        -0.0374470055103302,
+        0.0006321526598185301,
+        0.09693261981010437
+      ],
+      "inside_desktop": false
+    },
+    {
+      "step": 275,
+      "recovering": false,
+      "root": [
+        4.055469989776611,
+        -3.9948477745056152,
+        0.0948396623134613
+      ],
+      "feet_on_desktop": [
+        false,
+        false
+      ],
+      "root_ladder_relative": [
+        -0.03997233510017395,
+        0.002664909465238452,
+        0.09487463533878326
+      ],
+      "inside_desktop": false
+    },
+    {
+      "step": 300,
+      "recovering": false,
+      "root": [
+        4.053099155426025,
+        -3.992462396621704,
+        0.09547266364097595
+      ],
+      "feet_on_desktop": [
+        false,
+        false
+      ],
+      "root_ladder_relative": [
+        -0.04237416386604309,
+        0.005043373443186283,
+        0.0953858345746994
+      ],
+      "inside_desktop": false
+    },
+    {
+      "step": 325,
+      "recovering": false,
+      "root": [
+        4.052119255065918,
+        -3.9901294708251953,
+        0.09963151812553406
+      ],
+      "feet_on_desktop": [
+        false,
+        false
+      ],
+      "root_ladder_relative": [
+        -0.043430835008621216,
+        0.007386312820017338,
+        0.09938570111989975
+      ],
+      "inside_desktop": false
+    },
+    {
+      "step": 350,
+      "recovering": false,
+      "root": [
+        4.053388595581055,
+        -3.9882571697235107,
+        0.10824394226074219
+      ],
+      "feet_on_desktop": [
+        false,
+        false
+      ],
+      "root_ladder_relative": [
+        -0.042258769273757935,
+        0.009285555221140385,
+        0.10780349373817444
+      ],
+      "inside_desktop": false
+    },
+    {
+      "step": 375,
+      "recovering": false,
+      "root": [
+        4.057173728942871,
+        -3.987259864807129,
+        0.122022844851017
+      ],
+      "feet_on_desktop": [
+        false,
+        false
+      ],
+      "root_ladder_relative": [
+        -0.0385766327381134,
+        0.010322914458811283,
+        0.12136807292699814
+      ],
+      "inside_desktop": false
+    },
+    {
+      "step": 400,
+      "recovering": false,
+      "root": [
+        4.063571453094482,
+        -3.987295389175415,
+        0.14116497337818146
+      ],
+      "feet_on_desktop": [
+        false,
+        false
+      ],
+      "root_ladder_relative": [
+        -0.03228381276130676,
+        0.010329113341867924,
+        0.14029867947101593
+      ],
+      "inside_desktop": false
+    },
+    {
+      "step": 425,
+      "recovering": false,
+      "root": [
+        4.072587966918945,
+        -3.98836350440979,
+        0.1654464602470398
+      ],
+      "feet_on_desktop": [
+        false,
+        false
+      ],
+      "root_ladder_relative": [
+        -0.023371249437332153,
+        0.009301767684519291,
+        0.16438028216362
+      ],
+      "inside_desktop": false
+    },
+    {
+      "step": 450,
+      "recovering": false,
+      "root": [
+        4.084176063537598,
+        -3.990412473678589,
+        0.1945606917142868
+      ],
+      "feet_on_desktop": [
+        false,
+        false
+      ],
+      "root_ladder_relative": [
+        -0.011885195970535278,
+        0.0072899917140603065,
+        0.19330738484859467
+      ],
+      "inside_desktop": false
+    },
+    {
+      "step": 475,
+      "recovering": false,
+      "root": [
+        4.098233222961426,
+        -3.9933054447174072,
+        0.22815778851509094
+      ],
+      "feet_on_desktop": [
+        false,
+        false
+      ],
+      "root_ladder_relative": [
+        0.002077549695968628,
+        0.0044268229976296425,
+        0.22673363983631134
+      ],
+      "inside_desktop": false
+    },
+    {
+      "step": 500,
+      "recovering": false,
+      "root": [
+        4.11439323425293,
+        -3.996771812438965,
+        0.2656611502170563
+      ],
+      "feet_on_desktop": [
+        false,
+        false
+      ],
+      "root_ladder_relative": [
+        0.018164128065109253,
+        0.0009761906694620848,
+        0.26409587264060974
+      ],
+      "inside_desktop": false
+    },
+    {
+      "step": 525,
+      "recovering": false,
+      "root": [
+        4.132225036621094,
+        -4.000516891479492,
+        0.306366890668869
+      ],
+      "feet_on_desktop": [
+        false,
+        false
+      ],
+      "root_ladder_relative": [
+        0.0359329879283905,
+        -0.002760782139375806,
+        0.3046841323375702
+      ],
+      "inside_desktop": false
+    },
+    {
+      "step": 550,
+      "recovering": false,
+      "root": [
+        4.151538372039795,
+        -4.004408836364746,
+        0.3497135639190674
+      ],
+      "feet_on_desktop": [
+        false,
+        false
+      ],
+      "root_ladder_relative": [
+        0.05519053339958191,
+        -0.006649388931691647,
+        0.3479362726211548
+      ],
+      "inside_desktop": false
+    },
+    {
+      "step": 575,
+      "recovering": false,
+      "root": [
+        4.172195911407471,
+        -4.008289337158203,
+        0.3950785994529724
+      ],
+      "feet_on_desktop": [
+        false,
+        false
+      ],
+      "root_ladder_relative": [
+        0.07579562067985535,
+        -0.010533704422414303,
+        0.39323437213897705
+      ],
+      "inside_desktop": false
+    },
+    {
+      "step": 600,
+      "recovering": false,
+      "root": [
+        4.194133758544922,
+        -4.012053489685059,
+        0.4418291449546814
+      ],
+      "feet_on_desktop": [
+        false,
+        false
+      ],
+      "root_ladder_relative": [
+        0.09768196940422058,
+        -0.014301671646535397,
+        0.4399377703666687
+      ],
+      "inside_desktop": false
+    },
+    {
+      "step": 625,
+      "recovering": false,
+      "root": [
+        4.2174201011657715,
+        -4.015696048736572,
+        0.48952993750572205
+      ],
+      "feet_on_desktop": [
+        false,
+        false
+      ],
+      "root_ladder_relative": [
+        0.12091109156608582,
+        -0.017948046326637268,
+        0.48760977387428284
+      ],
+      "inside_desktop": false
+    },
+    {
+      "step": 650,
+      "recovering": false,
+      "root": [
+        4.242265701293945,
+        -4.019308567047119,
+        0.537695586681366
+      ],
+      "feet_on_desktop": [
+        false,
+        false
+      ],
+      "root_ladder_relative": [
+        0.1456904113292694,
+        -0.021562471985816956,
+        0.5357655882835388
+      ],
+      "inside_desktop": false
+    },
+    {
+      "step": 675,
+      "recovering": false,
+      "root": [
+        4.268845081329346,
+        -4.022885799407959,
+        0.5859291553497314
+      ],
+      "feet_on_desktop": [
+        false,
+        false
+      ],
+      "root_ladder_relative": [
+        0.17219731211662292,
+        -0.025138750672340393,
+        0.5840020775794983
+      ],
+      "inside_desktop": false
+    },
+    {
+      "step": 700,
+      "recovering": false,
+      "root": [
+        4.297307014465332,
+        -4.026518821716309,
+        0.6339364051818848
+      ],
+      "feet_on_desktop": [
+        false,
+        false
+      ],
+      "root_ladder_relative": [
+        0.20058533549308777,
+        -0.028770819306373596,
+        0.6320255994796753
+      ],
+      "inside_desktop": false
+    },
+    {
+      "step": 725,
+      "recovering": false,
+      "root": [
+        4.327290058135986,
+        -4.029987812042236,
+        0.6812629699707031
+      ],
+      "feet_on_desktop": [
+        false,
+        false
+      ],
+      "root_ladder_relative": [
+        0.23052307963371277,
+        -0.03225316107273102,
+        0.6793890595436096
+      ],
+      "inside_desktop": false
+    }
+  ],
+  "mean_climber_round_trip_ms": 0.7388935492296392,
+  "p95_climber_round_trip_ms": 0.6659360486082719,
+  "mean_getup_round_trip_ms": null,
+  "p95_getup_round_trip_ms": null,
+  "note": "Ubuntu runs MuJoCo and the privileged simulator-only foot-desktop handoff detector; the selected environment is controlled by either the RDK X5 HBM pair, the GPU ONNX actor, or the CPU ONNX reference, while inert background environments preserve the official vectorized scene shape."
+}

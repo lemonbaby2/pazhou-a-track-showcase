@@ -1,0 +1,21 @@
+{
+  "scene": "living_room",
+  "instruction": "Walk to the armchair in front of you and stop.",
+  "navigation_backend": "LightNav-0 / vllm_local / GPU",
+  "walking_backend": "pretrained alpha_walking / ONNX Runtime CPU",
+  "time_mode": "simulation pauses during inference",
+  "training": false,
+  "prediction_count": 42,
+  "trajectory_shape": [
+    10,
+    3
+  ],
+  "termination": "model_stop",
+  "sim_seconds": 11.250000000000437,
+  "wall_seconds": 71.21889793800074,
+  "median_latency_ms": 1713.0942515068455,
+  "initial_target_distance_m": 1.811077027627484,
+  "final_target_distance_m": 1.1707850510566808,
+  "final_trunk_height_m": 0.1178801066222643,
+  "video": "/home/nvidia/microduck-course-run/recordings/lightnav/living_room_latest.mp4"
+}

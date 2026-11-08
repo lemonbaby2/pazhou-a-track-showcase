@@ -1,0 +1,26 @@
+{
+  "task": "Datawhale MicroDuck Task2 browser physics perturbation",
+  "date": "2026-10-16",
+  "environment": "WSL2 Ubuntu 22.04 build; Windows browser recording",
+  "mjswan_version": "0.11.9",
+  "playground_commit": "2641dbbbc1e84e2226e694da60c91996f0f00bac",
+  "microduck_rl_commit": "c690e5599866893b11b3ab2764883a8b0800cbe7",
+  "microduck_deploy_commit": "590b986bd8c0d50ae02cb3ea2f59c463b6828168",
+  "build": {
+    "status": "pass",
+    "output_size_mib": 63,
+    "file_count": 48,
+    "http_status": 200,
+    "url": "http://127.0.0.1:8092/"
+  },
+  "recording": {
+    "status": "pass",
+    "duration_seconds": 48.8,
+    "resolution": "1280x820",
+    "fps": 25,
+    "trials": ["rightward lift", "leftward shove", "diagonal swing"],
+    "reset_between_trials": true
+  },
+  "observation": "External-force arrow and visible body/posture response were recorded; the robot remained upright after the shown perturbations.",
+  "claim_boundary": "Qualitative smoke test only; no force telemetry, recovery-time metric, success-rate benchmark, or real-robot validation."
+}

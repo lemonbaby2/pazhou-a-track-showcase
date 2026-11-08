@@ -10,7 +10,7 @@
 </style>
 </head>
 <body>
-<header class="top"><div class="wrap nav"><div class="brand">PAZHOU · A TRACK</div><nav class="links"><a href="#mission">赛题</a><a href="#data">开源数据</a><a href="#gpu">GPU 实验</a><a href="#sim">仿真结果</a><a href="#downloads">资料下载</a></nav></div></header>
+<header class="top"><div class="wrap nav"><div class="brand">PAZHOU · A TRACK</div><nav class="links"><a href="#mission">赛题</a><a href="#data">开源数据</a><a href="#gpu">GPU 实验</a><a href="#sim">仿真结果</a><a href="#downloads">资料下载</a><a href="microduck.html">MicroDuck 储备</a></nav></div></header>
 <main class="wrap">
 <section class="hero" id="mission">
  <div><div class="eyebrow">Embodied service · public research pack</div><h1>琶洲 A 赛道<br>资料与验证结果</h1><p>把赛题任务、可复用的开源真机数据、数据完整性检查、本机 GPU 训练和任务链仿真汇总到一个可复核的展示页。</p><span class="badge">GitHub Pages · 已公开</span></div>
@@ -59,6 +59,8 @@
 <a class="file" href="downloads/赛题本地规则测试记录.md">本地规则测试记录<span>固定 seed mock 指标与验证边界</span></a>
 <a class="file" href="downloads/train_external_dataset_probe.py">GPU 训练脚本<span>PyTorch 行为克隆管线检查</span></a>
 </div></section>
+
+<section id="microduck"><div class="section-head"><h2>MicroDuck 技术储备（独立归档）</h2><p>与 A 赛道赛题不同的另一条具身智能能力线：25 cm 双足机器鸭的强化学习短跑、8 本 Notebook 课程复现与视觉语言导航优化。不是比赛策略，也不是官方计分结果。</p></div><div class="two"><article class="card"><div class="label">三条可复用的定量诊断</div><h3>价值不在「跑得多快」</h3><p>① 奖励失衡导致 reward hacking（v1 站着踮脚刷腾空分，0.09 m/s）；② 上游命令二值化使 MPC 中间调速失效（命令 0.30 只跑出 0.155 m/s）；③ <code>model_stop</code> 不等于到达（三场全停，残余 1.17–1.87 m）。另有最硬的负结果：短跑训练到 3000 轮反而从 0.4572 退化到 0.1321 m/s。</p><div class="callout" style="margin-top:12px">全量 362 文件 / 144.29 MB 已归档到本仓库 <code>microduck/</code>，含 8 本心得、18 组优化实验、双栏论文稿与逐文件 SHA-256 清单。</div></article><article class="card"><div class="label">关键数字</div><div class="metric"><span>短跑 v2 平均速度</span><strong>0.4572 m/s（3.09×）</strong></div><div class="metric"><span>课程 Notebook 执行</span><strong>10 / 10</strong></div><div class="metric"><span>Task8 导航优化</span><strong>平均改善 21.7%</strong></div><div class="metric"><span>Task8 最优残余</span><strong>0.783–1.651 m（仍未到达）</strong></div><div class="metric"><span>验证范围</span><strong>全部仿真，无真机</strong></div></article></div><div class="files" style="margin-top:16px"><a class="file" href="microduck.html">MicroDuck 展示页<span>指标 / 图表 / 视频 / 边界</span></a><a class="file" href="https://github.com/lemonbaby2/pazhou-a-track-showcase/tree/main/microduck">全量归档目录<span>362 文件，可复核</span></a></div></section>
 
 <section><div class="section-head"><h2>当前结论与尚待完成事项</h2></div><div class="two"><article class="card"><div class="label">已完成并可复核</div><p>两份公开数据在本机下载和基础质量核查通过；RTX 5060 Ti 训练日志已保存；本地 mock 任务链和 17 项项目测试已运行；静态展示页面、报告附件与三分钟视频已生成。</p></article><article class="card"><div class="label">现场与远程工作仍待条件</div><p>要称为比赛级验证，仍需官方评分表、平台 SDK、场景模型和真机数据。DGX 复制/训练未执行；GitHub 和 Cloudflare 尚无已认证的发布权限。发布站点不能替代现场离线部署要求。</p></article></div></section>
 

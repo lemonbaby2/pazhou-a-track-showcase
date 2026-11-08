@@ -1,0 +1,34 @@
+{
+  "task": "walking",
+  "run_id": "4eb0ce6f-af8d-4d25-aa30-81643719537c",
+  "generated_at_utc": "2026-10-18T13:20:26.448004+00:00",
+  "policy_validation": {
+    "inference_calls": 500,
+    "real_observation_parity_checks": 32,
+    "max_abs_output_error": 3.5762786865234375e-07,
+    "parity_atol": 0.0001,
+    "parity_rtol": 0.0001
+  },
+  "task_id": "Mjlab-Velocity-Flat-MicroDuck",
+  "display_name": "navigation",
+  "backend": "GPU ONNX via Torch CUDA",
+  "policy_device": "GPU",
+  "onnx_file": "/home/nvidia/.cache/microduck-learning/BEST_alpha_walking.onnx",
+  "onnx_sha256": "e36332d383997d51401897734cd3e79cf5038406feddb18b4d57ecfb141daa6c",
+  "observation_dim": 61,
+  "action_dim": 14,
+  "recurrent": false,
+  "steps": 500,
+  "requested_steps": 500,
+  "terminated_or_truncated_resets": 1,
+  "reset_steps": [
+    156
+  ],
+  "first_termination_step": 156,
+  "longest_uninterrupted_steps": 344,
+  "longest_uninterrupted_time_s": 6.88,
+  "video_nominal_time_s": 10.0,
+  "mean_inference_ms": 0.3138373491819948,
+  "p95_inference_ms": 0.31308777106460184,
+  "note": "Ubuntu runs the MuJoCo physics and renderer; the task actor is evaluated by Torch on GPU."
+}

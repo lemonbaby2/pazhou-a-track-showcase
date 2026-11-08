@@ -1,0 +1,31 @@
+{
+  "scene": "living_room",
+  "arm": "full_smooth",
+  "instruction": "Walk to the armchair in front of you and stop.",
+  "v_max": 0.4,
+  "stop_mode": "ignore",
+  "stop_confirm": 2,
+  "tail_seconds": 0.0,
+  "seconds_budget": 24.0,
+  "prediction_count": 97,
+  "termination": "time_limit",
+  "sim_seconds": 25.00499999999921,
+  "wall_seconds": 123.41408212296665,
+  "median_latency_ms": 1215.5850809067488,
+  "initial_target_distance_m": 1.811077027627484,
+  "final_target_distance_m": 1.095549803649694,
+  "final_trunk_height_m": 0.11714549142244429,
+  "path_length_m": 2.7003135441407378,
+  "straight_displacement_m": 0.7206664556679219,
+  "path_efficiency": 0.2668825097113839,
+  "actual_path_speed_mps": 0.10799094357691753,
+  "mean_v_cmd": 0.1843350420341893,
+  "max_v_cmd": 0.4,
+  "progress_m": 0.7155272239777899,
+  "video": "/home/nvidia/microduck-course-run/recordings/lightnav_opt/full_smooth/living_room_latest.mp4",
+  "command_shape": {
+    "MAX_LINEAR_COMMAND": 0.4,
+    "MIN_LINEAR_COMMAND": 0.1,
+    "LINEAR_DEADBAND": 0.03
+  }
+}

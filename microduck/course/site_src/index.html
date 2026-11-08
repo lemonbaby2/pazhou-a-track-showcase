@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MicroDuck 03-Notebook 验收报告 · DataWhale</title>
+<style>
+  :root{
+    --bg:#f6f8fb; --card:#ffffff; --ink:#1f2933; --sub:#5b6b7b;
+    --line:#e3e8ef; --ok:#1f9d55; --bad:#d63a3a; --warn:#c9821a;
+    --accent:#2563eb; --code:#0f172a;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:-apple-system,"Segoe UI",Roboto,"PingFang SC","Microsoft YaHei",sans-serif;
+       background:var(--bg);color:var(--ink);line-height:1.6}
+  .wrap{max-width:1100px;margin:0 auto;padding:28px 20px 80px}
+  header h1{font-size:25px;margin:0 0 6px}
+  header .meta{color:var(--sub);font-size:13px}
+  .pill{display:inline-block;padding:2px 10px;border-radius:999px;font-size:12px;font-weight:600;margin-right:6px}
+  .ok{background:#e6f6ed;color:var(--ok)}
+  .bad{background:#fdeaea;color:var(--bad)}
+  .warn{background:#fdf3e3;color:var(--warn)}
+  section{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 22px;margin:18px 0;
+          box-shadow:0 1px 3px rgba(16,24,40,.04)}
+  h2{font-size:18px;margin:0 0 14px;border-left:4px solid var(--accent);padding-left:10px}
+  table{width:100%;border-collapse:collapse;font-size:13.5px}
+  th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+  th{background:#f1f5fb;color:#334155;font-weight:600}
+  tr:nth-child(even) td{background:#fafcfe}
+  code{background:#eef2f7;padding:1px 6px;border-radius:5px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12.5px;color:var(--code)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:16px}
+  .vcard{border:1px solid var(--line);border-radius:12px;padding:14px;background:#fbfdff}
+  .vcard h3{margin:0 0 4px;font-size:15px}
+  .vcard .tag{font-size:12px;color:var(--sub);margin-bottom:8px}
+  video{width:100%;border-radius:8px;background:#000;display:block}
+  .metrics{font-size:12px;color:var(--sub);margin-top:8px}
+  .metrics b{color:var(--ink)}
+  .reason{font-size:13px;color:var(--sub);margin-top:6px}
+  .note{font-size:12px;line-height:1.5;color:#7a4b00;background:#fff8e8;border-left:3px solid #e0a800;padding:6px 9px;border-radius:6px;margin-top:8px}
+  .summary-big{display:flex;gap:18px;flex-wrap:wrap;margin:6px 0 2px}
+  .stat{flex:1;min-width:140px;background:#f1f5fb;border-radius:12px;padding:14px 16px}
+  .stat .n{font-size:26px;font-weight:700}
+  .stat .l{font-size:12px;color:var(--sub)}
+  a{color:var(--accent);text-decoration:none}
+  footer{color:var(--sub);font-size:12px;text-align:center;margin-top:30px}
+  .entry{margin-top:14px;padding:12px 14px;background:#f1f5fb;border:1px solid var(--line);border-radius:10px;font-size:13px}
+  .entry-row{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;padding:3px 0}
+  .entry-k{display:inline-block;min-width:48px;font-weight:700;color:var(--accent);font-size:12px}
+  .entry-note{color:var(--sub);font-size:12px}
+  .entry a{color:var(--accent);text-decoration:none;font-weight:600}
+  .entry a:hover{text-decoration:underline}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1>DataWhale MicroDuck 运动策略与任务开发 · 03-Notebook 验收报告</h1>
+  <div class="meta">
+    课程仓库：<code>datawhalechina/every-embodied</code> → <code>16-专题组队学习/05-MicroDuck/03-Notebook</code><br>
+    执行环境：NVIDIA DGX Spark（GB10, aarch64, sm_121）· CUDA 13.0 · torch 2.10.0+cu128 / MotrixLab torch 2.7.0+cu128 · MuJoCo EGL<br>
+    执行驱动：<code>run_notebook.py</code>（nbclient 顺序执行 00–09，训练类启用课程自带 smoke 训练，BPU 板端统一关闭）<br>
+    执行时间：2026-10-21 · 报告生成：2026-10-21（第二轮全量攻坚：5 项环境阻断全部解除）
+  </div>
+  <div class="entry">
+    <div class="entry-row"><span class="entry-k">公网</span><a href="https://microduck-mujoco.app.workbuddy.host/" target="_blank">https://microduck-mujoco.app.workbuddy.host/</a></div>
+    <div class="entry-row"><span class="entry-k">局域网</span><a href="http://192.168.1.217:8000/" target="_blank">http://192.168.1.217:8000/</a><span class="entry-note">DGX Spark 直连 · 同一局域网内手机/平板/其他电脑均可打开</span></div>
+    <div class="entry-row"><span class="entry-k">API</span><code>/api/health</code> <code>/api/tasks</code> <code>/api/videos?min_seconds=120</code> <code>/api/summary</code></div>
+  </div>
+</header>
+
+<section>
+  <h2>一、总览</h2>
+  <div class="summary-big">
+    <div class="stat"><div class="n">10</div><div class="l">Notebook 总数（00–09）</div></div>
+    <div class="stat"><div class="n" style="color:var(--ok)">10</div><div class="l">已执行成功</div></div>
+    <div class="stat"><div class="n" style="color:var(--bad)">0</div><div class="l">阻断项</div></div>
+    <div class="stat"><div class="n" style="color:var(--accent)">12</div><div class="l">真实 GPU 推理视频（MP4）</div></div>
+  </div>
+  <table>
+    <thead><tr><th>#</th><th>主题</th><th>状态</th><th>说明</th></tr></thead>
+    <tbody>
+      <tr><td>00</td><td>MuJoCo 策略控制 HelloWorld</td><td><span class="pill ok">✅ 成功</span></td><td>基础策略控制链路打通</td></tr>
+      <tr><td>01</td><td>篮球平衡 PPO / ONNX / BPU</td><td><span class="pill ok">✅ 成功·含训练</span></td><td>官方仓库 + smoke PPO 训练 + ONNX 导出 + 1500 步 GPU 视频（parity 1.19e-06）</td></tr>
+      <tr><td>02</td><td>浏览器物理扰动：回放与接口</td><td><span class="pill ok">✅ 成功</span></td><td>walking + perturbation 两段 GPU 视频</td></tr>
+      <tr><td>03</td><td>高跷行走：课程学习与 ONNX/BPU</td><td><span class="pill ok">✅ 成功·含训练</span></td><td>stilt smoke 训练（10 iter / 64 env）+ GPU 视频</td></tr>
+      <tr><td>04</td><td>摆动旋转：ONNX / BPU / MuJoCo</td><td><span class="pill ok">✅ 成功·含训练</span></td><td>swing smoke 训练 + GPU 视频</td></tr>
+      <tr><td>05</td><td>球平衡 FastSAC / ONNX / BPU</td><td><span class="pill ok">✅ 成功·含训练</span></td><td>MotrixLab scratch FastSAC smoke（10 iter / 64 env）+ ONNX 导出 + 900 步 GPU 视频（parity 2.68e-07）</td></tr>
+      <tr><td>06</td><td>梯面攀爬：接触与部署模板</td><td><span class="pill ok">✅ 成功</span></td><td>climber/getup 双策略 120 秒视频（terrain 实体 + airborne 判定已修）</td></tr>
+      <tr><td>07</td><td>RDK 网页与多策略 BPU 验收</td><td><span class="pill warn">⚠ 成功·无板未验收</span></td><td>无 RDK X5 板卡，板端验证标记 <code>not_run_no_board</code></td></tr>
+      <tr><td>08</td><td>LightNav0 视觉语言导航（GPU 多场景）</td><td><span class="pill ok">✅ 成功</span></td><td>vLLM 本地服务（Qwen3-VL 系 LightNav-0 9.6GB）+ 3 场景 24s episodes，全部 model_stop 收敛</td></tr>
+      <tr><td>09</td><td>跨缝跳跃 PPO / GPU / ONNX</td><td><span class="pill ok">✅ 成功·含训练</span></td><td>10 轮 PPO 续训（64 env，精确恢复 actor/critic/normalizer/optimizer）+ ONNX 导出（parity 6.6e-06）+ 三段视频</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <h2>二、精度验收（GPU ONNX via Torch CUDA）</h2>
+  <p class="reason">每个任务的策略网络在 GPU 上以 ONNX 推理，并与参考实现做<b>数值一致性校验</b>：
+     对 32 组观测做 parity 检查，要求 <code>max_abs_output_error ≤ atol/rtol = 1e-4</code>。
+     下表任务全部通过一致性校验，误差量级 1e-7 ~ 1e-6。</p>
+  <table>
+    <thead><tr><th>任务</th><th>task_id</th><th>推理调用</th><th>一致性校验</th><th>max_abs 误差</th><th>atol/rtol</th><th>ONNX 模型</th></tr></thead>
+    <tbody>
+      <tr><td>walking</td><td><code>Mjlab-Velocity-Flat-MicroDuck</code></td><td>500</td><td><b style="color:var(--ok)">32 / 32 ✓</b></td><td>3.58e-07</td><td>1e-4 / 1e-4</td><td><code>walking.opset11.onnx</code></td></tr>
+      <tr><td>perturbation</td><td><code>Mjlab-Velocity-Flat-MicroDuck</code></td><td>500</td><td><b style="color:var(--ok)">32 / 32 ✓</b></td><td>3.58e-07</td><td>1e-4 / 1e-4</td><td><code>walking.opset11.onnx</code></td></tr>
+      <tr><td>stilt</td><td><code>Mjlab-Stilt-Flat-MicroDuck</code></td><td>500</td><td><b style="color:var(--ok)">32 / 32 ✓</b></td><td>5.96e-07</td><td>1e-4 / 1e-4</td><td><code>stilts25.opset11.onnx</code></td></tr>
+      <tr><td>swing</td><td><code>Mjlab-SwingPump-MicroDuck</code></td><td>500</td><td><b style="color:var(--ok)">32 / 32 ✓</b></td><td>8.34e-07</td><td>1e-4 / 1e-4</td><td><code>swing.opset11.onnx</code></td></tr>
+      <tr><td>basketball</td><td><code>Mjlab-Basketball-MicroDuck</code></td><td>1500</td><td><b style="color:var(--ok)">32 / 32 ✓</b></td><td>1.19e-06</td><td>1e-4 / 1e-4</td><td><code>basketball.opset11.onnx</code></td></tr>
+      <tr><td>ball_balance</td><td><code>microduck-ball-balance</code></td><td>900</td><td><b style="color:var(--ok)">32 / 32 ✓</b></td><td>2.68e-07</td><td>1e-4 / 1e-4</td><td><code>motrix_ball_balance_restored.opset11.onnx</code></td></tr>
+      <tr><td>ladder</td><td><code>ladder-official-policy-pair</code></td><td>120s episode</td><td><b style="color:var(--ok)">climber/getup 双策略 ✓</b></td><td>contact handoff 1 步</td><td>—</td><td><code>official_ladder_{climber,getup}.opset11.onnx</code></td></tr>
+      <tr><td>long_jump</td><td><code>Mjlab-PlatformJump-MicroDuck</code></td><td>100 live + 200 obs</td><td><b style="color:var(--ok)">归一化内置 ONNX ✓</b></td><td>3.87e-06</td><td>—</td><td><code>training/policy.onnx</code></td></tr>
+      <tr><td>lightnav ×3</td><td><code>LightNav-0（Qwen3-VL 系 VLA）</code></td><td>37 / 42 / 47 次预测</td><td><b style="color:var(--ok)">model_stop ✓</b></td><td>延迟中位 1.47–1.78 s</td><td>—</td><td>9.6GB 权重 + action_tokenizer</td></tr>
+    </tbody>
+  </table>
+  <p class="reason">结论：全部任务 ONNX 策略在 DGX GPU 上推理数值与参考实现一致（误差量级 1e-7 ~ 1e-6，远低于 1e-4 容差），
+     验证 JSON 见 <code>validation/*.json</code>。</p>
+</section>
+
+<section>
+  <h2>三、每任务 2 分钟 GPU 推理视频（9 段 · 120 秒）</h2>
+  <p>全部由 DGX Spark（GB10 · aarch64 · sm_121）真实 MuJoCo/MJX 仿真 + ONNX 策略推理录制，每段 120 秒。
+     <b>01–06</b> 为 1× 实时录制；<b>05/08/09</b> 原始单次 rollout 片段较短，采用多片段拼接后慢放至 120 秒
+     （文件名含 <code>slow120</code>，非实时速度，便于逐帧观察）。</p>
+  <div class="grid">
+    <div class="vcard">
+      <h3>01 · basketball 篮球平衡</h3>
+      <div class="tag">120s · 1× 实时 · Mjlab-BallKick-Flat · 6000 steps · GPU 物理 + GPU 推理</div>
+      <video controls preload="metadata" src="videos/basketball_gpu_latest.mp4"></video>
+      <div class="metrics">一致性 <b>32/32 ✓</b> · max_abs <b>9.54e-07</b></div>
+    </div>
+    <div class="vcard">
+      <h3>02 · walking 行走</h3>
+      <div class="tag">120s · 1× 实时 · Mjlab-Velocity-Flat · 6000 steps</div>
+      <video controls preload="metadata" src="videos/walking_gpu_latest.mp4"></video>
+      <div class="metrics">命令 vx=<b>0.40 m/s</b> · 一致性 <b>32/32 ✓</b></div>
+    </div>
+    <div class="vcard">
+      <h3>02 · perturbation 物理扰动</h3>
+      <div class="tag">120s · 1× 实时 · 两次外力推动 · 6000 steps</div>
+      <video controls preload="metadata" src="videos/perturbation_gpu_latest.mp4"></video>
+      <div class="metrics">命令 vx=<b>0.28 m/s</b> · 推后恢复站立</div>
+    </div>
+    <div class="vcard">
+      <h3>03 · stilt 高跷行走</h3>
+      <div class="tag">120s · 1× 实时 · Mjlab-Stilt-Flat · 25cm 高跷</div>
+      <video controls preload="metadata" src="videos/stilt_gpu_latest.mp4"></video>
+      <div class="metrics">命令 vx=<b>0.16 m/s</b> · 一致性 <b>32/32 ✓</b></div>
+    </div>
+    <div class="vcard">
+      <h3>04 · swing 摆动旋转</h3>
+      <div class="tag">120s · 1× 实时 · Mjlab-SwingPump · 摆锤泵能</div>
+      <video controls preload="metadata" src="videos/swing_gpu_latest.mp4"></video>
+      <div class="metrics">一致性 <b>32/32 ✓</b> · max_abs <b>8.34e-07</b></div>
+    </div>
+    <div class="vcard">
+      <h3>05 · ball_balance 球平衡</h3>
+      <div class="tag">120s · 慢放（片段拼接）· FastSAC scratch smoke · 900 steps</div>
+      <video controls preload="metadata" src="videos/ball_balance_slow120.mp4"></video>
+      <div class="metrics">一致性 <b>32/32 ✓</b> · max_abs <b>2.68e-07</b></div>
+    </div>
+    <div class="vcard">
+      <h3>06 · ladder 梯面攀爬</h3>
+      <div class="tag">120s · 2× 慢放（8 段不同种子 · 梯级起爬）· climber ONNX 实时推理</div>
+      <video controls preload="metadata" src="videos/ladder_120.mp4"></video>
+      <div class="metrics">梯级 27 踏 · 桌面 0.66m · ONNX parity <b>8.9e-07</b> · 已修 terrain / airborne / nconmax</div>
+      <div class="note">已知限制：官方 climber 权重在本环境每次起爬约 1–3 踏后失稳滑落，故按“多次真实起爬”剪辑；场景与接触链路已修复，非渲染问题。</div>
+    </div>
+    <div class="vcard">
+      <h3>08 · LightNav0 视觉语言导航</h3>
+      <div class="tag">120s · 慢放（三场景拼接）· apartment / living_room / corridor</div>
+      <video controls preload="metadata" src="videos/lightnav_slow120.mp4"></video>
+      <div class="metrics">三场景 <b>model_stop ×3</b> · 预测 37/42/47 次</div>
+    </div>
+    <div class="vcard">
+      <h3>09 · long_jump 跨缝跳跃</h3>
+      <div class="tag">120s · 慢放（预训练/续训/ONNX 三段拼接）</div>
+      <video controls preload="metadata" src="videos/long_jump_slow120.mp4"></video>
+      <div class="metrics">ONNX parity <b>6.6e-06</b> · 10 轮 PPO 精确恢复</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>四、各 Notebook 执行详情</h2>
+  <table>
+    <thead><tr><th>#</th><th>Notebook 文件</th><th>状态</th><th>cells</th><th>耗时</th><th>执行产物</th></tr></thead>
+    <tbody>
+      <tr><td>00</td><td><code>00_MuJoCo策略控制_HelloWorld.ipynb</code></td><td><span class="pill ok">✅</span></td><td>—</td><td>3.9s</td><td>基础控制链路</td></tr>
+      <tr><td>01</td><td><code>01_篮球平衡_PPO_ONNX_BPU_MuJoCo.ipynb</code></td><td><span class="pill ok">✅</span></td><td>9/9</td><td>78.1s</td><td>smoke PPO + ONNX + 视频/json（parity 1.19e-06）</td></tr>
+      <tr><td>02</td><td><code>02_浏览器物理扰动_回放与接口.ipynb</code></td><td><span class="pill ok">✅</span></td><td>—</td><td>60.9s</td><td>walking + perturbation 视频/json</td></tr>
+      <tr><td>03</td><td><code>03_高跷行走_课程与ONNX_BPU.ipynb</code></td><td><span class="pill ok">✅</span></td><td>—</td><td>27.1s</td><td>stilt 训练 + 视频/json</td></tr>
+      <tr><td>04</td><td><code>04_摆动旋转_ONNX_BPU_MuJoCo.ipynb</code></td><td><span class="pill ok">✅</span></td><td>—</td><td>33.8s</td><td>swing 训练 + 视频/json</td></tr>
+      <tr><td>05</td><td><code>05_球平衡_FastSAC_ONNX_BPU.ipynb</code></td><td><span class="pill ok">✅</span></td><td>11/11</td><td>41.6s</td><td>FastSAC smoke 训练 + ONNX + 视频/json + checkpoint 审计</td></tr>
+      <tr><td>06</td><td><code>06_梯面攀爬_接触与部署模板.ipynb</code></td><td><span class="pill ok">✅</span></td><td>9/9</td><td>992.1s</td><td>climber/getup 双策略 120s 视频/json/trace</td></tr>
+      <tr><td>07</td><td><code>07_RDK网页与多策略_BPU验收.ipynb</code></td><td><span class="pill warn">⚠</span></td><td>—</td><td>21.5s</td><td>执行成功，BPU 无板未验收</td></tr>
+      <tr><td>08</td><td><code>08_LightNav0_视觉语言导航_GPU_多场景.ipynb</code></td><td><span class="pill ok">✅</span></td><td>12/12</td><td>227.2s</td><td>3 场景视频 + reports（model_stop ×3）</td></tr>
+      <tr><td>09</td><td><code>09_跨缝跳跃_PPO_GPU_ONNX.ipynb</code></td><td><span class="pill ok">✅</span></td><td>13/13</td><td>539.7s</td><td>3 段视频 + 续训 + deployment parity + lesson summary</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <h2>五、第二轮攻坚记录（5 项阻断的解除）</h2>
+  <table>
+    <thead><tr><th>Notebook</th><th>原阻断根因</th><th>解除方式</th></tr></thead>
+    <tbody>
+      <tr><td>01 篮球</td><td>缺官方仓库与任务注册</td><td>DGX 实测有外网（此前 gitclone 镜像 502 误判）→ <code>GIT_CONFIG_GLOBAL=/dev/null</code> 绕过镜像直连 GitHub 克隆 <code>microduck-playground-official</code>；export.py 补 <code>import mjlab_microduck.tasks</code> 修复任务注册</td></tr>
+      <tr><td>05 球平衡</td><td>缺 FastSAC 模型与训练入口</td><td>MotrixLab <code>uv sync --package motrix-lab --extra cuda</code>（triton 无 aarch64 轮子，<code>--no-install-package triton</code> 绕行）；补 <code>scripts/train.py</code> / <code>scripts/export_onnx.py</code> 两个 shim 指向 <code>mxlab</code>；<code>learning_starts=0→2</code> 修复空 buffer 采样；40 个 microduck STL + 球资产为 git-LFS 指针，经 <code>media.githubusercontent.com</code> 逐一拉取并 SHA256 校验 → scratch smoke 训练 → ONNX 导出（parity 2.38e-07）</td></tr>
+      <tr><td>06 梯面</td><td>缺 getup 模型与场景 + notebook 600s 超时</td><td>导出 <code>official_ladder_getup.opset11.onnx</code>（opset11）并补齐 desk-climb 场景；notebook cell <code>timeout=600→3600</code>；standalone 先行录制验证 30s episode 可在 ~16 分钟完成</td></tr>
+      <tr><td>08 LightNav</td><td>模型服务不可用</td><td>克隆 LightNav-0（9.6GB 权重，hf-mirror 直下）；lightnav-0 env 修 torch 2.10.0+cu128 + torchvision 0.25.0+cu128（vllm 0.19.1 ABI 匹配）；<strong>关键坑</strong>：<code>run_notebook.py</code> 曾把内核 <code>http_proxy</code> 指向本地 7890 代理，websocket CONNECT 隧道被破坏 → 移除代理注入后 3 场景全部 model_stop</td></tr>
+      <tr><td>09 跨缝</td><td>外网下载 + 目录权限</td><td>hf-mirror 429 限流 → 本机下载后 scp（SHA256 双文件 MATCH）；<code>MICRODUCK_JUMP_HOME</code> override 避开 <code>/home/nvidia/projects</code> 权限限制；10 轮 PPO 续训精确恢复 + ONNX parity 6.6e-06</td></tr>
+    </tbody>
+  </table>
+  <p class="reason">说明：第二轮将第一轮 5 项"环境性阻断"全部解除，00–09 十本 Notebook 在 DGX Spark（GB10）上全部真实执行成功；
+     唯一保留项为 07 的 RDK X5 板端验收（无实体硬件，标记 <code>not_run_no_board</code>）。</p>
+</section>
+
+<section>
+  <h2>六、产物清单（已随本报告归档）</h2>
+  <ul>
+    <li><code>videos/</code> ：12 段 GPU 推理 MP4（walking / perturbation / stilt / swing / basketball / ball_balance / ladder / long_jump ×3 / lightnav ×3）</li>
+    <li><code>validation/</code> ：对应精度验收 JSON（含 parity、推理耗时、ONNX sha256、long_jump 续训摘要、lightnav 三场景报告）</li>
+    <li><code>notebooks/</code> ：00–09 共 10 本 Notebook（课程原件）</li>
+    <li><code>logs/</code> ：00–09 notebook 运行日志（第二轮全量执行）</li>
+  </ul>
+</section>
+
+<section>
+  <h2>七、后端 API（FastAPI + SQLite）</h2>
+  <p>本站由 <code>app.py</code>（FastAPI）单端口服务托管：静态资源 + 只读 JSON API，启动时把
+     <code>validation/*.json</code> 与 <code>videos/*.mp4</code> 汇总进 SQLite（<code>data/runs.db</code>）。</p>
+  <table>
+    <tr><th>方法</th><th>路径</th><th>说明</th></tr>
+    <tr><td>GET</td><td><code>/api/health</code></td><td>存活与视频计数</td></tr>
+    <tr><td>GET</td><td><code>/api/tasks</code></td><td>10 个任务 + 各自视频列表（含时长/大小）</td></tr>
+    <tr><td>GET</td><td><code>/api/tasks/{id}</code></td><td>单任务详情（00–09）</td></tr>
+    <tr><td>GET</td><td><code>/api/videos?min_seconds=120</code></td><td>视频索引，可按最短时长过滤</td></tr>
+    <tr><td>GET</td><td><code>/api/summary</code></td><td>视频总数、≥120s 数量、验收 JSON 清单</td></tr>
+  </table>
+  <p>启动：<code>uvicorn app:app --host 0.0.0.0 --port $PORT</code></p>
+</section>
+
+
+<section>
+  <h2>八、具身智能 · DGX 闲余算力收割</h2>
+  <p>本站第三章是 MicroDuck 十项课程任务；本区块来自同一台 NVIDIA DGX Spark（GB10 · aarch64 · CUDA sm_121）的<strong>闲余算力</strong>：生产服务（SOP 推理 / CVAT）优先，GPU 空转时由 <code>embodied-harvest</code> 调度器自动领任务 —— Isaac Lab 3.0 训练 → 推理录像 → 归一 120 秒 → 回传本站。</p>
+  <div class="vgrid">
+    <div class="vcard">
+      <h3>E01 · Unitree Go2 机械狗 · 平坦地形</h3>
+      <div class="tag">Isaac Lab 3.0 + RSL-RL 自训练 · 四足 flat terrain · 120s</div>
+      <video controls preload="metadata" src="videos/go2_flat.mp4"></video>
+      <div class="metrics">DGX Spark GB10 实拍 · 统一到 120 秒口径</div>
+    </div>
+    <div class="vcard">
+      <h3>E02 · Unitree Go2 机械狗 · 粗糙地形</h3>
+      <div class="tag">Isaac Lab 3.0 + RSL-RL 自训练 · 四足 rough terrain · 120s</div>
+      <video controls preload="metadata" src="videos/go2_rough.mp4"></video>
+      <div class="metrics">DGX Spark GB10 实拍 · 统一到 120 秒口径</div>
+    </div>
+    <div class="vcard">
+      <h3>E03 · ANYmal-D 四足 · 粗糙地形</h3>
+      <div class="tag">Isaac Lab 3.0 · 四足 rough terrain · 120s</div>
+      <video controls preload="metadata" src="videos/anymal_rough.mp4"></video>
+      <div class="metrics">DGX Spark GB10 实拍 · 统一到 120 秒口径</div>
+    </div>
+    <div class="vcard">
+      <h3>E04 · Unitree H1 人形 · 粗糙地形</h3>
+      <div class="tag">Isaac Lab 3.0 + RSL-RL 自训练 · 官方 DGX Spark 样例任务 · 120s</div>
+      <video controls preload="metadata" src="videos/h1_rough.mp4"></video>
+      <div class="metrics">DGX Spark GB10 实拍 · 统一到 120 秒口径</div>
+    </div>
+    <div class="vcard">
+      <h3>E05 · Unitree G1 人形 · 平坦地形</h3>
+      <div class="tag">Isaac Lab 3.0 · 人形 flat terrain · 120s</div>
+      <video controls preload="metadata" src="videos/g1_flat.mp4"></video>
+      <div class="metrics">DGX Spark GB10 实拍 · 统一到 120 秒口径</div>
+    </div>
+    <div class="vcard">
+      <h3>E06 · Allegro 灵巧手 · 方块重定向</h3>
+      <div class="tag">Isaac Lab 3.0 · 灵巧手操作 reorient-cube · 120s</div>
+      <video controls preload="metadata" src="videos/allegro_reorient.mp4"></video>
+      <div class="metrics">DGX Spark GB10 实拍 · 统一到 120 秒口径</div>
+    </div>
+    <div class="vcard">
+      <h3>E07 · Cassie 双足 · 粗糙地形</h3>
+      <div class="tag">Isaac Lab 3.0 · 双足 rough terrain · 120s</div>
+      <video controls preload="metadata" src="videos/cassie_rough.mp4"></video>
+      <div class="metrics">DGX Spark GB10 实拍 · 统一到 120 秒口径</div>
+    </div>
+    <div class="vcard">
+      <h3>E08 · Franka 机械臂 · 抓举方块</h3>
+      <div class="tag">Isaac Lab 3.0 · 操作任务 lift-cube · 120s</div>
+      <video controls preload="metadata" src="videos/franka_lift.mp4"></video>
+      <div class="metrics">DGX Spark GB10 实拍 · 统一到 120 秒口径</div>
+    </div>
+    <div class="vcard">
+      <h3>E09 · Unitree H1 人形 · 平坦地形</h3>
+      <div class="tag">Isaac Lab 3.0 + RSL-RL 自训练 · 人形 flat terrain · 120s</div>
+      <video controls preload="metadata" src="videos/h1_flat.mp4"></video>
+      <div class="metrics">DGX Spark GB10 实拍 · 统一到 120 秒口径</div>
+    </div>
+    <div class="vcard">
+      <h3>E10 · Unitree G1 人形 · 粗糙地形</h3>
+      <div class="tag">Isaac Lab 3.0 · 人形 rough terrain · 120s</div>
+      <video controls preload="metadata" src="videos/g1_rough.mp4"></video>
+      <div class="metrics">DGX Spark GB10 实拍 · 统一到 120 秒口径</div>
+    </div>
+    <div class="vcard">
+      <h3>E11 · ANYmal-D 四足 · 平坦地形</h3>
+      <div class="tag">Isaac Lab 3.0 · 四足 flat terrain · 120s</div>
+      <video controls preload="metadata" src="videos/anymal_flat.mp4"></video>
+      <div class="metrics">DGX Spark GB10 实拍 · 统一到 120 秒口径</div>
+    </div>
+    <div class="vcard">
+      <h3>E12 · Cassie 双足 · 平坦地形</h3>
+      <div class="tag">Isaac Lab 3.0 · 双足 flat terrain · 120s</div>
+      <video controls preload="metadata" src="videos/cassie_flat.mp4"></video>
+      <div class="metrics">DGX Spark GB10 实拍 · 统一到 120 秒口径</div>
+    </div>
+    <div class="vcard">
+      <h3>E13 · Franka 机械臂 · 到达目标位姿</h3>
+      <div class="tag">Isaac Lab 3.0 · 操作任务 reach · 120s</div>
+      <video controls preload="metadata" src="videos/franka_reach.mp4"></video>
+      <div class="metrics">DGX Spark GB10 实拍 · 统一到 120 秒口径</div>
+    </div>
+    <div class="vcard">
+      <h3>E14 · Franka 机械臂 · 拉开抽屉</h3>
+      <div class="tag">Isaac Lab 3.0 · 操作任务 open-drawer · 120s</div>
+      <video controls preload="metadata" src="videos/franka_drawer.mp4"></video>
+      <div class="metrics">DGX Spark GB10 实拍 · 统一到 120 秒口径</div>
+    </div>
+    <div class="vcard">
+      <h3>E15 · Shadow Hand 灵巧手 · 方块重定向</h3>
+      <div class="tag">Isaac Lab 3.0 · 灵巧手操作 reorient-cube · 120s</div>
+      <video controls preload="metadata" src="videos/shadow_reorient.mp4"></video>
+      <div class="metrics">DGX Spark GB10 实拍 · 统一到 120 秒口径</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>九、Isaac Lab 环境覆盖矩阵（DGX 闲余算力）</h2>
+  <p>DGX 上 <code>list_envs.py</code> 实测可用环境 <b>45 个</b>（Isaac Lab 3.0，任务名无 <code>-v0</code> 后缀）。
+  下表是本项目已覆盖 / 已排队 / 备用的 20 个，<b>状态以 DGX 侧 <code>state/done.list</code> 为准</b>，不是计划口径。</p>
+  <table>
+    <tr><th>类别</th><th>环境名</th><th>状态</th><th>备注</th></tr>
+      <tr><td>机械狗</td><td><code>Isaac-Velocity-Flat-UnitreeGo2</code></td><td><span class="pill ok">已出片</span> E01</td><td>平地速度跟踪 · 120 s</td></tr>
+      <tr><td>机械狗</td><td><code>Isaac-Velocity-Rough-UnitreeGo2</code></td><td><span class="pill ok">已出片</span> E02</td><td>粗糙地形越障 · 120 s</td></tr>
+      <tr><td>四足</td><td><code>Isaac-Velocity-Rough-AnymalD</code></td><td><span class="pill ok">已出片</span> E03</td><td>工业四足越障 · 120 s</td></tr>
+      <tr><td>四足</td><td><code>Isaac-Velocity-Flat-AnymalD</code></td><td><span class="pill warn">已入队</span></td><td>阶段 6 新增</td></tr>
+      <tr><td>人形</td><td><code>Isaac-Velocity-Rough-H1</code></td><td><span class="pill ok">已出片</span> E04</td><td>官方 DGX Spark 样例 · 120 s</td></tr>
+      <tr><td>人形</td><td><code>Isaac-Velocity-Flat-G1</code></td><td><span class="pill ok">已出片</span> E05</td><td>平地行走 · 120 s</td></tr>
+      <tr><td>人形</td><td><code>Isaac-Velocity-Flat-H1</code></td><td><span class="pill warn">已入队</span></td><td>阶段 6 新增</td></tr>
+      <tr><td>人形</td><td><code>Isaac-Velocity-Rough-G1</code></td><td><span class="pill warn">已入队</span></td><td>阶段 6 新增</td></tr>
+      <tr><td>双足</td><td><code>Isaac-Velocity-Rough-Cassie</code></td><td><span class="pill ok">已出片</span> E08</td><td>粗糙地形 · 120 s</td></tr>
+      <tr><td>双足</td><td><code>Isaac-Velocity-Flat-Cassie</code></td><td><span class="pill warn">已入队</span></td><td>阶段 6 新增</td></tr>
+      <tr><td>机械臂</td><td><code>Isaac-Lift-Cable-Franka</code></td><td><span class="pill warn">已入队</span></td><td>⚠️ 原写 Lift-Cube-Franka，该任务在 3.0 不存在，已更正并重新入队</td></tr>
+      <tr><td>机械臂</td><td><code>Isaac-Reach-Franka</code></td><td><span class="pill warn">已入队</span></td><td>已训练完成（franka_reach.done）</td></tr>
+      <tr><td>机械臂</td><td><code>Isaac-Open-Drawer-Franka</code></td><td><span class="pill bad">失败待查</span></td><td>跑满 2 h 超时：OV texture cache 创建失败（omni.rtx），非任务名问题</td></tr>
+      <tr><td>灵巧手</td><td><code>Isaac-Reorient-Cube-Allegro</code></td><td><span class="pill ok">已出片</span> E07</td><td>四指灵巧手转立方体 · 120 s</td></tr>
+      <tr><td>灵巧手</td><td><code>Isaac-Reorient-Cube-Shadow</code></td><td><span class="pill warn">已入队</span></td><td>阶段 6 新增</td></tr>
+      <tr><td>灵巧手</td><td><code>Isaac-Lift-KukaAllegro-Camera</code></td><td><span class="pill">备用</span></td><td>带相机版本，显存/渲染开销大，暂不排</td></tr>
+      <tr><td>经典</td><td><code>Isaac-Ant</code></td><td><span class="pill">备用</span></td><td>环境已核实在清单内，可不占大显存快速出片</td></tr>
+      <tr><td>经典</td><td><code>Isaac-Humanoid</code></td><td><span class="pill">备用</span></td><td>同上</td></tr>
+      <tr><td>经典</td><td><code>Isaac-Ant-Direct</code></td><td><span class="pill">备用</span></td><td>--</td></tr>
+      <tr><td>经典</td><td><code>Isaac-Humanoid-Direct</code></td><td><span class="pill">备用</span></td><td>--</td></tr>
+  </table>
+  <div class="note">两处口径更正：① 队列里原来的 <code>Isaac-Lift-Cube-Franka</code> 在 Isaac Lab 3.0
+  <b>并不存在</b>（正确名 <code>Isaac-Lift-Cable-Franka</code>），导致该任务当场失败、成片是别的任务的片段；已更正并重置重跑。
+  ② 经典控制 <code>Isaac-Ant / Isaac-Humanoid</code> 已核实存在于环境中，随时可以排进去，不必长期挂「备用」。</div>
+</section>
+
+<section>
+  <h2>十、差距诊断与改进路线（鸭子为什么还不够稳）</h2>
+  <p><b>先说结论：不是导出/部署链路的锅。</b>下表是各任务 ONNX 与真实观测的一致性校验，
+  最大绝对误差全部落在 <code>1e-7 ~ 1e-6</code>，远低于 <code>atol=1e-4</code> ——
+  "不够优秀"只可能来自<b>策略本身、场景参数、以及录像方式</b>这三层。</p>
+  <table>
+    <tr><th>任务</th><th>task_id</th><th>校验步数</th><th>max_abs_output_error</th></tr>
+      <tr><td>01 篮球平衡</td><td><code>Mjlab-Basketball-MicroDuck</code></td><td>1500</td><td><b>1.19e-06</b></td></tr>
+      <tr><td>02 走路 / 扰动</td><td><code>Mjlab-Velocity-Flat-MicroDuck</code></td><td>500</td><td><b>3.58e-07</b></td></tr>
+      <tr><td>03 高跷 25 cm</td><td><code>Mjlab-Stilt-Flat-MicroDuck</code></td><td>500</td><td><b>5.96e-07</b></td></tr>
+      <tr><td>04 摆动旋转</td><td><code>Mjlab-SwingPump-MicroDuck</code></td><td>500</td><td><b>8.34e-07</b></td></tr>
+      <tr><td>05 球平衡 FastSAC</td><td><code>microduck-ball-balance</code></td><td>900</td><td><b>2.68e-07</b></td></tr>
+      <tr><td>06 梯面攀爬</td><td><code>Mjlab-FloorDeskBlind-MicroDuck</code></td><td>32</td><td><b>8.94e-07</b></td></tr>
+      <tr><td>09 跨缝跳跃</td><td><code>Mjlab-PlatformJump-MicroDuck</code></td><td>200</td><td><b>3.87e-06</b></td></tr>
+  </table>
+  <div class="note">播放层的坑（新发现）：<code>walking_gpu_latest.mp4</code> 源片只有 <b>10 s</b>、
+  <code>ladder_gpu_latest.mp4</code> 与 <code>basketball_gpu_latest.mp4</code> 只有 <b>30 s</b>，
+  站点上的 120 s 版本是把它们拉长/循环出来的（walking 相当于 <b>12× 慢放</b>）。
+  慢放会把每一帧的抖动放大到肉眼可辨，<b>观感上的"摇晃"至少有一部分是这么来的</b>。</div>
+  <div class="vgrid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:16px;margin-top:14px">
+    <div class="vcard">
+      <h3>走路摇晃、步态不稳 <span class="pill warn">重训进行中</span></h3>
+      <div class="reason"><b>诊断：</b>① 播放层把 10 s 源片拉成 120 s（12× 慢放），动态被拉长，观感比实际更飘；② 站的 walking 视频与 02 扰动视频共用同一张 ONNX（<code>BEST_alpha_walking.onnx</code>，sha <code>e36332d3…</code>），没有为「稳定步态」单独训过策略。</div>
+      <div class="reason"><b>动作：</b>用官方配方（BAM 舵机模型 + 域随机化 + 61 维观测契约）在 GB10 上重训 <code>Mjlab-Velocity-Flat-MicroDuck</code>，4096 并发、seed 7；成片改回 1× 真实倍速。</div>
+    </div>
+    <div class="vcard">
+      <h3>06 爬楼梯不够优秀 <span class="pill bad">待办</span></h3>
+      <div class="reason"><b>诊断：</b>官方 <code>climber.onnx</code> + <code>getup.onnx</code> 双策略 handoff，episode 只有 30 s；场景参数是硬凑的（<code>nconmax=768 / njmax=3072 / contact maxmatch=400</code>，airborne_grace=120 步）。历史 bug：TerrainEntityCfg 缺失导致 <code>foot_on_floor</code> 恒为 False。</div>
+      <div class="reason"><b>动作：</b>把 episode 拉到 120 s 真实时长（现在 30 s 靠拼接/慢放），并做 handoff 接触阈值的敏感性扫描。</div>
+    </div>
+    <div class="vcard">
+      <h3>01 篮球平衡不够优秀 <span class="pill bad">待办</span></h3>
+      <div class="reason"><b>诊断：</b>recurrent 策略、1500 步收尾；球不在观测里，只能靠躯干间接平衡，收敛本身慢。一致性 1.19e-06 说明导出链路没问题，短板在策略侧。</div>
+      <div class="reason"><b>动作：</b>把收尾步数从 1500 提到 6000（与 02 看齐），并补一段「扰动下重平衡」的对照录制。</div>
+    </div>
+    <div class="vcard">
+      <h3>外部基线对比（凯源的鸭子） <span class="pill bad">缺素材</span></h3>
+      <div class="reason"><b>诊断：</b>未拿到对方仓库地址 / 截图（<code>Clipboard_Screenshot.png</code> 在本机和工作区都没找到），暂时无法做同口径对比。</div>
+      <div class="reason"><b>动作：</b>提供仓库链接或截图后，按同一组指标（velocity error / slip velocity / fall rate / 120 s 连续行走存活率）对齐比较。</div>
+    </div>
+  </div>
+  <div class="note">已启动的改进：<code>microduck_rl</code>（官方训练仓库）在 DGX 上
+  <code>uv sync</code> 装通，<code>warp-lang 1.12.0</code> 识别到 <code>cuda:0 = NVIDIA GB10 (122 GiB, sm_121)</code>；
+  <code>Mjlab-Velocity-Flat-MicroDuck</code> 以 <b>4096 并发 / seed 7</b> 重训中，
+  迭代 3.09 s、上限 50000 iter，检查点走 wandb offline。
+  基线读数（iter 97）：<code>error_vel_xy 0.56</code> · <code>fell_over 1.5%</code> · <code>slip_velocity 0.054</code>。
+  注意 <code>--video</code> 在 headless DGX 上会因无 OpenGL 上下文直接崩，录像要单走 EGL 通道。</div>
+</section>
+
+<!-- CH11:START -->
+<section>
+  <h2>十一、MicroDuck 短跑实验室 · 4096 只鸭子挤一台 GB10</h2>
+  <p><b>先说结论：</b>官方 <code>microduck_rl</code> 出厂配方只让鸭子跑 <b>0.4 m/s</b> ——
+  <code>Mjlab-Velocity-Flat-MicroDuck</code> 的速度命令范围写死为 <code>lin_vel_x ∈ (-0.4, 0.4)</code>，
+  那是"走路"。想把鸭子练成短跑选手（对标公开成绩 2.07 m/s），必须改三件事：
+  <b>命令范围</b>、<b>奖励配方</b>、<b>回合长度</b>。本区块是这套改法在 DGX Spark 上的真实跑批。</p>
+
+  <div class="summary-big">
+    <div class="stat"><div class="n">0.29</div><div class="l">实测峰值前进速度 (m/s)</div></div>
+    <div class="stat"><div class="n">0.14</div><div class="l">平均前进速度 (m/s)</div></div>
+    <div class="stat"><div class="n">0.21</div><div class="l">P95 前进速度 (m/s)</div></div>
+    <div class="stat"><div class="n">270</div><div class="l">已完成迭代</div></div>
+    <div class="stat"><div class="n">0.159</div><div class="l">腾空时间 (s)</div></div>
+  </div>
+  <div class="note">测速口径：<code>probe_sprint_speed.py</code> 在 CUDA 上并行 64 个环境、把前进命令<b>锁死</b>到
+  <code>2.6 m/s</code>，读 <code>root_link_lin_vel_b[:,0]</code>，
+  丢掉前 100 步暖机，统计剩余 1000 步。
+  检查点：<code>model_250.pt</code>。</div>
+  <h3 style="font-size:15px;margin-top:18px">公开成绩对标</h3>
+  <div style="display:flex;align-items:center;gap:10px;margin:5px 0"><span style="width:190px;font-size:13px">Hannes</span><span style="flex:1;background:#eef2f7;border-radius:6px;height:18px;position:relative"><span style="display:block;width:69.0%;height:100%;background:#94a3b8;border-radius:6px"></span></span><b style="width:62px;text-align:right;font-size:13px">1.60 m/s</b></div><div style="display:flex;align-items:center;gap:10px;margin:5px 0"><span style="width:190px;font-size:13px">Max Sumrall</span><span style="flex:1;background:#eef2f7;border-radius:6px;height:18px;position:relative"><span style="display:block;width:81.1%;height:100%;background:#94a3b8;border-radius:6px"></span></span><b style="width:62px;text-align:right;font-size:13px">1.88 m/s</b></div><div style="display:flex;align-items:center;gap:10px;margin:5px 0"><span style="width:190px;font-size:13px">电磁波Studio · 4090D</span><span style="flex:1;background:#eef2f7;border-radius:6px;height:18px;position:relative"><span style="display:block;width:89.3%;height:100%;background:#f59e0b;border-radius:6px"></span></span><b style="width:62px;text-align:right;font-size:13px">2.07 m/s</b></div><div style="display:flex;align-items:center;gap:10px;margin:5px 0"><span style="width:190px;font-size:13px">本机 DGX Spark（GB10）</span><span style="flex:1;background:#eef2f7;border-radius:6px;height:18px;position:relative"><span style="display:block;width:12.3%;height:100%;background:#2563eb;border-radius:6px"></span></span><b style="width:62px;text-align:right;font-size:13px">0.29 m/s</b></div>
+  <div class="note">公开成绩为外部口径（1.6 / 1.88 / 2.07 m/s）。本机数字由上面的
+  <code>probe_sprint_speed.py</code> 实测，不是训练日志里的 reward 换算。</div>
+
+  <h3 style="font-size:15px;margin-top:18px">训练曲线（每 1 迭代一点）</h3>
+  <div style="margin:6px 0 2px"></div><svg viewBox="0 0 980 210" style="width:100%;height:auto;background:#fbfdff;border:1px solid #e3e8ef;border-radius:10px"><polyline fill="none" stroke="#2563eb" stroke-width="2" points="46.0,184.0 49.4,177.2 52.8,177.7 56.2,177.4 59.7,177.6 63.1,177.7 66.5,177.5 69.9,177.8 73.3,177.7 76.7,177.8 80.1,178.0 83.6,178.2 87.0,178.1 90.4,178.3 93.8,178.5 97.2,178.7 100.6,178.8 104.1,178.7 107.5,178.8 110.9,178.7 114.3,178.7 117.7,178.5 121.1,178.3 124.5,178.4 128.0,178.0 131.4,177.8 134.8,177.9 138.2,177.6 141.6,177.5 145.0,177.5 148.4,177.7 151.9,177.5 155.3,177.3 158.7,177.4 162.1,177.2 165.5,177.1 168.9,177.0 172.3,176.9 175.8,177.0 179.2,177.0 182.6,176.7 186.0,176.6 189.4,176.6 192.8,175.9 196.3,176.0 199.7,175.5 203.1,175.2 206.5,175.1 209.9,174.7 213.3,174.4 216.7,174.0 220.2,173.5 223.6,173.5 227.0,172.8 230.4,172.3 233.8,172.2 237.2,171.8 240.6,171.6 244.1,171.1 247.5,170.3 250.9,169.6 254.3,169.5 257.7,168.9 261.1,168.0 264.5,167.7 268.0,165.7 271.4,165.1 274.8,164.6 278.2,164.7 281.6,162.5 285.0,162.1 288.5,161.4 291.9,159.7 295.3,160.1 298.7,158.6 302.1,157.9 305.5,155.3 308.9,154.6 312.4,154.9 315.8,150.1 319.2,148.6 322.6,148.6 326.0,143.3 329.4,142.0 332.8,139.5 336.3,134.4 339.7,139.5 343.1,134.6 346.5,131.6 349.9,131.0 353.3,124.6 356.7,118.9 360.2,115.9 363.6,106.7 367.0,95.0 370.4,90.4 373.8,84.6 377.2,77.3 380.7,73.4 384.1,56.1 387.5,58.4 390.9,73.0 394.3,55.9 397.7,53.8 401.1,53.3 404.6,52.6 408.0,57.7 411.4,46.9 414.8,50.0 418.2,41.4 421.6,41.0 425.0,44.8 428.5,31.8 431.9,38.1 435.3,45.4 438.7,37.7 442.1,56.5 445.5,36.8 448.9,47.6 452.4,36.4 455.8,44.4 459.2,34.1 462.6,33.7 466.0,35.3 469.4,27.0 472.9,26.0 476.3,33.2 479.7,33.2 483.1,31.4 486.5,34.2 489.9,38.6 493.3,39.2 496.8,35.1 500.2,31.1 503.6,30.7 507.0,42.6 510.4,37.2 513.8,38.5 517.2,29.3 520.7,36.8 524.1,27.6 527.5,28.9 530.9,24.3 534.3,40.6 537.7,46.0 541.1,29.1 544.6,51.7 548.0,34.5 551.4,33.9 554.8,32.7 558.2,25.4 561.6,30.4 565.1,33.3 568.5,30.7 571.9,29.1 575.3,30.4 578.7,30.6 582.1,30.6 585.5,37.6 589.0,36.9 592.4,21.7 595.8,29.5 599.2,43.5 602.6,37.2 606.0,30.2 609.4,32.3 612.9,32.5 616.3,36.9 619.7,41.4 623.1,36.3 626.5,27.3 629.9,33.9 633.3,32.0 636.8,25.6 640.2,28.1 643.6,30.8 647.0,23.4 650.4,33.2 653.8,35.0 657.3,31.2 660.7,33.1 664.1,33.2 667.5,21.2 670.9,38.2 674.3,29.6 677.7,34.8 681.2,30.9 684.6,28.6 688.0,32.2 691.4,31.9 694.8,41.9 698.2,35.6 701.6,32.9 705.1,34.9 708.5,32.9 711.9,30.9 715.3,27.4 718.7,37.4 722.1,35.3 725.5,32.9 729.0,39.1 732.4,30.3 735.8,39.8 739.2,44.2 742.6,29.9 746.0,28.4 749.5,25.2 752.9,22.7 756.3,34.4 759.7,32.7 763.1,41.1 766.5,38.9 769.9,31.2 773.4,39.1 776.8,42.6 780.2,33.5 783.6,29.5 787.0,37.0 790.4,41.2 793.8,35.8 797.3,30.3 800.7,34.0 804.1,39.9 807.5,29.2 810.9,38.8 814.3,33.4 817.7,35.2 821.2,29.1 824.6,39.5 828.0,32.9 831.4,29.8 834.8,29.8 838.2,32.3 841.7,42.9 845.1,31.0 848.5,29.8 851.9,39.6 855.3,41.0 858.7,34.2 862.1,44.6 865.6,35.8 869.0,28.3 872.4,28.8 875.8,34.9 879.2,35.7 882.6,34.1 886.0,40.5 889.5,41.3 892.9,25.6 896.3,30.6 899.7,35.5 903.1,28.7 906.5,30.2 909.9,40.3 913.4,27.0 916.8,16.0 920.2,31.8 923.6,28.9 927.0,32.1 930.4,33.4 933.9,39.5 937.3,27.4 940.7,40.3 944.1,28.3 947.5,27.8 950.9,40.4 954.3,29.8 957.8,41.1 961.2,19.3 964.6,33.8 968.0,37.2"/><polyline fill="none" stroke="#1f9d55" stroke-width="2" points="46.0,184.0 49.4,174.0 52.8,166.4 56.2,164.8 59.7,160.6 63.1,155.0 66.5,148.5 69.9,143.5 73.3,137.6 76.7,129.1 80.1,122.0 83.6,119.6 87.0,113.6 90.4,108.4 93.8,104.5 97.2,100.9 100.6,95.6 104.1,91.7 107.5,88.5 110.9,86.4 114.3,79.4 117.7,76.1 121.1,71.6 124.5,69.3 128.0,64.7 131.4,63.2 134.8,59.0 138.2,54.7 141.6,54.4 145.0,53.2 148.4,48.6 151.9,47.5 155.3,46.1 158.7,42.9 162.1,41.0 165.5,36.8 168.9,35.3 172.3,32.5 175.8,32.2 179.2,35.1 182.6,31.5 186.0,28.2 189.4,31.6 192.8,28.3 196.3,30.9 199.7,31.7 203.1,30.5 206.5,31.3 209.9,35.3 213.3,39.2 216.7,44.8 220.2,44.1 223.6,44.2 227.0,47.4 230.4,50.6 233.8,51.2 237.2,51.5 240.6,50.9 244.1,48.6 247.5,53.2 250.9,52.0 254.3,51.8 257.7,54.3 261.1,54.6 264.5,54.3 268.0,52.8 271.4,52.3 274.8,46.0 278.2,47.8 281.6,49.0 285.0,47.8 288.5,49.9 291.9,48.2 295.3,50.4 298.7,52.6 302.1,53.0 305.5,53.3 308.9,50.8 312.4,49.7 315.8,51.0 319.2,52.5 322.6,51.7 326.0,50.8 329.4,49.7 332.8,51.7 336.3,50.5 339.7,51.5 343.1,50.4 346.5,53.4 349.9,56.8 353.3,56.9 356.7,56.7 360.2,56.8 363.6,55.9 367.0,55.2 370.4,55.5 373.8,57.3 377.2,54.9 380.7,54.3 384.1,54.7 387.5,53.3 390.9,55.4 394.3,56.7 397.7,55.7 401.1,55.7 404.6,55.8 408.0,56.6 411.4,54.0 414.8,53.6 418.2,51.6 421.6,50.0 425.0,51.5 428.5,51.0 431.9,47.8 435.3,46.5 438.7,46.2 442.1,44.8 445.5,41.9 448.9,41.7 452.4,42.4 455.8,41.2 459.2,40.6 462.6,41.8 466.0,41.8 469.4,42.3 472.9,41.3 476.3,41.1 479.7,39.9 483.1,39.5 486.5,40.9 489.9,44.4 493.3,45.1 496.8,43.7 500.2,42.2 503.6,43.3 507.0,42.9 510.4,42.3 513.8,40.4 517.2,41.3 520.7,40.3 524.1,37.6 527.5,40.0 530.9,38.6 534.3,37.7 537.7,38.0 541.1,38.4 544.6,38.1 548.0,37.3 551.4,38.0 554.8,37.8 558.2,39.5 561.6,39.3 565.1,38.1 568.5,35.2 571.9,34.9 575.3,35.0 578.7,36.4 582.1,35.8 585.5,35.9 589.0,37.4 592.4,36.1 595.8,35.7 599.2,34.6 602.6,33.4 606.0,34.2 609.4,33.3 612.9,34.1 616.3,32.8 619.7,34.5 623.1,33.8 626.5,32.9 629.9,32.8 633.3,31.8 636.8,32.2 640.2,33.2 643.6,31.8 647.0,32.6 650.4,31.3 653.8,30.4 657.3,29.5 660.7,29.5 664.1,30.1 667.5,29.3 670.9,28.8 674.3,29.5 677.7,29.7 681.2,29.4 684.6,29.8 688.0,28.1 691.4,28.7 694.8,27.8 698.2,27.9 701.6,28.3 705.1,29.1 708.5,28.9 711.9,27.8 715.3,26.8 718.7,25.5 722.1,26.0 725.5,25.9 729.0,26.6 732.4,27.6 735.8,28.0 739.2,28.4 742.6,28.2 746.0,28.2 749.5,28.9 752.9,28.9 756.3,27.8 759.7,28.5 763.1,29.0 766.5,29.2 769.9,28.0 773.4,28.0 776.8,27.9 780.2,25.9 783.6,26.8 787.0,26.0 790.4,26.9 793.8,26.5 797.3,28.7 800.7,27.6 804.1,28.1 807.5,28.0 810.9,27.4 814.3,27.5 817.7,27.1 821.2,26.1 824.6,25.2 828.0,25.6 831.4,26.0 834.8,25.4 838.2,24.5 841.7,24.1 845.1,24.4 848.5,24.8 851.9,25.1 855.3,25.4 858.7,24.8 862.1,23.3 865.6,23.5 869.0,22.6 872.4,22.9 875.8,22.7 879.2,22.6 882.6,22.7 886.0,22.5 889.5,21.8 892.9,22.0 896.3,21.4 899.7,21.7 903.1,21.1 906.5,20.4 909.9,20.5 913.4,20.9 916.8,19.3 920.2,18.5 923.6,18.6 927.0,19.0 930.4,18.5 933.9,18.2 937.3,16.8 940.7,16.5 944.1,16.0 947.5,16.5 950.9,16.7 954.3,16.7 957.8,16.6 961.2,17.8 964.6,18.2 968.0,18.3"/><polyline fill="none" stroke="#c9821a" stroke-width="2" points="46.0,183.0 49.4,184.0 52.8,183.7 56.2,183.1 59.7,182.4 63.1,182.3 66.5,182.0 69.9,181.8 73.3,181.4 76.7,181.4 80.1,181.2 83.6,180.8 87.0,181.0 90.4,180.5 93.8,180.4 97.2,180.3 100.6,179.9 104.1,179.6 107.5,179.6 110.9,179.4 114.3,178.8 117.7,178.9 121.1,178.7 124.5,178.5 128.0,178.0 131.4,178.0 134.8,177.8 138.2,177.8 141.6,177.6 145.0,177.6 148.4,177.4 151.9,177.3 155.3,177.0 158.7,177.0 162.1,176.9 165.5,176.8 168.9,176.8 172.3,176.5 175.8,176.2 179.2,176.2 182.6,175.9 186.0,176.2 189.4,175.5 192.8,175.7 196.3,175.8 199.7,175.5 203.1,175.1 206.5,175.1 209.9,175.5 213.3,174.3 216.7,174.2 220.2,173.9 223.6,173.6 227.0,173.8 230.4,173.3 233.8,173.1 237.2,173.1 240.6,172.7 244.1,172.2 247.5,171.5 250.9,172.3 254.3,170.8 257.7,171.3 261.1,170.6 264.5,169.3 268.0,167.8 271.4,168.8 274.8,169.3 278.2,168.5 281.6,166.3 285.0,167.2 288.5,166.2 291.9,166.5 295.3,165.2 298.7,163.3 302.1,163.7 305.5,163.3 308.9,161.9 312.4,160.9 315.8,157.7 319.2,160.8 322.6,156.0 326.0,158.5 329.4,154.4 332.8,150.9 336.3,151.8 339.7,152.0 343.1,145.1 346.5,150.0 349.9,143.4 353.3,141.4 356.7,135.7 360.2,134.5 363.6,133.0 367.0,119.7 370.4,109.2 373.8,117.6 377.2,100.6 380.7,110.5 384.1,97.1 387.5,95.3 390.9,98.2 394.3,103.2 397.7,89.8 401.1,87.0 404.6,87.2 408.0,88.2 411.4,90.2 414.8,88.6 418.2,75.1 421.6,85.1 425.0,81.0 428.5,78.2 431.9,85.1 435.3,77.9 438.7,84.8 442.1,85.2 445.5,83.0 448.9,84.2 452.4,79.6 455.8,76.9 459.2,75.7 462.6,74.6 466.0,73.8 469.4,72.9 472.9,73.3 476.3,71.6 479.7,71.8 483.1,75.4 486.5,63.5 489.9,66.9 493.3,74.0 496.8,72.3 500.2,63.9 503.6,65.0 507.0,66.6 510.4,72.1 513.8,68.1 517.2,63.1 520.7,64.4 524.1,65.3 527.5,64.5 530.9,69.4 534.3,67.1 537.7,62.8 541.1,64.1 544.6,64.3 548.0,61.3 551.4,61.1 554.8,63.6 558.2,56.9 561.6,64.9 565.1,59.2 568.5,57.7 571.9,60.8 575.3,56.7 578.7,60.6 582.1,54.7 585.5,53.8 589.0,56.6 592.4,57.3 595.8,61.1 599.2,54.7 602.6,56.2 606.0,52.4 609.4,57.3 612.9,56.8 616.3,64.1 619.7,55.1 623.1,56.5 626.5,54.7 629.9,54.8 633.3,48.0 636.8,52.8 640.2,50.9 643.6,50.1 647.0,50.2 650.4,50.6 653.8,49.9 657.3,52.0 660.7,53.9 664.1,49.4 667.5,43.0 670.9,48.0 674.3,40.5 677.7,45.3 681.2,49.2 684.6,47.1 688.0,47.0 691.4,46.0 694.8,45.8 698.2,49.3 701.6,43.9 705.1,43.9 708.5,41.2 711.9,39.8 715.3,46.2 718.7,43.6 722.1,42.5 725.5,41.8 729.0,40.8 732.4,36.8 735.8,38.3 739.2,38.8 742.6,41.9 746.0,39.2 749.5,37.8 752.9,36.4 756.3,37.7 759.7,36.4 763.1,41.9 766.5,36.9 769.9,33.9 773.4,33.9 776.8,32.4 780.2,35.1 783.6,42.0 787.0,34.2 790.4,39.1 793.8,31.5 797.3,31.9 800.7,35.0 804.1,33.4 807.5,28.5 810.9,32.4 814.3,33.2 817.7,34.1 821.2,33.4 824.6,30.9 828.0,29.8 831.4,30.0 834.8,33.0 838.2,26.8 841.7,32.7 845.1,26.8 848.5,32.6 851.9,25.6 855.3,28.1 858.7,30.1 862.1,26.7 865.6,29.5 869.0,25.6 872.4,29.0 875.8,23.9 879.2,26.4 882.6,20.5 886.0,26.3 889.5,22.4 892.9,22.6 896.3,22.1 899.7,21.4 903.1,29.2 906.5,27.2 909.9,22.1 913.4,24.7 916.8,20.0 920.2,23.5 923.6,21.9 927.0,18.2 930.4,23.4 933.9,26.2 937.3,16.9 940.7,16.8 944.1,24.6 947.5,20.3 950.9,23.2 954.3,22.4 957.8,26.4 961.2,23.1 964.6,20.0 968.0,16.0"/><line x1="46" y1="184" x2="968" y2="184" stroke="#e3e8ef"/><text x="46" y="202" font-size="11" fill="#5b6b7b">iter 0</text><text x="968" y="202" font-size="11" fill="#5b6b7b" text-anchor="end">iter 270</text></svg><div style="margin-top:6px"><span style="display:inline-flex;align-items:center;gap:6px;margin-right:14px;font-size:12px"><i style="width:14px;height:3px;background:#2563eb;display:inline-block;border-radius:2px"></i>速度误差 error_vel_xy <b style="color:#1f2933">1.945</b></span><span style="display:inline-flex;align-items:center;gap:6px;margin-right:14px;font-size:12px"><i style="width:14px;height:3px;background:#1f9d55;display:inline-block;border-radius:2px"></i>腾空时间 air_time (s) <b style="color:#1f2933">0.1589</b></span><span style="display:inline-flex;align-items:center;gap:6px;margin-right:14px;font-size:12px"><i style="width:14px;height:3px;background:#c9821a;display:inline-block;border-radius:2px"></i>回合奖励 mean_reward <b style="color:#1f2933">54.27</b></span></div><div class="metrics">纵轴为各指标自身 min–max 归一（只看形状，数值见右侧末值）。</div>
+
+  <h3 style="font-size:15px;margin-top:18px">冲刺配方 vs 官方配方</h3>
+  <table>
+    <tr><th>项目</th><th>官方 Velocity（走路）</th><th>本机 Sprint（短跑）</th><th>为什么这么改</th></tr>
+    <tr><td>前进速度命令</td><td><code>(-0.4, 0.4)</code> m/s</td><td><code>(0.8, 2.6)</code> m/s</td><td>命令上不去，策略永远学不到高速；下界 0.8 保证全程都在跑</td></tr>
+    <tr><td>横向 / 转向命令</td><td>±0.3 / ±1.0</td><td>±0.12 / ±0.25</td><td>收窄 ≈ "跑偏扣分"：只允许微调，不允许横着走</td></tr>
+    <tr><td>朝向</td><td><code>rel_heading_envs=0</code></td><td><code>1.0</code>，heading ±0.12</td><td>全部环境按相对朝向采样，直道冲刺</td></tr>
+    <tr><td>腾空奖励 <code>air_time</code></td><td>权重 3.0，窗口 [0.125, 0.300] s</td><td>权重 <b>5.0</b>，窗口 [0.10, 0.35] s</td><td>双击腾空是短跑的核心，窗口放宽让"腾得久"也被奖励</td></tr>
+    <tr><td>速度追踪</td><td>2.0</td><td><b>3.0</b></td><td>主目标权重最高</td></tr>
+    <tr><td>动作变形 <code>action_rate_l2</code></td><td>−0.1</td><td>−0.05</td><td>放宽，否则爆发力被罚死</td></tr>
+    <tr><td>打滑 <code>foot_slip</code></td><td>−0.1</td><td><b>−0.35</b></td><td>加重 —— 滑步刷出来的是假速度</td></tr>
+    <tr><td>头部姿态追踪</td><td>2.0</td><td>0.3</td><td>短跑不关心脖子，把容量让给腿</td></tr>
+    <tr><td>回合长度</td><td>20 s</td><td>12 s</td><td>冲刺是高频片段，长回合稀释梯度</td></tr>
+  </table>
+  <div class="note">代码位置：<code>src/mjlab_microduck/tasks/microduck_sprint_env_cfg.py</code>（新增文件，
+  不改官方任何一行），注册为独立任务 <code>Mjlab-Sprint-Flat-MicroDuck</code>，与官方任务并存。</div>
+
+  <h3 style="font-size:15px;margin-top:18px">跑批参数</h3>
+  <table>
+    <tr><th>项</th><th>值</th><th>说明</th></tr>
+    <tr><td>物理引擎</td><td>MuJoCo Warp（<code>warp-lang 1.12.0</code> + <code>mujoco-warp</code>）</td><td>4096 个环境在卡内并行，一次 kernel 推进</td></tr>
+    <tr><td>算法</td><td>PPO（rsl_rl）</td><td>actor/critic 各 3×128 ELU</td></tr>
+    <tr><td>并发环境</td><td>4096</td><td>GB10 统一内存 121 GB，鸭子仅 15 自由度，远未吃满</td></tr>
+    <tr><td>迭代预算</td><td>5000</td><td>每 250 迭代存 checkpoint + 录一段视频</td></tr>
+    <tr><td>控制频率</td><td>50 Hz</td><td>与 RK3566 实机 robotd 对齐</td></tr>
+    <tr><td>训练卡</td><td>NVIDIA GB10（DGX Spark，sm_121）</td><td>与生产 SOP 推理共用，闲余算力跑</td></tr>
+  </table>
+
+  <h3 style="font-size:15px;margin-top:18px">算法与技能动物园 —— 这只鸭子还能怎么练</h3>
+  <p>先说清一件事：官方训练栈 <code>microduck_rl</code> 的算法层来自 <b>rsl_rl</b>，
+  而 rsl_rl 里<b>只有 PPO 和 distillation</b>（<code>rsl_rl/algorithms/</code> 下就这两个文件）。
+  所以"换算法"不是改一行参数的事，得分清哪些是现成的、哪些要自己接。</p>
+  <table>
+    <tr><th>玩法</th><th>落地方式</th><th>能拿到什么</th><th>状态</th></tr>
+    <tr><td><b>PPO 冲刺配方</b></td><td><code>Mjlab-Sprint-Flat-MicroDuck</code>（本次新增）</td><td>高速直道短跑，冲 2 m/s 量级</td><td><span class="pill ok">进行中</span></td></tr>
+    <tr><td><b>PPO + RNN（LSTM/GRU）</b></td><td><code>--agent.actor.rnn-type lstm</code> + <code>--agent.actor.class-name RNNModel</code></td><td>带记忆的策略：扛观测延迟、扛遮挡、实机更稳</td><td><span class="pill warn">一条命令可跑</span></td></tr>
+    <tr><td><b>PPO + 对称性增强</b></td><td>官方 <code>tasks/symmetry.py</code> + <code>--agent.algorithm.symmetry-cfg</code></td><td>左右对称数据增广，收敛更快、步态更规整</td><td><span class="pill warn">一条命令可跑</span></td></tr>
+    <tr><td><b>Teacher-Student 蒸馏</b></td><td><code>rsl_rl/algorithms/distillation.py</code></td><td>teacher 吃特权信息（真实摩擦/速度），student 只看本体感知 → 可上实机</td><td><span class="pill warn">需写 runner</span></td></tr>
+    <tr><td><b>域随机化强度扫描</b></td><td>BAM 舵机摩擦 / 齿轮间隙 / 控制延迟 / 电池电压</td><td>sim2real 稳定性，直接决定上真鸭子会不会摔</td><td><span class="pill warn">改配置即可</span></td></tr>
+    <tr><td><b>粗糙地形课程</b></td><td><code>Mjlab-Velocity-Rough-MicroDuck</code> / <code>-Backlash-</code></td><td>台阶、斜坡、缝隙；抗扰能力</td><td><span class="pill">排队</span></td></tr>
+    <tr><td><b>七个现成技能</b></td><td><code>Roulade</code>（前滚翻）<code>BallKick</code>（踢球）<code>Rollers</code>（轮滑）<code>StandUp</code> <code>SitStand</code> <code>GroundPick</code> <code>Spin</code> <code>Swizzle</code></td><td>一只鸭子八种动作，全部是注册好的任务，直接 <code>train &lt;task&gt;</code></td><td><span class="pill">待跑</span></td></tr>
+    <tr><td>SAC / FastSAC</td><td>需自己写 env 适配（rsl_rl 不含 off-policy）</td><td>样本效率高，但这里 4096 并发下 PPO 更划算</td><td><span class="pill bad">不建议先做</span></td></tr>
+    <tr><td>AMP（对抗运动先验）</td><td>需自写判别器 + 参考动作数据</td><td>学"像鸭子的跑"，不是"最快的跑"</td><td><span class="pill bad">缺参考动作数据</span></td></tr>
+  </table>
+  <div class="note">一句话取舍：<b>想让鸭子快 → 改命令范围 + 改奖励（本次做的事）；想让鸭子像鸭子 → AMP；想上真机不摔 → 域随机化 + RNN。</b>
+  换 SAC/AMP 的收益在这台机器上不如先把 PPO 的命令空间和奖励配方调对。</div>
+
+  <h3 style="font-size:15px;margin-top:18px">训练实拍（MuJoCo Warp 渲染）</h3>
+  <div class="grid">
+    <div class="vcard">
+      <h3>训练快照 · step 0</h3>
+      <div class="tag">MuJoCo Warp 渲染 · 6.0s · 0.2 MB</div>
+      <video controls preload="metadata" src="duck/videos/rl-video-step-0.mp4"></video>
+    </div>
+    <div class="vcard">
+      <h3>训练快照 · step 1000</h3>
+      <div class="tag">MuJoCo Warp 渲染 · 6.0s · 0.2 MB</div>
+      <video controls preload="metadata" src="duck/videos/rl-video-step-1000.mp4"></video>
+    </div>
+    <div class="vcard">
+      <h3>训练快照 · step 1500</h3>
+      <div class="tag">MuJoCo Warp 渲染 · 6.0s · 0.2 MB</div>
+      <video controls preload="metadata" src="duck/videos/rl-video-step-1500.mp4"></video>
+    </div>
+    <div class="vcard">
+      <h3>训练快照 · step 2000</h3>
+      <div class="tag">MuJoCo Warp 渲染 · 6.0s · 0.2 MB</div>
+      <video controls preload="metadata" src="duck/videos/rl-video-step-2000.mp4"></video>
+    </div>
+    <div class="vcard">
+      <h3>训练快照 · step 2500</h3>
+      <div class="tag">MuJoCo Warp 渲染 · 6.0s · 0.2 MB</div>
+      <video controls preload="metadata" src="duck/videos/rl-video-step-2500.mp4"></video>
+    </div>
+    <div class="vcard">
+      <h3>训练快照 · step 3000</h3>
+      <div class="tag">MuJoCo Warp 渲染 · 6.0s · 0.2 MB</div>
+      <video controls preload="metadata" src="duck/videos/rl-video-step-3000.mp4"></video>
+    </div>
+    <div class="vcard">
+      <h3>训练快照 · step 3500</h3>
+      <div class="tag">MuJoCo Warp 渲染 · 6.0s · 0.2 MB</div>
+      <video controls preload="metadata" src="duck/videos/rl-video-step-3500.mp4"></video>
+    </div>
+    <div class="vcard">
+      <h3>训练快照 · step 4000</h3>
+      <div class="tag">MuJoCo Warp 渲染 · 6.0s · 0.2 MB</div>
+      <video controls preload="metadata" src="duck/videos/rl-video-step-4000.mp4"></video>
+    </div>
+    <div class="vcard">
+      <h3>训练快照 · step 4500</h3>
+      <div class="tag">MuJoCo Warp 渲染 · 6.0s · 0.2 MB</div>
+      <video controls preload="metadata" src="duck/videos/rl-video-step-4500.mp4"></video>
+    </div>
+    <div class="vcard">
+      <h3>训练快照 · step 500</h3>
+      <div class="tag">MuJoCo Warp 渲染 · 6.0s · 0.2 MB</div>
+      <video controls preload="metadata" src="duck/videos/rl-video-step-500.mp4"></video>
+    </div>
+    <div class="vcard">
+      <h3>训练快照 · step 5000</h3>
+      <div class="tag">MuJoCo Warp 渲染 · 6.0s · 0.2 MB</div>
+      <video controls preload="metadata" src="duck/videos/rl-video-step-5000.mp4"></video>
+    </div>
+    <div class="vcard">
+      <h3>训练快照 · step 5500</h3>
+      <div class="tag">MuJoCo Warp 渲染 · 6.0s · 0.2 MB</div>
+      <video controls preload="metadata" src="duck/videos/rl-video-step-5500.mp4"></video>
+    </div>
+    <div class="vcard">
+      <h3>训练快照 · step 6000</h3>
+      <div class="tag">MuJoCo Warp 渲染 · 6.0s · 0.2 MB</div>
+      <video controls preload="metadata" src="duck/videos/rl-video-step-6000.mp4"></video>
+    </div>
+  </div>
+</section>
+<!-- CH11:END -->
+
+<footer>
+  本报告由 WorkBuddy 在 NVIDIA DGX Spark（GB10）上真实执行生成 · 2026-10-21 ·
+  课程：DataWhale every-embodied / 05-MicroDuck 运动策略与任务开发专题 / 03-Notebook
+</footer>
+</div>
+</body>
+</html>

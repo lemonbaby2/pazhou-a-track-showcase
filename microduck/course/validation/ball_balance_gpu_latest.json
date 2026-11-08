@@ -1,0 +1,386 @@
+{
+  "task": "ball_balance",
+  "run_id": "b60d8ee0-7a3d-4049-a195-87a7a6895832",
+  "generated_at_utc": "2026-10-21T11:13:28.475255+00:00",
+  "policy_validation": {
+    "inference_calls": 900,
+    "real_observation_parity_checks": 32,
+    "max_abs_output_error": 2.682209014892578e-07,
+    "parity_atol": 0.0001,
+    "parity_rtol": 0.0001
+  },
+  "task_id": "microduck-ball-balance",
+  "display_name": "Motrix FastSAC ball balance",
+  "backend": "GPU ONNX via Torch CUDA",
+  "policy_device": "GPU",
+  "renderer": "Ubuntu MotrixSim headless renderer",
+  "onnx_file": "/home/nvidia/microduck-course-run/converted/motrix_ball_balance_restored.opset11.onnx",
+  "onnx_sha256": "0101d6ffdcf74e3b8ef611e70d0dd9f998c1ca54d9fd76f3f53ce90e2e7be596",
+  "observation_dim": 54,
+  "action_dim": 14,
+  "steps": 900,
+  "requested_steps": 900,
+  "video_frames": 540,
+  "resets": 59,
+  "reset_events": [
+    {
+      "step": 17,
+      "terms": [
+        "bad_orientation"
+      ]
+    },
+    {
+      "step": 30,
+      "terms": [
+        "bad_orientation"
+      ]
+    },
+    {
+      "step": 42,
+      "terms": [
+        "bad_orientation"
+      ]
+    },
+    {
+      "step": 57,
+      "terms": [
+        "bad_orientation"
+      ]
+    },
+    {
+      "step": 75,
+      "terms": [
+        "bad_orientation"
+      ]
+    },
+    {
+      "step": 89,
+      "terms": [
+        "bad_orientation"
+      ]
+    },
+    {
+      "step": 103,
+      "terms": [
+        "bad_orientation"
+      ]
+    },
+    {
+      "step": 115,
+      "terms": [
+        "bad_orientation"
+      ]
+    },
+    {
+      "step": 132,
+      "terms": [
+        "bad_orientation"
+      ]
+    },
+    {
+      "step": 149,
+      "terms": [
+        "bad_orientation"
+      ]
+    },
+    {
+      "step": 162,
+      "terms": [
+        "bad_orientation"
+      ]
+    },
+    {
+      "step": 176,
+      "terms": [
+        "bad_orientation"
+      ]
+    },
+    {
+      "step": 190,
+      "terms": [
+        "bad_orientation"
+      ]
+    },
+    {
+      "step": 203,
+      "terms": [
+        "bad_orientation"
+      ]
+    },
+    {
+      "step": 216,
+      "terms": [
+        "bad_orientation"
+      ]
+    },
+    {
+      "step": 229,
+      "terms": [
+        "bad_orientation"
+      ]
+    },
+    {
+      "step": 244,
+      "terms": [
+        "bad_orientation"
+      ]
+    },
+    {
+      "step": 261,
+      "terms": [
+        "bad_orientation"
+      ]
+    },
+    {
+      "step": 275,
+      "terms": [
+        "bad_orientation"
+      ]
+    },
+    {
+      "step": 292,
+      "terms": [
+        "bad_orientation"
+      ]
+    },
+    {
+      "step": 308,
+      "terms": [
+        "bad_orientation"
+      ]
+    },
+    {
+      "step": 322,
+      "terms": [
+        "bad_orientation"
+      ]
+    },
+    {
+      "step": 337,
+      "terms": [
+        "bad_orientation"
+      ]
+    },
+    {
+      "step": 351,
+      "terms": [
+        "bad_orientation"
+      ]
+    },
+    {
+      "step": 366,
+      "terms": [
+        "bad_orientation"
+      ]
+    },
+    {
+      "step": 381,
+      "terms": [
+        "bad_orientation"
+      ]
+    },
+    {
+      "step": 395,
+      "terms": [
+        "bad_orientation"
+      ]
+    },
+    {
+      "step": 411,
+      "terms": [
+        "bad_orientation"
+      ]
+    },
+    {
+      "step": 425,
+      "terms": [
+        "bad_orientation"
+      ]
+    },
+    {
+      "step": 441,
+      "terms": [
+        "bad_orientation"
+      ]
+    },
+    {
+      "step": 458,
+      "terms": [
+        "bad_orientation"
+      ]
+    },
+    {
+      "step": 474,
+      "terms": [
+        "bad_orientation"
+      ]
+    },
+    {
+      "step": 489,
+      "terms": [
+        "bad_orientation"
+      ]
+    },
+    {
+      "step": 506,
+      "terms": [
+        "bad_orientation"
+      ]
+    },
+    {
+      "step": 524,
+      "terms": [
+        "bad_orientation"
+      ]
+    },
+    {
+      "step": 538,
+      "terms": [
+        "bad_orientation"
+      ]
+    },
+    {
+      "step": 551,
+      "terms": [
+        "bad_orientation"
+      ]
+    },
+    {
+      "step": 565,
+      "terms": [
+        "bad_orientation"
+      ]
+    },
+    {
+      "step": 588,
+      "terms": [
+        "bad_orientation"
+      ]
+    },
+    {
+      "step": 603,
+      "terms": [
+        "bad_orientation"
+      ]
+    },
+    {
+      "step": 619,
+      "terms": [
+        "bad_orientation"
+      ]
+    },
+    {
+      "step": 631,
+      "terms": [
+        "bad_orientation"
+      ]
+    },
+    {
+      "step": 646,
+      "terms": [
+        "bad_orientation"
+      ]
+    },
+    {
+      "step": 661,
+      "terms": [
+        "bad_orientation"
+      ]
+    },
+    {
+      "step": 675,
+      "terms": [
+        "bad_orientation"
+      ]
+    },
+    {
+      "step": 692,
+      "terms": [
+        "bad_orientation"
+      ]
+    },
+    {
+      "step": 710,
+      "terms": [
+        "bad_orientation"
+      ]
+    },
+    {
+      "step": 725,
+      "terms": [
+        "bad_orientation"
+      ]
+    },
+    {
+      "step": 739,
+      "terms": [
+        "bad_orientation"
+      ]
+    },
+    {
+      "step": 754,
+      "terms": [
+        "bad_orientation"
+      ]
+    },
+    {
+      "step": 768,
+      "terms": [
+        "bad_orientation"
+      ]
+    },
+    {
+      "step": 783,
+      "terms": [
+        "bad_orientation"
+      ]
+    },
+    {
+      "step": 797,
+      "terms": [
+        "bad_orientation"
+      ]
+    },
+    {
+      "step": 812,
+      "terms": [
+        "bad_orientation"
+      ]
+    },
+    {
+      "step": 827,
+      "terms": [
+        "bad_orientation"
+      ]
+    },
+    {
+      "step": 842,
+      "terms": [
+        "bad_orientation"
+      ]
+    },
+    {
+      "step": 856,
+      "terms": [
+        "bad_orientation"
+      ]
+    },
+    {
+      "step": 872,
+      "terms": [
+        "bad_orientation"
+      ]
+    },
+    {
+      "step": 887,
+      "terms": [
+        "bad_orientation"
+      ]
+    }
+  ],
+  "failure_resets": 59,
+  "timeout_resets": 0,
+  "mean_inference_ms": 4.160450856466519,
+  "p95_inference_ms": 8.231191083905282,
+  "note": "MotrixSim renders on Ubuntu; the FastSAC actor is evaluated by Torch on GPU."
+}

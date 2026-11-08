@@ -9,7 +9,8 @@ venv/
 *.log
 
 # 数据不进 git：轨迹、视频、质检报告都按需重生成
-data/
+# 只忽略仓库根目录的采集数据；microduck/data/ 是已归档的实验结果，必须入库
+/data/
 out/qc_report.json
 out/verify/
 out/pazhou_video_voice_20261107/
@@ -18,3 +19,6 @@ out/pazhou_video_voice_20261107/
 build/
 dist/
 *.egg-info/
+
+# microduck 归档：notebook 运行日志是实验证据，不能被上面的 *.log 吞掉
+!microduck/**/*.log

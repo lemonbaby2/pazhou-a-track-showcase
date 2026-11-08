@@ -1,0 +1,363 @@
+﻿path,bytes,sha256,top_dir,source
+checkpoints/model_250.pt,4843363,941946247628a54f2b05eda1df3caf983b1926a2ed9e6d5c73e1a5617ee50495,checkpoints,Gitee duckf--the-playful-duck / 检查点
+checkpoints/model_2999.pt,4843445,8ab76b94514c1565dc696e5c960dbd12f075a2d8516b99485a7a037463a3ebbe,checkpoints,Gitee duckf--the-playful-duck / 检查点
+course/logs/00-notebook.log,566,a46293b5be54b8650da9e3cf9b0cd925bf5008a9ccb852f0cd0b623f79903bb2,course,Datawhale task3/logs 原始运行日志
+course/logs/00_execution.json,310,bc89fb83b4b34401f13426c955972b858825d496a8fa8b6b84ddce107361821e,course,Datawhale task3/logs 原始运行日志
+course/logs/01-notebook.log,55190,03b82d7fe4041e815efc79e38e077fddc099189cc14e82809f8ba3a13b51e6a7,course,Datawhale task3/logs 原始运行日志
+course/logs/01_execution.json,308,903fe300f335596792c732587f22c2a38c3e20770755885af0f74a28f34935ec,course,Datawhale task3/logs 原始运行日志
+course/logs/02-notebook.log,564,ddb0ec2a38abba3e7a0cbebf5ff559a70e0d16c9dcbe9f10cd24c71079b2acfd,course,Datawhale task3/logs 原始运行日志
+course/logs/02_execution.json,308,8470e0bfc5a4c9bf0e524346f96b33943c6a35de4d233ecca7a6a80532e6161c,course,Datawhale task3/logs 原始运行日志
+course/logs/03-notebook.log,1703,936d0b5e874ca403167d9efddc0be4289e20f8cef995cee64f2107e750caaff1,course,Datawhale task3/logs 原始运行日志
+course/logs/03_execution.json,307,7edb37279b23b2b638d10ea11a0612c2a57c9447658fc7bc2097ce77d91e3f3b,course,Datawhale task3/logs 原始运行日志
+course/logs/04-notebook.log,1703,ed3cedfa2afb69d50b2a79139ea1900acfd823a86229a19915f9f5e31de92347,course,Datawhale task3/logs 原始运行日志
+course/logs/04_execution.json,307,d5e59792f44369924324d73912d3a5db31106e0d4ec3f31eb99970b2158803bd,course,Datawhale task3/logs 原始运行日志
+course/logs/05-notebook.log,4141,bdea3aa59e7d11a977a3a31acd2c8ebea56fc2167b75c1d17fe5d879255ba2bd,course,Datawhale task3/logs 原始运行日志
+course/logs/05_execution.json,310,4b01386cf49bc49676d05b4b62c0e3322fc39251ab6a793468b778f852e93ea8,course,Datawhale task3/logs 原始运行日志
+course/logs/06-notebook.log,564,a2a233f548079b006365acd5f1442c18166f744617e06946a14f3e8faff8cd92,course,Datawhale task3/logs 原始运行日志
+course/logs/06_execution.json,308,380e013c1a18cb16e5db7d5c6f26a430fa004b4ff78cc1106d6d7a048085f826,course,Datawhale task3/logs 原始运行日志
+course/logs/07-notebook.log,564,0f3debab1248c6f34a5b61fb571726a7013575d71567fb504ae0f91bad652a32,course,Datawhale task3/logs 原始运行日志
+course/logs/07_execution.json,308,0aaccbede97c8e414245b52b1fb48a0270c8414eee1027cc426ba4286bb5ac04,course,Datawhale task3/logs 原始运行日志
+course/logs/08-notebook.log,567,c111c0d18d821dc006e97ef5beb52a5d32c0ee4eef47dfbe2f25e8656c821e77,course,Datawhale task3/logs 原始运行日志
+course/logs/08_execution.json,311,edeb7c3eeb7a05b31418c8a62a7fe96a01449b3d169d51514e47282ea65dbc27,course,Datawhale task3/logs 原始运行日志
+course/logs/09-notebook.log,566,439da5f2ad2325de8202d1979c184253c9d9fac711b94b68d1e01dd138682ead,course,Datawhale task3/logs 原始运行日志
+course/logs/09_execution.json,310,f251de39148f86742c2ad0fde495f9c3476e8ef280e5b5a962e672ef4320b0b9,course,Datawhale task3/logs 原始运行日志
+course/logs/run_all_master.json,3455,f9167cdad2c54925d48b095d935668f74e88cdcdc9e45cadd173bd106f125925,course,Datawhale task3/logs 原始运行日志
+course/notebooks/00_MuJoCo策略控制_HelloWorld.ipynb,298079,2a6d11df72193c3c23e573bae677be87b0040e54d7f52543a8c05eb6fcadf46c,course,Datawhale task3/notebooks 00-09
+course/notebooks/01_篮球平衡_PPO_ONNX_BPU_MuJoCo.ipynb,5298756,086117ab57e0a9c33473a1ddfac784a40645d5ec40b50a72457192fe8cf3af8f,course,Datawhale task3/notebooks 00-09
+course/notebooks/02_浏览器物理扰动_回放与接口.ipynb,1611856,bfa4d0974f586b37005f865eee81830a34689c662a79782cba01ce5cc7cc24d5,course,Datawhale task3/notebooks 00-09
+course/notebooks/03_高跷行走_课程与ONNX_BPU.ipynb,1717978,1183d82ddc1ada1870ba8e1b256be91f58fff3d160858a284bb457ad850dce55,course,Datawhale task3/notebooks 00-09
+course/notebooks/04_摆动旋转_ONNX_BPU_MuJoCo.ipynb,1883457,0fa30bba9508c3c13380c84c78cd9957f72b87a4d7bdf5c9c26164cfb6ac102f,course,Datawhale task3/notebooks 00-09
+course/notebooks/05_球平衡_FastSAC_ONNX_BPU.ipynb,438642,135804b2e2c25388569f0f837639f704b2c9eec41b5cff4f62840383a15282e0,course,Datawhale task3/notebooks 00-09
+course/notebooks/06_梯面攀爬_接触与部署模板.ipynb,2502649,bcd14cdd4685fd88a11e9a4d1f18eca65fded28ea75b7675f0ba21698920b446,course,Datawhale task3/notebooks 00-09
+course/notebooks/07_RDK网页与多策略_BPU验收.ipynb,1637354,428c295f2d7ef269ec4b5f83c679649ac56e0392151e8101aff725dbc7654e83,course,Datawhale task3/notebooks 00-09
+course/notebooks/08_LightNav0_视觉语言导航_GPU_多场景.ipynb,1368300,dc0ba32141de4d31451a0006c01c76cf5681e5da62b78b59253c062e390024f9,course,Datawhale task3/notebooks 00-09
+course/notebooks/09_跨缝跳跃_PPO_GPU_ONNX.ipynb,155591,66ef3378f05f15a7ae78eb4e96b06de0dafafef98b26d4ae64fea4cfcd32ce61,course,Datawhale task3/notebooks 00-09
+course/optimization/lightnav_opt.py,13573,938660cbd9cba53385e869e94fd22791714dba86e69ba7fd230f314f28dee1ca,course,Task8 控制层优化实验（2026-11-04）
+course/optimization/README.md,8706,090f4f5e5fc5df57c720641911583014771a24ada85b8b4466d275585a05cd10,course,Task8 控制层优化实验（2026-11-04）
+course/optimization/reports/all.json,17580,71db35582e1f0a8e50c5a608a2f4c57d8b56d94d10d12ce59f6d0147b538df18,course,Task8 控制层优化实验（2026-11-04）
+course/optimization/reports/base__corridor_report.json,919,1066364d2194d60476f17322ccec749541349e08a445de6fce70ac8653b9ea87,course,Task8 控制层优化实验（2026-11-04）
+course/optimization/reports/base__living_room_report.json,910,532d1668f4d19d4ed89ec12b81759e6d14e0e346197d9b6b88d9674819758abe,course,Task8 控制层优化实验（2026-11-04）
+course/optimization/reports/base__official_apartment_report.json,916,ab42164faa4dd26afdb7049bb03c2c1882c1703a3f03368eaba9e2944a2197fe,course,Task8 控制层优化实验（2026-11-04）
+course/optimization/reports/fast__corridor_report.json,920,60a8baf36744e5750f41e8bdbd9dee97fba66fb438ac719aad4c53b73a6c29df,course,Task8 控制层优化实验（2026-11-04）
+course/optimization/reports/fast__living_room_report.json,913,d6be7876a459b4066e0d50fb70caf93fd4544a6f8b944075eb4e42a2271a2587,course,Task8 控制层优化实验（2026-11-04）
+course/optimization/reports/fast__official_apartment_report.json,918,7937ddf0e8c77e6fb49175e7aba92e491a907f1a93714d793388ad411122f44b,course,Task8 控制层优化实验（2026-11-04）
+course/optimization/reports/full__corridor_report.json,923,864cbe2cc810783b3656bf207bd34ee220cd3fb6d4dfd40bec51a91bf920cdff,course,Task8 控制层优化实验（2026-11-04）
+course/optimization/reports/full__living_room_report.json,913,5d10a6f53c0b7c01554d137af1067babb3f642db1ab75d214489f7d69ced87f6,course,Task8 控制层优化实验（2026-11-04）
+course/optimization/reports/full__official_apartment_report.json,919,b46ffbd512e0cc59c7ccc590afda9890725ba02ac33e048e8cb8cbe508b57012,course,Task8 控制层优化实验（2026-11-04）
+course/optimization/reports/full_smooth__corridor_report.json,1078,a41bd6acc8bd3fb97fc00d98f1b2fb926911602ad08fe3fe06a3b8195a1dc7a8,course,Task8 控制层优化实验（2026-11-04）
+course/optimization/reports/full_smooth__living_room_report.json,1071,0fb1d257caf32c3c5eb657531ba95edf75f356f6cb04281a1d6d0c5ccc12addb,course,Task8 控制层优化实验（2026-11-04）
+course/optimization/reports/full_smooth__official_apartment_report.json,1079,4f7522b21d8ee867fc8400996a76544f8cd65a5eae63bbd6eeb95d6e09e90583,course,Task8 控制层优化实验（2026-11-04）
+course/optimization/reports/smooth__corridor_report.json,1066,3fbd6073358bcd3fa4187cef01faab82b7b34d5c2128334708886bdeded4f0bf,course,Task8 控制层优化实验（2026-11-04）
+course/optimization/reports/smooth__living_room_report.json,1061,27d7c7951f0c3ab3fd9518f53d529a4aeea27a027e3e4d1fa31cc4a040b98774,course,Task8 控制层优化实验（2026-11-04）
+course/optimization/reports/smooth__official_apartment_report.json,1067,415672fe7735f2cb20b71338573b377f42abcfc4742b1e067dc49ccd35743c0d,course,Task8 控制层优化实验（2026-11-04）
+course/optimization/reports/summary.csv,1720,95f25fe2e4909a92d5c6383ef42ba09d33e4ddbca8b985e8ba41b43460ac1467,course,Task8 控制层优化实验（2026-11-04）
+course/optimization/reports/summary.md,1608,0541581fe226137d9560303b1eac75859f431e2e51d0c338ec9fb517a2c568cd,course,Task8 控制层优化实验（2026-11-04）
+course/optimization/reports/tail__corridor_report.json,947,b9f4c13e7ed507e64ace391ef1e2ca9e3da48822a0ad9a9e07008fd92419164e,course,Task8 控制层优化实验（2026-11-04）
+course/optimization/reports/tail__living_room_report.json,939,2254b0f9d17a87759cb7f273a7928842ce1b67ee50176391b3138f0712b75193,course,Task8 控制层优化实验（2026-11-04）
+course/optimization/reports/tail__official_apartment_report.json,946,41f2788e6f6b1e5565ee75b4f717c7b22a9e85700d63bb25bcd956efe7f43711,course,Task8 控制层优化实验（2026-11-04）
+course/optimization/videos/base__corridor.mp4,1372513,7d07265c74dbaf2b22cc2f35f3c1baf2016078330152980e7b5bfadb70747dae,course,Task8 控制层优化实验（2026-11-04）
+course/optimization/videos/base__living_room.mp4,1092326,56dfd9573471de9f752f52b31e968cb7a7cda32532713d648701cca17142fdb9,course,Task8 控制层优化实验（2026-11-04）
+course/optimization/videos/base__official_apartment.mp4,866021,643c75f8c90a2a0a63d4f4c7c1b6125e2c631abcada34bd3a5f4da552e98c081,course,Task8 控制层优化实验（2026-11-04）
+course/optimization/videos/full_smooth__corridor.mp4,2282293,b32c3688bdd5cb0e611fe1ddc4d4b9e1f859a9cdfb1f40e4efdd8bedbdfae27c,course,Task8 控制层优化实验（2026-11-04）
+course/optimization/videos/full_smooth__living_room.mp4,2277681,06977e8308592d87b096c7be0927b6db1f7c35ecdacd574d6746e26623c89ee9,course,Task8 控制层优化实验（2026-11-04）
+course/optimization/videos/full_smooth__official_apartment.mp4,1156182,314cff057fb943430688828fdb62da5cf6590584d50a06e55eb914ffceb339eb,course,Task8 控制层优化实验（2026-11-04）
+course/README.md,10321,920e4505248ff99b5153101b9dbeaf099bbc26fd76da50f4df8dad54f6835697,course,Gitee duckf--the-playful-duck / 课程归档
+course/site_src/.gitignore,152,a570ca9b171d285ba2b692192a14e9d5d5ed442e7e4e654051598aaa6f989ffe,course,Datawhale task3 站点源码
+course/site_src/add_ch9_ch10.py,9418,48970f0a1a81a6d50306732d22a110d930a506ab1634fad0f4f31f68383eff48,course,Datawhale task3 站点源码
+course/site_src/app.py,8642,bb4567917434e68d403a01957b579bd787715733bd8d27ff2c1a3cd13acae511,course,Datawhale task3 站点源码
+course/site_src/data/runs.db,20480,797a5a9c9168858ac463e0491783a73cf0b9b80b0f692ce97217e9eb81a70892,course,Datawhale task3 站点源码
+course/site_src/duck/sprint_metrics.json,23478,e05f978f36c9fb02ba1e519ec5c86c5fd1aa9844b89843c02b942abdf6873b6c,course,Datawhale task3 站点源码
+course/site_src/duck/sprint_speed.json,319,295cf79e3e6f752794b7015ea8ac35f934d3818d4e6cb4a88eef0047e62bad4a,course,Datawhale task3 站点源码
+course/site_src/index.html,58929,27a3dab66ddc947f2a0f7b3cd35c9ae500dafda79287fc2dce5d38d05e0982ea,course,Datawhale task3 站点源码
+course/site_src/regen_ch11.py,15407,b016f8499317233492e1f4e1ceadf7a6d5f06237cec8934a0115fd6682f618b4,course,Datawhale task3 站点源码
+course/site_src/regen_ch8.py,4240,03107c9973a6f617153696659586ea44576544cd9f705ff5f0f9a0471ef222e5,course,Datawhale task3 站点源码
+course/site_src/requirements.txt,33,8287f8c9bb9b42c5572cfc7fd1aec8f2240b3f4616bb9c9c5076c4522602318b,course,Datawhale task3 站点源码
+course/site_src/sync_duck.sh,1905,d1b1cd8a7478381bba38ce9db4a9ce173a130315c4df2c7f1e29f0c8ac449f89,course,Datawhale task3 站点源码
+course/site_src/飞书收集表提交稿.md,2424,fd44cef9c14cf8bb042ef99528857a0e7548c1c048f6b8216d5f82929176b39a,course,Datawhale task3 站点源码
+course/Task1-8_学习心得全集.md,24667,7a9235555d8ce613b44513ae4ae2a8fa798454b6ebcc517df66fd61d8edd96a5,course,Gitee duckf--the-playful-duck / 课程归档
+course/upstream-docs/BRANCH_START.md,686,a10d5ab698cd00aa40a3a6a1b579aef845f4453bf74c0dee2fc30cb4ecb10b79,course,Datawhale 课程说明 + task1/task2 原件
+course/upstream-docs/HELLO_ROBOT_REFERENCE.md,1281,6e82713c131a09d9e27a23bc5a94ee5d225ec1af53f81986caab14957ab7a70b,course,Datawhale 课程说明 + task1/task2 原件
+course/upstream-docs/README.md,2030,ca2077eb2b3ea07c7eebcafc428dbacb3c9d516bdcc6f823ece509d38af5ebd0,course,Datawhale 课程说明 + task1/task2 原件
+course/upstream-docs/START_HERE.md,1815,4c97bbec321eb02e285fb152edf7f2483c38827e9d3209a8b588497aa524f32e,course,Datawhale 课程说明 + task1/task2 原件
+course/upstream-docs/task1/artifacts/basketball/checkpoint.pt,9965749,57a322eff092cb71e7cba831791232f0cc4fd45ede0441cad6d87813b0033e41,course,Datawhale 课程说明 + task1/task2 原件
+course/upstream-docs/task1/artifacts/basketball/policy.onnx,2500571,e105148b160b3a86170621648215be38dd5018e955930ce182394f4513c7569b,course,Datawhale 课程说明 + task1/task2 原件
+course/upstream-docs/task1/artifacts/basketball/validation.json,1075,34b887296babb5b27a24207610dfd3e9cd001b0cff0047d95a8a55b21c49376e,course,Datawhale 课程说明 + task1/task2 原件
+course/upstream-docs/task1/basketball_gpu_contact_sheet.jpg,70598,807b5cba796ada960e403c43acf6664b79f228ddee002d70492936922d9d2407,course,Datawhale 课程说明 + task1/task2 原件
+course/upstream-docs/task1/basketball_gpu_local.json,1251,27b5b1baac5b235260f042808b617b976c68e1e57cee859f1fcfb179e949d44a,course,Datawhale 课程说明 + task1/task2 原件
+course/upstream-docs/task1/basketball_gpu_local.mp4,662664,61074d91486c2ffa0c05d812719362887f7545c8b9e5d96f2ca70affd3ebcf16,course,Datawhale 课程说明 + task1/task2 原件
+course/upstream-docs/task1/basketball_gpu_local.trace.npz,58011,9b85c99470e3a6fd9b483834d937102c784551bf0ceca3a3464013d03ddb7e8b,course,Datawhale 课程说明 + task1/task2 原件
+course/upstream-docs/task1/LICENSE,11553,48a029ca4cffafe32428e9f7d3f6a54ce637fac5327a9ccf88c93cb3c40e5a8a,course,Datawhale 课程说明 + task1/task2 原件
+course/upstream-docs/task1/model_contract.json,307,3e884ca22a1c9cf5d933991249cd805fa7962071f7303e5b15f9410944a616b4,course,Datawhale 课程说明 + task1/task2 原件
+course/upstream-docs/task1/NOTICE,779,e5a0922605d47a035b170143e1489362684b03536b3599e28171f91c9d09e4cc,course,Datawhale 课程说明 + task1/task2 原件
+course/upstream-docs/task1/README.md,1385,138953c6e0251224524ec5cbde68985ccdae44ace04dc56d7bc6f8f5a20add49,course,Datawhale 课程说明 + task1/task2 原件
+course/upstream-docs/task1/Task1_safe_check.py,1491,2474d275c19553af0c6819ac8ec0dfcadf481b8c82f8d63372920adfb02e23dd,course,Datawhale 课程说明 + task1/task2 原件
+course/upstream-docs/task1/Task1_学习笔记.md,5206,5d23f33adab43b28ab0518c7baf911ed86fc6fc3c7b41d3bc69874dba8470d1d,course,Datawhale 课程说明 + task1/task2 原件
+course/upstream-docs/task1/Task1_篮球平衡_Notebook.ipynb,60018,d75f734436e332acea7a1adf3e1e601e004a9bebb1a14e947ac8451d5cb52055,course,Datawhale 课程说明 + task1/task2 原件
+course/upstream-docs/task1/课程原始说明.md,14198,baf93f0df8a16a118f731caba0758c845588e773f6ef6cc26c21c525ac4da410,course,Datawhale 课程说明 + task1/task2 原件
+course/upstream-docs/task2/official_materials/assets/microduck_browser_smoke.png,314548,f1fec94901ff685b730c0475a9369e0a72b4775bf2c701be95265e2e9a2b3556,course,Datawhale 课程说明 + task1/task2 原件
+course/upstream-docs/task2/official_materials/assets/microduck_duck_drag_active.png,315395,da72e32743d7cb637bb0946591877b861924664c827d9f614f9c0db3462324b9,course,Datawhale 课程说明 + task1/task2 原件
+course/upstream-docs/task2/official_materials/assets/microduck_official.gif,1469276,8bf68b29eee44c3fae9a019e9107ea6871ecc8353806a71cdcc6bcc75bc88b52,course,Datawhale 课程说明 + task1/task2 原件
+course/upstream-docs/task2/official_materials/assets/mjswan_microduck_manual_drag_demo_keyframes.jpg,25762,928b39e3e1098b3bd44d23d3261b364e7237b2dea9e5d8e4ddb23908bad23549,course,Datawhale 课程说明 + task1/task2 原件
+course/upstream-docs/task2/official_materials/README.md,20818,0472fd2ff9da79e8333f52de7270e96c03ef38837fb550995a97f930d382e245,course,Datawhale 课程说明 + task1/task2 原件
+course/upstream-docs/task2/official_materials/record_mjswan_drag_demo.py,3532,8edb0295212f7e928a53aef76546bfee260e8b61798989c15333a0ad55915ebf,course,Datawhale 课程说明 + task1/task2 原件
+course/upstream-docs/task2/official_materials/serve_mjswan.py,1692,0d1a88efd26d6dec832113fd545dc079ef82909ff56a9c6123cf3b03b05d0835,course,Datawhale 课程说明 + task1/task2 原件
+course/upstream-docs/task2/README.md,1111,d43258aa3e0b5c37da1d60f16557c6b811575fc20e33af7249dced4c2b4912d0,course,Datawhale 课程说明 + task1/task2 原件
+course/upstream-docs/task2/record_mjswan_drag_demo_local.py,4494,3fecbf0fae4a24ee309f9f56f1d0435044b43cfebc5b6785e9ea7c634dfd3ba8,course,Datawhale 课程说明 + task1/task2 原件
+course/upstream-docs/task2/recordings/mjswan_microduck_contact_sheet.jpg,59151,0f212156da3b07edd51f8aaebac3a86d98fdcd62f50bb01f62abc71d59b2789c,course,Datawhale 课程说明 + task1/task2 原件
+course/upstream-docs/task2/recordings/mjswan_microduck_manual_drag_demo.mp4,2986509,a655798311b3333d3c7cfacd6b3c5c6807e0b69fab1f8ea38bb300aca7b53a5c,course,Datawhale 课程说明 + task1/task2 原件
+course/upstream-docs/task2/recordings/mjswan_microduck_manual_drag_demo.webm,14434592,272faf598ab41f8d9f57ac5791688f576bb33febea77bfd9dba34e007b7503f2,course,Datawhale 课程说明 + task1/task2 原件
+course/upstream-docs/task2/task2_run_report.json,1094,c462e599b55557a8c8b7547459daf412f353b152d966d536c637314e39e61ecd,course,Datawhale 课程说明 + task1/task2 原件
+course/upstream-docs/task2/Task2_学习笔记.md,6186,d0a81f7dcbe2d41decd238d7b4cf02eb43366cb8bfbcfb890a1f542db535bed6,course,Datawhale 课程说明 + task1/task2 原件
+course/upstream-docs/task2/Task2_浏览器物理扰动_Notebook.ipynb,52659,c63cfa112671527739d916c17829130b191426d183cf4d6a1e37c8ce5f463cf8,course,Datawhale 课程说明 + task1/task2 原件
+course/validation/00_execution.json,310,bc89fb83b4b34401f13426c955972b858825d496a8fa8b6b84ddce107361821e,course,Datawhale task3/validation + execution
+course/validation/01_execution.json,308,903fe300f335596792c732587f22c2a38c3e20770755885af0f74a28f34935ec,course,Datawhale task3/validation + execution
+course/validation/02_execution.json,308,8470e0bfc5a4c9bf0e524346f96b33943c6a35de4d233ecca7a6a80532e6161c,course,Datawhale task3/validation + execution
+course/validation/03_execution.json,307,7edb37279b23b2b638d10ea11a0612c2a57c9447658fc7bc2097ce77d91e3f3b,course,Datawhale task3/validation + execution
+course/validation/04_execution.json,307,d5e59792f44369924324d73912d3a5db31106e0d4ec3f31eb99970b2158803bd,course,Datawhale task3/validation + execution
+course/validation/05_execution.json,310,4b01386cf49bc49676d05b4b62c0e3322fc39251ab6a793468b778f852e93ea8,course,Datawhale task3/validation + execution
+course/validation/06_execution.json,308,380e013c1a18cb16e5db7d5c6f26a430fa004b4ff78cc1106d6d7a048085f826,course,Datawhale task3/validation + execution
+course/validation/07_execution.json,308,0aaccbede97c8e414245b52b1fb48a0270c8414eee1027cc426ba4286bb5ac04,course,Datawhale task3/validation + execution
+course/validation/08_execution.json,311,edeb7c3eeb7a05b31418c8a62a7fe96a01449b3d169d51514e47282ea65dbc27,course,Datawhale task3/validation + execution
+course/validation/09_execution.json,310,f251de39148f86742c2ad0fde495f9c3476e8ef280e5b5a962e672ef4320b0b9,course,Datawhale task3/validation + execution
+course/validation/ball_balance_gpu_latest.json,6385,0ea7c50d5083d89bdffb5e2ca3d066d244af5ee5be3b6e954a6ff8bad83bbd42,course,Datawhale task3/validation + execution
+course/validation/basketball_gpu_latest.json,1193,945b1937ef8642904eff4f52d3a12e00d0895df4b8ff63213a096e08cfd8b2cd,course,Datawhale task3/validation + execution
+course/validation/embodied_manifest.json,1619,bf47d434d2434582f655a46f90c96410dbf28930af562a183c461618be60b77d,course,Datawhale task3/validation + execution
+course/validation/ladder_120_reel.json,1264,9821dec2af4644f61635e9843a4c95924c66bb3a2fb0387a88ffb26cae9518a0,course,Datawhale task3/validation + execution
+course/validation/ladder_gpu_latest.json,202041,b7ccef99d9bdd5f29e2c8b7d005db453bf661250ede604c489df01305cf4779a,course,Datawhale task3/validation + execution
+course/validation/lightnav_corridor_report.json,774,fee60029351f6e6db8ec126f262d84d6e75fc3d47403b272ef9c68fa72396cd3,course,Datawhale task3/validation + execution
+course/validation/lightnav_lesson_summary.json,2504,eb14b5d73e03678adf9cc746dfbe09fd380b2a65de16f66dd759287b8b32a93e,course,Datawhale task3/validation + execution
+course/validation/lightnav_living_room_report.json,767,898eaeba2ee5b1e7f3811d725dfa788ed5dbcbfbfb658badf34172b4399d3ddf,course,Datawhale task3/validation + execution
+course/validation/lightnav_official_apartment_report.json,776,9b1805ea028813e4a6716a742e09ef4a24ab86c0e95f2d79d20fe2f3fe825aa1,course,Datawhale task3/validation + execution
+course/validation/long_jump_deployment_parity.json,1887,27eff8def524b52caf4b84ad40931b0c8d55bf1fb6e4e1440a04c7d966f93324,course,Datawhale task3/validation + execution
+course/validation/long_jump_lesson_summary.json,3216,e982cab719d60c7d6c1112a2414f0e9fa117691adaef77d3d2c533a810c59507,course,Datawhale task3/validation + execution
+course/validation/perturbation_gpu_latest.json,1210,18d7d854e6c07ec4fccb17ec646ae62be675e17fd8fabeb0f9f305ecf82bbba8,course,Datawhale task3/validation + execution
+course/validation/stilt_gpu_latest.json,1179,5cf2bc662ac587fb0de8581fbf75eec84ebae5d4d735578d596ce3b13f083b92,course,Datawhale task3/validation + execution
+course/validation/swing_gpu_latest.json,1248,d666d6f197bc5d5d3870676992fe60a722488e0a024ea187381b06bc4f3d29fd,course,Datawhale task3/validation + execution
+course/validation/walking_gpu_latest.json,1195,f4bb7de8dd7dd3cc211b3900ce77e6ef4db86a79204dc4804e799f94b5aa4823,course,Datawhale task3/validation + execution
+course/videos/ball_balance_gpu_latest.mp4,280290,c8ab36921a75b1d37c9af924a0ac06e7d1aa39a2d7d2ece10e962fa1366e51ff,course,Datawhale task3/videos 精选 17 段
+course/videos/ball_balance_slow120.mp4,431950,bab8166140d5701bafdfe0de6f6f3655719956f38218555b3bc19377d44ae3a9,course,Datawhale task3/videos 精选 17 段
+course/videos/basketball_gpu_latest.mp4,5887971,dcb58c65ef66492234548bf892f2cb272caf23e889f84efbd787d626f47b5fd0,course,Datawhale task3/videos 精选 17 段
+course/videos/ladder_120.mp4,2034828,36b36e79cde9ef97c1a9f2375ccb944e397521f98fb942fb39d6ad8193397f18,course,Datawhale task3/videos 精选 17 段
+course/videos/ladder_gpu_latest.mp4,1759059,639fa77d7a32117e0aac195ac72c9b19b163e6c5c6b02e05484418ad996d7d09,course,Datawhale task3/videos 精选 17 段
+course/videos/lightnav_corridor_latest.mp4,1377795,a9c919073bfe23139b5b7fc407ec32fff377eeae45ec37147bb78cac997f3c1e,course,Datawhale task3/videos 精选 17 段
+course/videos/lightnav_living_room_latest.mp4,1185024,a1aa928f531507c7a61b0be1724dd6324de6fcb85afa865372b9bade08de71ca,course,Datawhale task3/videos 精选 17 段
+course/videos/lightnav_official_apartment_latest.mp4,945532,f0d04f2174ed6212000c1760848158f17fe0b497cdf58fd939b69cc96b69676a,course,Datawhale task3/videos 精选 17 段
+course/videos/lightnav_slow120.mp4,1202535,716f0b8485cbd2e75566078bdf1221ed2d6f4ecd029011d3db8e5eb179eb7940,course,Datawhale task3/videos 精选 17 段
+course/videos/long_jump_continued_latest.mp4,521737,522f6a1e0638361c15c2c40437434ac57d62c02b4d0d21cb98bfae091d4601f2,course,Datawhale task3/videos 精选 17 段
+course/videos/long_jump_onnx_latest.mp4,513863,4c612b6a1183a80833d886c09b2cc30cf9ca9951f2e063c90c497341138d24fe,course,Datawhale task3/videos 精选 17 段
+course/videos/long_jump_pretrained_latest.mp4,534168,bb01714c92dbaa7718b2e3e1acca601b1c5651ad473c92933601bb3fede187f8,course,Datawhale task3/videos 精选 17 段
+course/videos/long_jump_slow120.mp4,1178639,e52ba628841fa6a522e7b13197d5c1b519d7653a47a9f42048a0507a6c57e573,course,Datawhale task3/videos 精选 17 段
+course/videos/perturbation_gpu_latest.mp4,4895814,c3d9b4b7a88a7a3ce95884c06c90082b3883b12b48dec761628a83f75c1a1a8d,course,Datawhale task3/videos 精选 17 段
+course/videos/stilt_gpu_latest.mp4,4813052,9d3ea292629dba539aeeba64b1568e33f138738e9a8d6a454fb2e6ea379dc68b,course,Datawhale task3/videos 精选 17 段
+course/videos/swing_gpu_latest.mp4,6690505,ed54fc7f9608eeaca99f254aa5d8e0e3e3e32ffc62774b423b111bdac6b7c37c,course,Datawhale task3/videos 精选 17 段
+course/videos/walking_gpu_latest.mp4,5126852,c94a404986efbcc4c55cabe315fc2cad04d77618a85e3a059c45cbf76d29281b,course,Datawhale task3/videos 精选 17 段
+data/sweep_1000.json,321,82e2efde63533be75931a6a469531921bebe52b5a76059e84c8b3cd55e8f79e1,data,Gitee duckf--the-playful-duck / 短跑指标 JSON
+data/sweep_1500.json,322,1af9ce50f04e66c59c9cf4b3a6c1d1eeb4ed54035594522477ef865e01b5599e,data,Gitee duckf--the-playful-duck / 短跑指标 JSON
+data/sweep_2000.json,322,34374b1b8867da1ef785379f57011a9938dfaa946a358bdaf8b56c090f06adbd,data,Gitee duckf--the-playful-duck / 短跑指标 JSON
+data/sweep_2500.json,322,cbd133bf41b2053d1704f02aa4677532d6d32588f0773f14d737c780564d6036,data,Gitee duckf--the-playful-duck / 短跑指标 JSON
+data/sweep_500.json,321,31f450165adc67f010dff3606b7eac41c7638c99b410ffe75a53758b832eb8e3,data,Gitee duckf--the-playful-duck / 短跑指标 JSON
+data/v1_metrics.json,77450,115b23162dc5cc473e0c87c57ac8af88e4e97cb541910b642b81baddd7fa5c05,data,Gitee duckf--the-playful-duck / 短跑指标 JSON
+data/v1_speed_c16.json,319,77deba4afeb32daea50b61ff7368dd791de1069580fafdd630b3c4c164934b71,data,Gitee duckf--the-playful-duck / 短跑指标 JSON
+data/v1_speed_cmd16.json,319,2d867eb2516a1cf728354615049a099de4ff64c401288702df82a987482dd8c6,data,Gitee duckf--the-playful-duck / 短跑指标 JSON
+data/v2_metrics.json,10155,40a2e5c238a82fce82c2057a071b3196fd140c12b47a08809a73fd73da3fcd84,data,Gitee duckf--the-playful-duck / 短跑指标 JSON
+data/v2_metrics_full.json,261284,42dd6c3fe1a3981facf094683ec5275b34e78941ff13f2a4e580f3766442c48f,data,Gitee duckf--the-playful-duck / 短跑指标 JSON
+data/v2_speed.json,320,078df42e8dcf194829c57bd7f61f2c52bca8b35be0f11b37cb4ed30ebe3e55bc,data,Gitee duckf--the-playful-duck / 短跑指标 JSON
+data/v2_speed_cmd26.json,320,b8f37e5499f92b3db8e69e102228b74adce04c06bc7615ebd8d3d829d849ae34,data,Gitee duckf--the-playful-duck / 短跑指标 JSON
+data/v2_speed_final_c16.json,322,62a1b292f80f71942559e445fe03477434c2aca2799bf117f3d3d6ef64acb819,data,Gitee duckf--the-playful-duck / 短跑指标 JSON
+docs/experiment_log.md,4636,5259be932ea54231c61cc57208de68b84f6868966fa0d18a07de30f695830d3e,docs,Gitee duckf--the-playful-duck / 硬件与协议文档
+docs/HARDWARE_BOM.md,5547,93f59131b9961f8782ed97472ee99f36aa7b7cbe8be6535a3e32db399a4d6417,docs,Gitee duckf--the-playful-duck / 硬件与协议文档
+docs/METRICS_PROTOCOL.md,3979,c3b09bf3163651cf64937f6deccf7e2947461d499d1e193fe549c43cc540fa3f,docs,Gitee duckf--the-playful-duck / 硬件与协议文档
+docs/style_guide.md,3131,7585b01c0f7b8d30d02b0b81d85f11a5ce49626efc193cfab2fa2cee35c3fd10,docs,Gitee duckf--the-playful-duck / 硬件与协议文档
+docs/TRAINING_LOG.md,5827,12f354655aab6657f57ff159bb1c142b7b7a0b6a79e0bbe543ebae9485506a79,docs,Gitee duckf--the-playful-duck / 硬件与协议文档
+figs/fig2_v1_training.png,115715,7630867899ac817a7124b397c9cc380bbc20a0f5e880504a81e2ee99ca54b477,figs,Gitee duckf--the-playful-duck / 论文图
+figs/fig3_reward_imbalance.png,58621,a3d316bfd144397c02ddfa430ded3b2cd17cfb499349420b96e0d87719e3d2f4,figs,Gitee duckf--the-playful-duck / 论文图
+figs/fig4_speed_compare.png,41025,7b510d9202f0dc8bab4de960d4fffa8169212b3c8bc581932d9dc1175ac611a1,figs,Gitee duckf--the-playful-duck / 论文图
+figs/fig5_public_benchmark.png,42698,47682510f22a633d8121106ec3895111d3ecb5f8754ceb69daac72e076f8e8ba,figs,Gitee duckf--the-playful-duck / 论文图
+figs/fig6_v1_v2_curves.png,60911,eac76e3c33bb2a61596bf7ffbeccf3fd4755dfd320a773947e31c91a907e3e26,figs,Gitee duckf--the-playful-duck / 论文图
+figs/fig7_checkpoint_decay.png,81054,b74cd5e82596a24973c047913e2258d6bf838ad8ee20e4d46d5bfff404292f28,figs,Gitee duckf--the-playful-duck / 论文图
+LICENSE,11358,cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30,[模块根],本轮封装新增（总索引 / 指标 / 建议 / 清单）
+METRICS.md,11060,f96d19594954af4d0564c32254970e8831966ca9fe0f6693424a5fce3e3a3886,[模块根],本轮封装新增（总索引 / 指标 / 建议 / 清单）
+paper-agent/build_paper.py,40153,8a45062aa3a75147b42826383c9c7f19b92314fdd24bf60f9f2b3df2670e3687,paper-agent,本机 paper-agent 知识库与写作脚本
+paper-agent/data/v1_metrics.json,77450,115b23162dc5cc473e0c87c57ac8af88e4e97cb541910b642b81baddd7fa5c05,paper-agent,本机 paper-agent 知识库与写作脚本
+paper-agent/data/v1_speed.json,319,77deba4afeb32daea50b61ff7368dd791de1069580fafdd630b3c4c164934b71,paper-agent,本机 paper-agent 知识库与写作脚本
+paper-agent/data/v1_speed_cmd16.json,319,2d867eb2516a1cf728354615049a099de4ff64c401288702df82a987482dd8c6,paper-agent,本机 paper-agent 知识库与写作脚本
+paper-agent/data/v2_metrics.json,10155,40a2e5c238a82fce82c2057a071b3196fd140c12b47a08809a73fd73da3fcd84,paper-agent,本机 paper-agent 知识库与写作脚本
+paper-agent/data/v2_speed.json,320,078df42e8dcf194829c57bd7f61f2c52bca8b35be0f11b37cb4ed30ebe3e55bc,paper-agent,本机 paper-agent 知识库与写作脚本
+paper-agent/data/v2_speed_cmd26.json,320,b8f37e5499f92b3db8e69e102228b74adce04c06bc7615ebd8d3d829d849ae34,paper-agent,本机 paper-agent 知识库与写作脚本
+paper-agent/figs/fig2_v1_training.png,115715,7630867899ac817a7124b397c9cc380bbc20a0f5e880504a81e2ee99ca54b477,paper-agent,本机 paper-agent 知识库与写作脚本
+paper-agent/figs/fig3_reward_imbalance.png,58621,a3d316bfd144397c02ddfa430ded3b2cd17cfb499349420b96e0d87719e3d2f4,paper-agent,本机 paper-agent 知识库与写作脚本
+paper-agent/figs/fig4_speed_compare.png,41025,7b510d9202f0dc8bab4de960d4fffa8169212b3c8bc581932d9dc1175ac611a1,paper-agent,本机 paper-agent 知识库与写作脚本
+paper-agent/figs/fig5_public_benchmark.png,42698,47682510f22a633d8121106ec3895111d3ecb5f8754ceb69daac72e076f8e8ba,paper-agent,本机 paper-agent 知识库与写作脚本
+paper-agent/figs/fig6_v1_v2_curves.png,60911,eac76e3c33bb2a61596bf7ffbeccf3fd4755dfd320a773947e31c91a907e3e26,paper-agent,本机 paper-agent 知识库与写作脚本
+paper-agent/knowledge/corpus_index.md,2524,84d2726ffdb86f9535011a49600c11bfa26e1c016d5d637768f41850a5dbfb3d,paper-agent,本机 paper-agent 知识库与写作脚本
+paper-agent/knowledge/experiment_log.md,3517,3906e7c76c4da5e93ec717613c62ca4db54f257445da17852035d51c4756fc88,paper-agent,本机 paper-agent 知识库与写作脚本
+paper-agent/knowledge/source_TAC-R2S2R.txt,45847,70b021bff54c36f43210c56295d7d3273389a6f8959c09bdd11b958281ac9d5c,paper-agent,本机 paper-agent 知识库与写作脚本
+paper-agent/knowledge/style_guide.md,3131,7585b01c0f7b8d30d02b0b81d85f11a5ce49626efc193cfab2fa2cee35c3fd10,paper-agent,本机 paper-agent 知识库与写作脚本
+paper-agent/make_figs.py,6417,fcdfa90d662fe0abd98bb34b0b85412be7516d08a25a632cbffdc8480332efa3,paper-agent,本机 paper-agent 知识库与写作脚本
+paper-agent/MicroDuck短跑策略_Real2Sim2Real_双栏投稿稿.docx,353704,b0f7821e404767a88bc0377855d98afe106b93af465329860e4c2dde4109826f,paper-agent,本机 paper-agent 知识库与写作脚本
+paper-agent/README.md,2611,f5b862c00882f10861547dd356a2621d8272658d70f74f495d7021355ad57866,paper-agent,本机 paper-agent 知识库与写作脚本
+papers/MicroDuck短跑策略_Real2Sim2Real_双栏投稿稿.docx,353704,b0f7821e404767a88bc0377855d98afe106b93af465329860e4c2dde4109826f,papers,Gitee duckf--the-playful-duck / 双栏论文稿
+papers/README.md,1434,a6fb6afc0f343a4ce9194e55796c0d9c0aa08fc9b91cabacf5869a1d232863c0,papers,Gitee duckf--the-playful-duck / 双栏论文稿
+README.en.md,8382,d48b4b61cb1ec64b4cdac89dbb3568f1af980d6fded2c6b69b7b4e8faabde797,[模块根],本轮封装新增（总索引 / 指标 / 建议 / 清单）
+README.md,9787,ab933c86431977cc91adb9603c23a8c8850eff717a9ad31ecf17fa54c8a2e1eb,[模块根],本轮封装新增（总索引 / 指标 / 建议 / 清单）
+README_sprint.md,17191,060ef5a1514c5b9c3756630093878fcf17df5e1785e802fa2ec73578853d6dff,[模块根],本轮封装新增（总索引 / 指标 / 建议 / 清单）
+RECOMMENDATIONS.md,10322,b5ef44401933d3728ca328406811c6f77d6114a82dd31074f8b76a7e85ad50ec,[模块根],本轮封装新增（总索引 / 指标 / 建议 / 清单）
+scripts/build_paper.py,40153,8a45062aa3a75147b42826383c9c7f19b92314fdd24bf60f9f2b3df2670e3687,scripts,Gitee duckf--the-playful-duck / 实验脚本
+scripts/duck_queue.sh,2380,fe310f647fe21b746165f7fe1baccda90a0f4aeb9cce9af696f3e71787b4cb5f,scripts,Gitee duckf--the-playful-duck / 实验脚本
+scripts/export_sprint_metrics.py,2718,2043a02fe972530afde307c1625f206ea0c0b6aec1af418f531b868e72ec0a1e,scripts,Gitee duckf--the-playful-duck / 实验脚本
+scripts/make_fig_decay.py,2788,f90322291c0f80a594fe4eede85346d5333671a08f54398f7bd27dc247789bd9,scripts,Gitee duckf--the-playful-duck / 实验脚本
+scripts/make_figs.py,6417,fcdfa90d662fe0abd98bb34b0b85412be7516d08a25a632cbffdc8480332efa3,scripts,Gitee duckf--the-playful-duck / 实验脚本
+scripts/probe_sprint_speed.py,3712,615a45db0028e2d2d266a0e020407d7a57e5b3c124fc415d637ee2d7770898e0,scripts,Gitee duckf--the-playful-duck / 实验脚本
+scripts/setup_duckrl.sh,2316,db9ad32ec0e8ede1851a1445e3c7552e94aedb5a3422ca2d33921f19a2c5f3ed,scripts,Gitee duckf--the-playful-duck / 实验脚本
+src/microduck_sprint_env_cfg.py,4149,d21d671ef49f834d747654db2b33ed3d56bcfd9eb25a9b6df769b45ba6bb82bb,src,Gitee duckf--the-playful-duck / 短跑任务配置
+src/tasks_init_patch.md,1572,4e342a610a745899d3309c4adf138e18a6ca83d0dbd60727704c8d704bbb9209,src,Gitee duckf--the-playful-duck / 短跑任务配置
+src/upstream_snapshot/pyproject.toml,3041,269181880f9f50d1890426cdbf5262571b193a1b87e6f91cde5f7e402902c1cb,src,Gitee duckf--the-playful-duck / 短跑任务配置
+src/upstream_snapshot/README.md,1718,33763a82db0a7453d3b3d8215a6fe46f5359382f31de806a034378c98ce82a34,src,Gitee duckf--the-playful-duck / 短跑任务配置
+src/upstream_snapshot/src/mjlab_microduck/__init__.py,0,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,src,Gitee duckf--the-playful-duck / 短跑任务配置
+src/upstream_snapshot/src/mjlab_microduck/actuator/__init__.py,328,181bfbec32115818720695915322f6e2c860fe87767570662a029f8e2d01f12d,src,Gitee duckf--the-playful-duck / 短跑任务配置
+src/upstream_snapshot/src/mjlab_microduck/actuator/friction_dr_bam.py,5060,e9b349a4be9910ea2c452cacfa78ccfc7fadb9f60e2f5ab8b54eed835e09b2b4,src,Gitee duckf--the-playful-duck / 短跑任务配置
+src/upstream_snapshot/src/mjlab_microduck/hf_jobs.py,20017,c8a9eac1773a536729c48a844b61af41432d0969e972f107a852d3b327407519,src,Gitee duckf--the-playful-duck / 短跑任务配置
+src/upstream_snapshot/src/mjlab_microduck/robot/__init__.py,0,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,src,Gitee duckf--the-playful-duck / 短跑任务配置
+src/upstream_snapshot/src/mjlab_microduck/robot/microduck/add_backlash.py,5867,c304dbf56e23c4e73009e67297e358bb758904372858e344eff7eff47cfd8293,src,Gitee duckf--the-playful-duck / 短跑任务配置
+src/upstream_snapshot/src/mjlab_microduck/robot/microduck/additional.xml,611,958010af8e09a2ac7a79797d1aead327435e5201b3c4df0f2f7220f3c2c42941,src,Gitee duckf--the-playful-duck / 短跑任务配置
+src/upstream_snapshot/src/mjlab_microduck/robot/microduck/ball.xml,706,54a455bf454a9b6167655381df91593bbca86695d8d71e29fb6af69454c7c865,src,Gitee duckf--the-playful-duck / 短跑任务配置
+src/upstream_snapshot/src/mjlab_microduck/robot/microduck/config_mjcf_allcollisions.json,2006,2c27728a0e6d7d9dcfe210ede931cc24f5a59f19fbd6b0846bf8eca1c9ac1e11,src,Gitee duckf--the-playful-duck / 短跑任务配置
+src/upstream_snapshot/src/mjlab_microduck/robot/microduck/config_mjcf_allcollisions_backlash.json,2141,19f453a1409c15867f7e08577b49cf1d3b52f7bfaa6abbccf7456cfd28dc5ebb,src,Gitee duckf--the-playful-duck / 短跑任务配置
+src/upstream_snapshot/src/mjlab_microduck/robot/microduck/config_mjcf_allcollisions_rollers.json,2092,5932ade31b859e9bb4d9986b0d0d8e7000d4d2f6048b86a919f49e462694328c,src,Gitee duckf--the-playful-duck / 短跑任务配置
+src/upstream_snapshot/src/mjlab_microduck/robot/microduck/config_mjcf_allcollisions_rollers_backlash.json,2235,a0d61ffc0bbfcce791c6b79b25694ce3401cf4b693819b91d5f751e8c033585e,src,Gitee duckf--the-playful-duck / 短跑任务配置
+src/upstream_snapshot/src/mjlab_microduck/robot/microduck/config_mjcf_walk.json,1814,31fdf5bd061170fb41729b3a82a7780e772121ec566625c5a6bf849b890b31f9,src,Gitee duckf--the-playful-duck / 短跑任务配置
+src/upstream_snapshot/src/mjlab_microduck/robot/microduck/config_mjcf_walk_backlash.json,1974,1f662b54138c30b135a451e1765da34045b6330bcb7c573d2719c51ef5f564a0,src,Gitee duckf--the-playful-duck / 短跑任务配置
+src/upstream_snapshot/src/mjlab_microduck/robot/microduck/joints_properties.xml,1780,6a4481a9279ffd92139479e67515df7b3510799ceb648c18fde0d58c300eae86,src,Gitee duckf--the-playful-duck / 短跑任务配置
+src/upstream_snapshot/src/mjlab_microduck/robot/microduck/robot_allcollisions.xml,32898,7a6fdf437f5a80c7348ad801f43f906b997a834389cb70cca5e1e8517ba38044,src,Gitee duckf--the-playful-duck / 短跑任务配置
+src/upstream_snapshot/src/mjlab_microduck/robot/microduck/robot_allcollisions_backlash.xml,34985,248c712e13258104ccab3f96c5cc47c7faa8f718f56f2c7de03efda653c8fb6b,src,Gitee duckf--the-playful-duck / 短跑任务配置
+src/upstream_snapshot/src/mjlab_microduck/robot/microduck/robot_allcollisions_rollers.xml,35688,c201a72ecbc4dd8e110c840cb79b1647aab59e6c76db7369a88c34a33307447e,src,Gitee duckf--the-playful-duck / 短跑任务配置
+src/upstream_snapshot/src/mjlab_microduck/robot/microduck/robot_allcollisions_rollers_backlash.xml,37775,97d18e5426a911a443b06ec28ea87af18413f243c12cbb55ae844bbb5b0c2e2c,src,Gitee duckf--the-playful-duck / 短跑任务配置
+src/upstream_snapshot/src/mjlab_microduck/robot/microduck/robot_walk.xml,32017,07af5e482200dfd2a7bf80ddde371153c88768a3a5aebc2f58ea42136fc7dadb,src,Gitee duckf--the-playful-duck / 短跑任务配置
+src/upstream_snapshot/src/mjlab_microduck/robot/microduck/robot_walk_backlash.xml,34104,43686e85bf0fa0c77c89673d546c483d4a22d06a9c81fff3a673bfe9aae36d0d,src,Gitee duckf--the-playful-duck / 短跑任务配置
+src/upstream_snapshot/src/mjlab_microduck/robot/microduck/scene.xml,2350,0d2f58227a3e1c4caae4e847a368ae83516d0f398f428c4e96737b67dd894ef1,src,Gitee duckf--the-playful-duck / 短跑任务配置
+src/upstream_snapshot/src/mjlab_microduck/robot/microduck/scene_backlash.xml,2570,9ad82184844332f3999a3bb4e634700e8d8010f9974744c16f9ac174243cf488,src,Gitee duckf--the-playful-duck / 短跑任务配置
+src/upstream_snapshot/src/mjlab_microduck/robot/microduck/scene_ball.xml,1238,3d59c82db5c3ac5cb35b1f5d4dfa550832be2eddffa9249ba0bfef3b6452e2bd,src,Gitee duckf--the-playful-duck / 短跑任务配置
+src/upstream_snapshot/src/mjlab_microduck/robot/microduck/scene_rollers.xml,2439,b22987450ae4d8e4656d6f236390ef0d01ad316560f645a557a2d18c4b45dc2d,src,Gitee duckf--the-playful-duck / 短跑任务配置
+src/upstream_snapshot/src/mjlab_microduck/robot/microduck/scene_walk.xml,2341,6e23146c1a5025473b55ec94cbe37b08104ca388b7eb005ea277f8230736c8be,src,Gitee duckf--the-playful-duck / 短跑任务配置
+src/upstream_snapshot/src/mjlab_microduck/robot/microduck/scene_walk_backlash.xml,2562,bf71c93e90f5a70890f6f76f79f8ba25191cf7ef0a8de47b1dd24f629449150b,src,Gitee duckf--the-playful-duck / 短跑任务配置
+src/upstream_snapshot/src/mjlab_microduck/robot/microduck/sensors.xml,357,47854a0ab18261f069553e1572e0c329c4f39e4557dbdada71e0dc62af14ee20,src,Gitee duckf--the-playful-duck / 短跑任务配置
+src/upstream_snapshot/src/mjlab_microduck/robot/microduck_constants.py,10380,b846c0e99ac340b0c6a0c35da686a7c5fd2fd84ef6cccaed15255fcbfd30682a,src,Gitee duckf--the-playful-duck / 短跑任务配置
+src/upstream_snapshot/src/mjlab_microduck/robot/testbench_constants.py,1777,bf5e95376131471443e1daddf5abb0bc6326bc6b5c49bfb352774bcc6b011b9f,src,Gitee duckf--the-playful-duck / 短跑任务配置
+src/upstream_snapshot/src/mjlab_microduck/robot/xl330_test_bench/config.json,508,c66518cd6fade3bbe881be0ab9b6e1ac395ddfb41a9b3ce5b39dfdf58e3a0210,src,Gitee duckf--the-playful-duck / 短跑任务配置
+src/upstream_snapshot/src/mjlab_microduck/robot/xl330_test_bench/joints_properties.xml,909,5204d854ca41a08b752be733acc7abe238c279f6525cbf2c532792446b187458,src,Gitee duckf--the-playful-duck / 短跑任务配置
+src/upstream_snapshot/src/mjlab_microduck/robot/xl330_test_bench/scene.xml,932,711f1503b4cee29270f206bd538de38fbd9df18cb2c12ff6a012061fadce247c,src,Gitee duckf--the-playful-duck / 短跑任务配置
+src/upstream_snapshot/src/mjlab_microduck/robot/xl330_test_bench/xl330_test_bench.xml,4598,b189f8c9d97b1e8fd11a67e8270f379042f863bca24d3af03970194c5e3451f2,src,Gitee duckf--the-playful-duck / 短跑任务配置
+src/upstream_snapshot/src/mjlab_microduck/tasks/__init__.py,11965,da9b10e607552580b8bcf79bce1970609618e62982f63c9dd6c736da9cfe3d34,src,Gitee duckf--the-playful-duck / 短跑任务配置
+src/upstream_snapshot/src/mjlab_microduck/tasks/backlash.py,4344,c2fc78e42576c40f7a6ac8eac034630e780bd1881a843666274e64d424e8dcb4,src,Gitee duckf--the-playful-duck / 短跑任务配置
+src/upstream_snapshot/src/mjlab_microduck/tasks/mdp.py,302264,2c1a046ea8845a1ae0b986fa9d12bc27aa279d4f7f699ac2116ccc8bb2b5863a,src,Gitee duckf--the-playful-duck / 短跑任务配置
+src/upstream_snapshot/src/mjlab_microduck/tasks/microduck_ball_kick_env_cfg.py,29653,313180628c0d0364ea6d0f1843e7e3e10b76585491b90b0c1f0e301d9e5fd30c,src,Gitee duckf--the-playful-duck / 短跑任务配置
+src/upstream_snapshot/src/mjlab_microduck/tasks/microduck_ground_pick_env_cfg.py,32917,9b68951e2c84fdccb5894701efa97e060438eb56c956a34c65e844ba3fa6185e,src,Gitee duckf--the-playful-duck / 短跑任务配置
+src/upstream_snapshot/src/mjlab_microduck/tasks/microduck_roller_crouch_env_cfg.py,19507,745142fab9ffc4c43a6b7d367d6be37f5675f5fbf255ac4341a9e2a21a4062ee,src,Gitee duckf--the-playful-duck / 短跑任务配置
+src/upstream_snapshot/src/mjlab_microduck/tasks/microduck_roller_slope_env_cfg.py,12134,92738df650e3527c8cbe194169f60fb2a232933b1eabbbaf7d4b7d2aa67e2b42,src,Gitee duckf--the-playful-duck / 短跑任务配置
+src/upstream_snapshot/src/mjlab_microduck/tasks/microduck_roller_standup_env_cfg.py,27733,146e417c082823039b87d2ff350e96e84007df80c268d53984d7c160f25cdeee,src,Gitee duckf--the-playful-duck / 短跑任务配置
+src/upstream_snapshot/src/mjlab_microduck/tasks/microduck_roulade_env_cfg.py,35052,7075e079849a9961dbe8d35dc680848c9651e8a98897f08538c48b29f715fc10,src,Gitee duckf--the-playful-duck / 短跑任务配置
+src/upstream_snapshot/src/mjlab_microduck/tasks/microduck_sitstand_env_cfg.py,43897,4cb26df53b53beea7e98f995a13dfe3de31c8c0f46b963818a6e337c4a256ac2,src,Gitee duckf--the-playful-duck / 短跑任务配置
+src/upstream_snapshot/src/mjlab_microduck/tasks/microduck_spin_env_cfg.py,19856,ba85e26407a29a208f871aa229bb2c7971eca6087f0740e7de6f898adbc5b395,src,Gitee duckf--the-playful-duck / 短跑任务配置
+src/upstream_snapshot/src/mjlab_microduck/tasks/microduck_sprint_env_cfg.py,4149,d21d671ef49f834d747654db2b33ed3d56bcfd9eb25a9b6df769b45ba6bb82bb,src,Gitee duckf--the-playful-duck / 短跑任务配置
+src/upstream_snapshot/src/mjlab_microduck/tasks/microduck_standup_env_cfg.py,58592,b20b8f3fac5a374dd602f371f0b500955b4dbcb4d3f7330bddfa15b327826873,src,Gitee duckf--the-playful-duck / 短跑任务配置
+src/upstream_snapshot/src/mjlab_microduck/tasks/microduck_velocity_env_cfg.py,44971,75a0430b814ac7495eb237ab806fbd4dd10309b9fd3027ac3eee3c2e3c5a944a,src,Gitee duckf--the-playful-duck / 短跑任务配置
+src/upstream_snapshot/src/mjlab_microduck/tasks/microduck_velocity_rollers_env_cfg.py,30194,c134f914a516dad7c34f31aecb073b2973c44cf02017ee8bef66ebd046c587fe,src,Gitee duckf--the-playful-duck / 短跑任务配置
+src/upstream_snapshot/src/mjlab_microduck/tasks/microduck_velocity_swizzle_env_cfg.py,9544,75197c956afd77586f60e4b773033ace15e088179bb5912a88328862b0a10f49,src,Gitee duckf--the-playful-duck / 短跑任务配置
+src/upstream_snapshot/src/mjlab_microduck/tasks/microduck_velstand_env_cfg.py,21298,0ccb20f3334d47afcb59dcdb9cda54fdd417b86f535fec8c73f5db6fe0d1c666,src,Gitee duckf--the-playful-duck / 短跑任务配置
+src/upstream_snapshot/src/mjlab_microduck/tasks/slope_terrain.py,5004,1ce48eef8b4bd82cde94d7c9f50f19d2992f4dc8d3b5b5d314b7381bc572b8a0,src,Gitee duckf--the-playful-duck / 短跑任务配置
+src/upstream_snapshot/src/mjlab_microduck/tasks/symmetry.py,7348,e37980389773f2f87b8f376df449af4d70e0c983744459f9a35a3ee7b686186b,src,Gitee duckf--the-playful-duck / 短跑任务配置
+src/upstream_snapshot/src/mjlab_microduck/tasks/testbench_env_cfg.py,9481,d254218ca3f491e52d471ad033ebd1cb39a339f1f21394ea55e2bec4f3dc2776,src,Gitee duckf--the-playful-duck / 短跑任务配置
+src/upstream_snapshot/src/mjlab_microduck/train_cli.py,1092,ab210a1ee8eaf56ab8499eaf3b71b60f2d32935db7a041db621f3975ec7120aa,src,Gitee duckf--the-playful-duck / 短跑任务配置
+tooling/build_manifest.py,3027,aa591aec5c4d66eeb3aacc406ebdd700e696169a3a87b30e2f8e84a3b5897f98,tooling,本轮封装新增（总索引 / 指标 / 建议 / 清单）
+tooling/build_microduck_page.py,14032,4ed63af6b2d889b9557801976075abe89523c00f46d516f92608b6df4a2b9c96,tooling,本轮封装新增（总索引 / 指标 / 建议 / 清单）
+tooling/lesson-scripts/build_master.py,826,f93c4f2bb4c16d2f206635ec982805958eb17b96446a47158c841633b235dfa1,tooling,本机 microduck_task 执行与修补脚本
+tooling/lesson-scripts/export_onnx_shim.py,564,6d95f1ce97a911a07f266c20214f39fa369c5426ee2816e35e70054eef7d7e6b,tooling,本机 microduck_task 执行与修补脚本
+tooling/lesson-scripts/fetch120.sh,1425,b88984ca43d2e2bdb64d19b4d3a300cb03b1eaaf1ab3e91800431be083ddbc3e,tooling,本机 microduck_task 执行与修补脚本
+tooling/lesson-scripts/fx_12.png,173576,b6b16abb2d9eb5a2090093b777844bbcdc90f1520d9210a5aaca037411ec46b9,tooling,本机 microduck_task 执行与修补脚本
+tooling/lesson-scripts/fx_3.png,152531,35ddb0538ef5198ec95342dcec9f966d1bbf9399562c7ae13fd3eb246fec21ba,tooling,本机 microduck_task 执行与修补脚本
+tooling/lesson-scripts/gen120.sh,1728,4cdb5ef5e5f07deba30cad4cc291d98120bdac7c4e828d52f396faf1ce603949,tooling,本机 microduck_task 执行与修补脚本
+tooling/lesson-scripts/gen_ladder_reel.sh,1470,1536a3bf0397587e0b420efba1d9ddb8c62a6a17f6f7426e1b5094be458ad0be,tooling,本机 microduck_task 执行与修补脚本
+tooling/lesson-scripts/l64_0.png,110670,a8fd3b818a862ae630ee91fcd05c5b03b51b16da460328b2ac0fc001973a642d,tooling,本机 microduck_task 执行与修补脚本
+tooling/lesson-scripts/ladder_fixed.json,52956,0748a56c9db4a3c336fa0e4812d08cf2ba28ced8d7cfaf48bc0d3b35f3f7968b,tooling,本机 microduck_task 执行与修补脚本
+tooling/lesson-scripts/lfs_fix.py,1875,879454706f2b0f6546f558b81e31559c9c9b9dc27db5848ce4239eb7a15601ab,tooling,本机 microduck_task 执行与修补脚本
+tooling/lesson-scripts/lt_0.png,121575,72923dbe8c2d0cbd4bdbc318cc08c0b44c412f7c4401d0d95b5ac7f908b18712,tooling,本机 microduck_task 执行与修补脚本
+tooling/lesson-scripts/make_slow120.sh,1333,c17887bc8fb18b0d56cc3172657c1d045664321d2a88a518adbba447fa598f28,tooling,本机 microduck_task 执行与修补脚本
+tooling/lesson-scripts/nc_4.png,143990,51d750d1a72899eb4101a2a09a50c4eeacf50af52ffdc6ca8a3dd52c3f727c02,tooling,本机 microduck_task 执行与修补脚本
+tooling/lesson-scripts/nc_7.png,145740,f3bcdcd823f92374095dedecab0b26c44b93b1ebce23f32b1533d303e5c91e79,tooling,本机 microduck_task 执行与修补脚本
+tooling/lesson-scripts/old_0s.png,58815,fdd5111f58639862be529c5e309db94caed79ad443229903166f19768dbb0bfa,tooling,本机 microduck_task 执行与修补脚本
+tooling/lesson-scripts/old_10s.png,63777,6e19638aa59db45e4d1fe2a00602bb9c9bf21baed3da1e47c2edf278403d42bf,tooling,本机 microduck_task 执行与修补脚本
+tooling/lesson-scripts/old_15s.png,68033,e7f3c63f482b6b15995e4535372a09b808308d8fd5c20f63cdee06eeef36197a,tooling,本机 microduck_task 执行与修补脚本
+tooling/lesson-scripts/old_21s.png,74227,9990e40be9a41170f93b80b0e644d25cf29ac9744233543830a8ba3fb69b3f4a,tooling,本机 microduck_task 执行与修补脚本
+tooling/lesson-scripts/old_27s.png,66529,7d0b05a94c8a55bf6603f1c1576d63b1121d60a1ad5f79e3bd48f864d0d70172,tooling,本机 microduck_task 执行与修补脚本
+tooling/lesson-scripts/old_5s.png,57526,0775126e955a0cff468207bd76823ad1a65de0eed1989d954181a054629a1a90,tooling,本机 microduck_task 执行与修补脚本
+tooling/lesson-scripts/patch_audit.py,545,d7920796fc65465b2fb96b7f73818cec9d3fe87c28fc8158907124a76d84e5d0,tooling,本机 microduck_task 执行与修补脚本
+tooling/lesson-scripts/patch_ball_ls.py,611,f65a25c0cd94424dc7423611a86853ebd8967114df07a11c8ec90c00be80ba4c,tooling,本机 microduck_task 执行与修补脚本
+tooling/lesson-scripts/patch_ball_runidr.py,591,565d54d18a63249f9e590a4e0c56c349c29166b85a2dc28bace37283215948d8,tooling,本机 microduck_task 执行与修补脚本
+tooling/lesson-scripts/patch_index.py,5760,76662670312eb08aac4b184945347209d51a08b569ec6ecbece1f03cbb14b132,tooling,本机 microduck_task 执行与修补脚本
+tooling/lesson-scripts/patch_nconmax.py,1081,9d3b2f94493682934d42a4e9a5ef147cf6695931749e0e213ccae6a8fe509856,tooling,本机 microduck_task 执行与修补脚本
+tooling/lesson-scripts/patch_registry.py,994,1defd035931e2172131f067845928faee806f3f8a98e3019ddaae0f747099431,tooling,本机 microduck_task 执行与修补脚本
+tooling/lesson-scripts/patch_spawn.py,1185,800ef550e9b9c072bf2cb01ac56be757bcfc97522b3f22f0b792beafd809799b,tooling,本机 microduck_task 执行与修补脚本
+tooling/lesson-scripts/patch_terrain.py,1946,998fbac20da5420c51ee62f837bef7ba0b4ed79eb4be67911452fa5bccfba7c7,tooling,本机 microduck_task 执行与修补脚本
+tooling/lesson-scripts/patch_timeout.py,707,5168c0af83a92b1025f6df9e605cbc47f5219a137f377bcf282a66a8e81ad6ba,tooling,本机 microduck_task 执行与修补脚本
+tooling/lesson-scripts/patch_ws_trace.py,601,c818bb9a13e7485a49c264f433097c08f8903c7ebf1b6e9a13e10da6aea173d6,tooling,本机 microduck_task 执行与修补脚本
+tooling/lesson-scripts/probe_contacts.py,2003,2d28e46f9c5bbb58bbb35f8b9a0a2ae5dbf5c8820b65edc205981af514706795,tooling,本机 microduck_task 执行与修补脚本
+tooling/lesson-scripts/probe_ladder.py,1648,c253353c3e403a01fb8062379dd0b663bd69a8a1d1d085d37f87fd676ed0639a,tooling,本机 microduck_task 执行与修补脚本
+tooling/lesson-scripts/probe_runtime.py,2969,722be8a1fdf8f1858c570d3d4f6d868337506f7e72364b69fe3f3dc493da95a6,tooling,本机 microduck_task 执行与修补脚本
+tooling/lesson-scripts/reel/ball_balance_slow120_cat.mp4,280405,9305b1411295d02ea75108f835e84c99cc41a60d807b3c91a858a16718be4e7c,tooling,本机 microduck_task 执行与修补脚本
+tooling/lesson-scripts/reel/ball_balance_slow120_list.txt,163,75c5e8eee8ae6926cd23dd8a9cbd7e0d28a2e2a685467713303f5d21b9fb9c13,tooling,本机 microduck_task 执行与修补脚本
+tooling/lesson-scripts/reel/lightnav_slow120_cat.mp4,3506777,c76f2b0b1d64031b56f5d4f43bba231750b66b87f3a868bf61d0087c39186e22,tooling,本机 microduck_task 执行与修补脚本
+tooling/lesson-scripts/reel/lightnav_slow120_list.txt,505,5adf7a566c9c08819a95f8b631c432d68cc482bdb5e520920ca5e6be831d4cc3,tooling,本机 microduck_task 执行与修补脚本
+tooling/lesson-scripts/reel/long_jump_slow120_cat.mp4,1568421,4c75af24fe6b0e8fcbcef69c921eb1563cec510eb5768ec49bedfbaba9b831eb,tooling,本机 microduck_task 执行与修补脚本
+tooling/lesson-scripts/reel/long_jump_slow120_list.txt,494,a23c37a60063c59a061cb4395eace2c9673ce5af75552801c412b62b5bd5bc51,tooling,本机 microduck_task 执行与修补脚本
+tooling/lesson-scripts/ref_4s.png,244625,bb394b8e9b51e3b417cdb9bc76706262fbd75214a567b5be3971ff0e67683506,tooling,本机 microduck_task 执行与修补脚本
+tooling/lesson-scripts/repro_cell11.py,2916,0d751719697adba8587acc0315640efde59d3a4282e2fc928069524e1ebff9b7,tooling,本机 microduck_task 执行与修补脚本
+tooling/lesson-scripts/run05_ball.sh,1945,1d6729f572181a217029f2c8df92477bf9f2b98225ccac442ae68a40173e8bb2,tooling,本机 microduck_task 执行与修补脚本
+tooling/lesson-scripts/run05_export.sh,1255,1f4e598d2422dd99878f688daf824d8be89671dd0fd7e1eac916a75b17cf3054,tooling,本机 microduck_task 执行与修补脚本
+tooling/lesson-scripts/run05_nb.sh,1251,6a875e89cb9b8dadd033f9582df81bc05ceedeb716ea97ba11057b693f736985,tooling,本机 microduck_task 执行与修补脚本
+tooling/lesson-scripts/run06_nb.sh,1544,17d60d5d67b8664f1bc79fab0e7760a13544059fa24a0ca0ce1dee2d1c58044f,tooling,本机 microduck_task 执行与修补脚本
+tooling/lesson-scripts/run06_standalone.sh,1315,c83360a4eca245b41a8a03ab9c45481d41ea13973664bf8b4c5a8ffc74a15f5f,tooling,本机 microduck_task 执行与修补脚本
+tooling/lesson-scripts/run08_nb.sh,1350,9ba3308bc54290d0ff6806196d8528290dda7a5fbfa2eac22b5afbae0f2c6534,tooling,本机 microduck_task 执行与修补脚本
+tooling/lesson-scripts/run09.sh,861,69547b1ba5c528416abbd9f25ae0913a683ddb104b5ecc005a0b075b10b2aaf4,tooling,本机 microduck_task 执行与修补脚本
+tooling/lesson-scripts/t22_0.png,116263,9baf6cb1e2c9779356d767ebd0a52c695a108404ec2d55b27153468fed6b37c0,tooling,本机 microduck_task 执行与修补脚本
+tooling/lesson-scripts/t22_8.png,173436,021e42ecd4462fbd138ec7e0a9471ec4ec98d37146c2a8c4ae312f9a1ae84c87,tooling,本机 microduck_task 执行与修补脚本
+tooling/lesson-scripts/train_shim.py,539,dbebfbbdb9cbefa3bf53064f5e300df147f8b247720166ae997fcaa4b19c958f,tooling,本机 microduck_task 执行与修补脚本
+tooling/lesson-scripts/ws_test.py,343,23200770b71d082d8c5a062836680979aded001a765274a7d22bb957c0dc62e4,tooling,本机 microduck_task 执行与修补脚本
+tooling/lesson-scripts/ws_test2.py,574,ab3f0d9e595b7570ae2bed1fd3f4f5a4e95ca56741939ef877edce4d32cffb02,tooling,本机 microduck_task 执行与修补脚本
+tooling/lightnav-probe/all.json,17580,71db35582e1f0a8e50c5a608a2f4c57d8b56d94d10d12ce59f6d0147b538df18,tooling,本机 duck-opt 探针与 18 组原始报告
+tooling/lightnav-probe/lightnav_lesson.py,15950,70aabcbd9d112e273efcbce7425e169bdf0adbecd94a3a187f20b706041c32f8,tooling,本机 duck-opt 探针与 18 组原始报告
+tooling/lightnav-probe/lightnav_opt.py,13573,938660cbd9cba53385e869e94fd22791714dba86e69ba7fd230f314f28dee1ca,tooling,本机 duck-opt 探针与 18 组原始报告
+tooling/lightnav-probe/probe_onnx.py,477,2c63c63d557c74dff91ff4a8f9ff6bd6e9aff5707e280138b5832ef27519330b,tooling,本机 duck-opt 探针与 18 组原始报告
+tooling/lightnav-probe/reports/base__corridor_report.json,919,1066364d2194d60476f17322ccec749541349e08a445de6fce70ac8653b9ea87,tooling,本机 duck-opt 探针与 18 组原始报告
+tooling/lightnav-probe/reports/base__living_room_report.json,910,532d1668f4d19d4ed89ec12b81759e6d14e0e346197d9b6b88d9674819758abe,tooling,本机 duck-opt 探针与 18 组原始报告
+tooling/lightnav-probe/reports/base__official_apartment_report.json,916,ab42164faa4dd26afdb7049bb03c2c1882c1703a3f03368eaba9e2944a2197fe,tooling,本机 duck-opt 探针与 18 组原始报告
+tooling/lightnav-probe/reports/fast__corridor_report.json,920,60a8baf36744e5750f41e8bdbd9dee97fba66fb438ac719aad4c53b73a6c29df,tooling,本机 duck-opt 探针与 18 组原始报告
+tooling/lightnav-probe/reports/fast__living_room_report.json,913,d6be7876a459b4066e0d50fb70caf93fd4544a6f8b944075eb4e42a2271a2587,tooling,本机 duck-opt 探针与 18 组原始报告
+tooling/lightnav-probe/reports/fast__official_apartment_report.json,918,7937ddf0e8c77e6fb49175e7aba92e491a907f1a93714d793388ad411122f44b,tooling,本机 duck-opt 探针与 18 组原始报告
+tooling/lightnav-probe/reports/full__corridor_report.json,923,864cbe2cc810783b3656bf207bd34ee220cd3fb6d4dfd40bec51a91bf920cdff,tooling,本机 duck-opt 探针与 18 组原始报告
+tooling/lightnav-probe/reports/full__living_room_report.json,913,5d10a6f53c0b7c01554d137af1067babb3f642db1ab75d214489f7d69ced87f6,tooling,本机 duck-opt 探针与 18 组原始报告
+tooling/lightnav-probe/reports/full__official_apartment_report.json,919,b46ffbd512e0cc59c7ccc590afda9890725ba02ac33e048e8cb8cbe508b57012,tooling,本机 duck-opt 探针与 18 组原始报告
+tooling/lightnav-probe/reports/full_smooth__corridor_report.json,1078,a41bd6acc8bd3fb97fc00d98f1b2fb926911602ad08fe3fe06a3b8195a1dc7a8,tooling,本机 duck-opt 探针与 18 组原始报告
+tooling/lightnav-probe/reports/full_smooth__living_room_report.json,1071,0fb1d257caf32c3c5eb657531ba95edf75f356f6cb04281a1d6d0c5ccc12addb,tooling,本机 duck-opt 探针与 18 组原始报告
+tooling/lightnav-probe/reports/full_smooth__official_apartment_report.json,1079,4f7522b21d8ee867fc8400996a76544f8cd65a5eae63bbd6eeb95d6e09e90583,tooling,本机 duck-opt 探针与 18 组原始报告
+tooling/lightnav-probe/reports/smooth__corridor_report.json,1066,3fbd6073358bcd3fa4187cef01faab82b7b34d5c2128334708886bdeded4f0bf,tooling,本机 duck-opt 探针与 18 组原始报告
+tooling/lightnav-probe/reports/smooth__living_room_report.json,1061,27d7c7951f0c3ab3fd9518f53d529a4aeea27a027e3e4d1fa31cc4a040b98774,tooling,本机 duck-opt 探针与 18 组原始报告
+tooling/lightnav-probe/reports/smooth__official_apartment_report.json,1067,415672fe7735f2cb20b71338573b377f42abcfc4742b1e067dc49ccd35743c0d,tooling,本机 duck-opt 探针与 18 组原始报告
+tooling/lightnav-probe/reports/tail__corridor_report.json,947,b9f4c13e7ed507e64ace391ef1e2ca9e3da48822a0ad9a9e07008fd92419164e,tooling,本机 duck-opt 探针与 18 组原始报告
+tooling/lightnav-probe/reports/tail__living_room_report.json,939,2254b0f9d17a87759cb7f273a7928842ce1b67ee50176391b3138f0712b75193,tooling,本机 duck-opt 探针与 18 组原始报告
+tooling/lightnav-probe/reports/tail__official_apartment_report.json,946,41f2788e6f6b1e5565ee75b4f717c7b22a9e85700d63bb25bcd956efe7f43711,tooling,本机 duck-opt 探针与 18 组原始报告
+tooling/lightnav-probe/summary.csv,1720,95f25fe2e4909a92d5c6383ef42ba09d33e4ddbca8b985e8ba41b43460ac1467,tooling,本机 duck-opt 探针与 18 组原始报告
+tooling/lightnav-probe/summary.md,1608,0541581fe226137d9560303b1eac75859f431e2e51d0c338ec9fb517a2c568cd,tooling,本机 duck-opt 探针与 18 组原始报告
+tooling/lightnav-probe/test_lightnav_lesson.py,1132,efec03d2419b3a6d976302297a784be9a6a67b6f505a912433e8317e5dfcba19,tooling,本机 duck-opt 探针与 18 组原始报告
+videos/clips/rl-video-step-0.mp4,209232,96d67101c0ea0a88d4b25476efe8bf3217d235af6fab5ba6ae151683cb519dee,videos,Gitee duckf--the-playful-duck / 短跑录像
+videos/clips/rl-video-step-10000.mp4,216196,616f83a4341e79df69a22ed64124573ede79e77b553ebbfb010e0db62d904b31,videos,Gitee duckf--the-playful-duck / 短跑录像
+videos/clips/rl-video-step-20000.mp4,194956,8352425279e983fe2dcb57d53088d5df631b25defd7f86a69fb13f5db60c699d,videos,Gitee duckf--the-playful-duck / 短跑录像
+videos/clips/rl-video-step-3000.mp4,170248,349c22ca81bb03424da7a36593e6b5777f0247fc13c586f66154d4a6b280320e,videos,Gitee duckf--the-playful-duck / 短跑录像
+videos/clips/rl-video-step-30000.mp4,150905,ff6a0837f835090cf9ed069099331321ae47d790b1725b79d2a0ac22501b71af,videos,Gitee duckf--the-playful-duck / 短跑录像
+videos/clips/rl-video-step-40000.mp4,198719,d9edbcae651f1e7958645589f26cb4260c9577dcceb3279db1d24cc05703acc1,videos,Gitee duckf--the-playful-duck / 短跑录像
+videos/clips/rl-video-step-50000.mp4,168631,0ab7dd6c24e00b207ece8223a37eece29eb467c95ccbccd1480e78c381cbda59,videos,Gitee duckf--the-playful-duck / 短跑录像
+videos/clips/rl-video-step-60000.mp4,122082,f5ee878cf0c88a1baba724c9faff6464619c0bcbfef1d2887252e20364ca333b,videos,Gitee duckf--the-playful-duck / 短跑录像
+videos/clips/rl-video-step-69000.mp4,170582,107a75cd337752108c2c17b623b4f891b55eda1bacf534c013410080c9fb0f42,videos,Gitee duckf--the-playful-duck / 短跑录像
+videos/clips/rl-video-step-71500.mp4,205355,8fbc9bf66c54f15037726bbb2ad91c56d56c66baca38e8748416c106776fab60,videos,Gitee duckf--the-playful-duck / 短跑录像
+videos/sprint_progression.mp4,1098849,1815442d782cfe859b78f694781bd4b5a8f57335832053606194a4e392c41c21,videos,Gitee duckf--the-playful-duck / 短跑录像
+videos/train_clips_full.zip,26457230,0b32d78b6682fe3d775361162aec6157b449f3925a3e671a40c190ae65ef984a,videos,Gitee duckf--the-playful-duck / 短跑录像
+videos/v1_clips.zip,2840053,ac8403b1fb46d1ab3e3542dd00ce8a26d18f8ba874034b64824bc0a9e36a7bbe,videos,Gitee duckf--the-playful-duck / 短跑录像
