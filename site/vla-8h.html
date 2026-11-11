@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="refresh" content="300">
+<title>MicroDuck · π0.5 8h 训练实时看板</title>
+<style>
+:root{color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:#0b1020;color:#e8ecf6;font:15px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif}
+.wrap{max-width:960px;margin:0 auto;padding:24px 18px 60px}
+h1{font-size:24px;margin:0 0 6px}
+h2{font-size:17px;margin:30px 0 12px;color:#9fb4ff}
+.sub{color:#8a97b8;font-size:13px;margin-bottom:22px}
+.bar{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:20px}
+.pill{background:#172145;border:1px solid #2c3a70;border-radius:999px;padding:5px 14px;font-size:13px}
+.pill b{color:#7fe0b0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+.card{background:#131b36;border:1px solid #26325c;border-radius:12px;padding:14px}
+.k{font-size:12px;color:#8a97b8;margin-bottom:6px}
+.v{font-size:20px;font-weight:650;color:#e8ecf6;font-variant-numeric:tabular-nums}
+figure{margin:0;background:#131b36;border:1px solid #26325c;border-radius:12px;padding:14px;overflow:auto}
+figure svg{max-width:100%;height:auto;display:block}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th,td{padding:9px 10px;border-bottom:1px solid #26325c;text-align:left;vertical-align:top}
+th{color:#8a97b8;font-weight:500}
+code{background:#1b2547;padding:2px 6px;border-radius:5px;color:#9fd4ff}
+pre{white-space:pre-wrap;background:#131b36;border:1px solid #26325c;border-radius:12px;padding:14px;font-size:12px;overflow:auto}
+.note{background:#241c33;border-left:3px solid #b98cff;padding:12px 16px;border-radius:8px;color:#cbb9e8;font-size:13px}
+a{color:#8fb4ff}
+footer{margin-top:36px;color:#6f7c9e;font-size:12px}
+</style></head><body><div class="wrap">
+<h1>MicroDuck · π0.5 8h 连续训练看板</h1>
+<div class="sub">DGX Spark GB10 · 3.6B π0.5 · LIBERO v3.0 · 数据每 30 分钟同步，页面 5 分钟自动刷新</div>
+<div class="bar">
+  <span class="pill">阶段 <b>smoke</b></span>
+  <span class="pill">当前臂 <b>—</b></span>
+  <span class="pill">快照 <b>2026-11-11 12:36:35</b></span>
+  <span class="pill">告警 <b>0</b></span>
+</div>
+<div class="grid"><div class="card"><div class="k">当前 loss</div><div class="v">—</div></div>
+<div class="card"><div class="k">最小 loss</div><div class="v">—</div></div>
+<div class="card"><div class="k">loss 采样点</div><div class="v">0</div></div>
+<div class="card"><div class="k">步数</div><div class="v">— / —</div></div>
+<div class="card"><div class="k">学习率</div><div class="v">—</div></div>
+<div class="card"><div class="k">grad norm</div><div class="v">—</div></div>
+<div class="card"><div class="k">可用内存</div><div class="v">97248 MB</div></div>
+<div class="card"><div class="k">nuclio 健康</div><div class="v">4 / 4</div></div></div>
+<h2>Loss 曲线</h2>
+<figure><p style="color:#8a97b8">曲线尚未生成（训练冒烟通过后每 30 分钟出图）</p></figure>
+<h2>自变量消融设计（论文方法复现）</h2>
+<table><thead><tr><th>臂</th><th>自变量</th><th>对应方法</th></tr></thead><tbody><tr><td><code>A_ki</code></td><td>基线：Knowledge Insulation + QUANTILES</td><td>π0.5 原生 flow matching</td></tr>
+<tr><td><code>B_lm</code></td><td>解冻 VLM 语言模型</td><td>Knowledge Insulation 消融</td></tr>
+<tr><td><code>C_mstd</code></td><td>QUANTILES → MEAN_STD</td><td>openpi LIBERO 参考配方</td></tr>
+<tr><td><code>D_beta</code></td><td>Beta(1.5,1.0) → 均匀采样</td><td>π0 论文 §4 timestep sampling</td></tr></tbody></table>
+<div class="note"><b>边界声明：</b>8 小时只做少步数微调，<b>不复现论文榜单数值</b>。π0.5 论文第一阶段 FAST 预训练、
+部署期高层子任务推理、60k steps × batch 384 全量配方、RoboTwin 评测均未复现（开源仓库缺代码 / aarch64 无 SAPIEN wheel / 算力差约 90×）。
+loss / grad norm / lr 全部从训练日志正则解析，未插值、未伪造。</div>
+
+<footer>生成于 2026-11-11 12:59:13 · 源数据 <code>/home/nvidia/vla-8h/reports/</code> ·
+仓库 <a href="https://github.com/lemonbaby2/pazhou-a-track-showcase">pazhou-a-track-showcase</a></footer>
+</div></body></html>
