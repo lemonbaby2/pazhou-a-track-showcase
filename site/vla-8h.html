@@ -34,19 +34,19 @@ footer{margin-top:36px;color:#6f7c9e;font-size:12px}
 <div class="bar">
   <span class="pill">阶段 <b>smoke</b></span>
   <span class="pill">当前臂 <b>—</b></span>
-  <span class="pill">快照 <b>2026-11-11 12:36:35</b></span>
+  <span class="pill">快照 <b>2026-11-11 13:01:15</b></span>
   <span class="pill">告警 <b>0</b></span>
 </div>
-<div class="grid"><div class="card"><div class="k">当前 loss</div><div class="v">—</div></div>
-<div class="card"><div class="k">最小 loss</div><div class="v">—</div></div>
-<div class="card"><div class="k">loss 采样点</div><div class="v">0</div></div>
-<div class="card"><div class="k">步数</div><div class="v">— / —</div></div>
-<div class="card"><div class="k">学习率</div><div class="v">—</div></div>
-<div class="card"><div class="k">grad norm</div><div class="v">—</div></div>
-<div class="card"><div class="k">可用内存</div><div class="v">97248 MB</div></div>
+<div class="grid"><div class="card"><div class="k">当前 loss</div><div class="v">0.4420</div></div>
+<div class="card"><div class="k">最小 loss</div><div class="v">0.4420</div></div>
+<div class="card"><div class="k">loss 采样点</div><div class="v">3</div></div>
+<div class="card"><div class="k">步数</div><div class="v">170 / 100000</div></div>
+<div class="card"><div class="k">学习率</div><div class="v">0.0000</div></div>
+<div class="card"><div class="k">grad norm</div><div class="v">1.6560</div></div>
+<div class="card"><div class="k">可用内存</div><div class="v">55471 MB</div></div>
 <div class="card"><div class="k">nuclio 健康</div><div class="v">4 / 4</div></div></div>
 <h2>Loss 曲线</h2>
-<figure><p style="color:#8a97b8">曲线尚未生成（训练冒烟通过后每 30 分钟出图）</p></figure>
+<figure><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 320" width="900" height="320"><rect width="900" height="320" fill="#ffffff"/><text x="40" y="24" font-size="14" fill="#111">pi0.5 3.6B loss · n=3 · min=0.4420 max=0.4740</text><polyline points="40.0,40.0 450.0,40.0 860.0,280.0" fill="none" stroke="#2563eb" stroke-width="1.5"/></svg></figure>
 <h2>自变量消融设计（论文方法复现）</h2>
 <table><thead><tr><th>臂</th><th>自变量</th><th>对应方法</th></tr></thead><tbody><tr><td><code>A_ki</code></td><td>基线：Knowledge Insulation + QUANTILES</td><td>π0.5 原生 flow matching</td></tr>
 <tr><td><code>B_lm</code></td><td>解冻 VLM 语言模型</td><td>Knowledge Insulation 消融</td></tr>
@@ -56,6 +56,6 @@ footer{margin-top:36px;color:#6f7c9e;font-size:12px}
 部署期高层子任务推理、60k steps × batch 384 全量配方、RoboTwin 评测均未复现（开源仓库缺代码 / aarch64 无 SAPIEN wheel / 算力差约 90×）。
 loss / grad norm / lr 全部从训练日志正则解析，未插值、未伪造。</div>
 
-<footer>生成于 2026-11-11 12:59:13 · 源数据 <code>/home/nvidia/vla-8h/reports/</code> ·
+<footer>生成于 2026-11-11 13:01:58 · 源数据 <code>/home/nvidia/vla-8h/reports/</code> ·
 仓库 <a href="https://github.com/lemonbaby2/pazhou-a-track-showcase">pazhou-a-track-showcase</a></footer>
 </div></body></html>
