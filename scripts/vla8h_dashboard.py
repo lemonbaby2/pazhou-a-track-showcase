@@ -232,10 +232,15 @@ loss / grad norm / lr 全部从训练日志正则解析，未插值、未伪造�
             f"chore(vla-8h): sync training dashboard {datetime.now():%Y-%m-%d %H:%M}")
     # Push in both cases: a previous run may have committed successfully but
     # failed to push (e.g. port 22 timeout), leaving an unpushed dashboard.
-    r = git("push", GH, "main")
-    if r.returncode != 0:
-        r = git("push", GH_FALLBACK, "main")
-    pushed = (r.returncode == 0)
+    # Port 443 is reachable but flaky on this network; retry immediately a
+    # few times before falling back to 22, otherwise the hourly automation
+    # would lose a full hour of dashboard updates to a single timeout.
+    r = None
+    for url in (GH, GH, GH, GH_FALLBACK):
+        r = git("push", url, "main")
+        if r.returncode == 0:
+            break
+    pushed = bool(r is not None and r.returncode == 0)
 
     digest = {
         "phase": phase, "arm": arm,
