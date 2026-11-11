@@ -30,32 +30,42 @@ a{color:#8fb4ff}
 footer{margin-top:36px;color:#6f7c9e;font-size:12px}
 </style></head><body><div class="wrap">
 <h1>MicroDuck · π0.5 8h 连续训练看板</h1>
-<div class="sub">DGX Spark GB10 · 3.6B π0.5 · LIBERO v3.0 · 数据每 30 分钟同步，页面 5 分钟自动刷新</div>
+<div class="sub">DGX Spark GB10 · 3.6B π0.5 · LIBERO v3.0 · DGX 每 5 分钟采集 · 整点自动同步 · 页面 5 分钟自动刷新</div>
 <div class="bar">
   <span class="pill">阶段 <b>smoke</b></span>
   <span class="pill">当前臂 <b>—</b></span>
-  <span class="pill">快照 <b>2026-11-11 13:01:15</b></span>
+  <span class="pill">快照 <b>2026-11-11 13:11:16</b></span>
+  <span class="pill">8h 进度 <b>19 min / 480 min · 4.1% · 预计 20:55</b></span>
   <span class="pill">告警 <b>0</b></span>
 </div>
-<div class="grid"><div class="card"><div class="k">当前 loss</div><div class="v">0.4420</div></div>
-<div class="card"><div class="k">最小 loss</div><div class="v">0.4420</div></div>
-<div class="card"><div class="k">loss 采样点</div><div class="v">3</div></div>
-<div class="card"><div class="k">步数</div><div class="v">170 / 100000</div></div>
+<div class="grid"><div class="card"><div class="k">当前 loss</div><div class="v">0.3330</div></div>
+<div class="card"><div class="k">最小 loss</div><div class="v">0.3100</div></div>
+<div class="card"><div class="k">loss 采样点</div><div class="v">11</div></div>
+<div class="card"><div class="k">步数</div><div class="v">580 / 100000</div></div>
 <div class="card"><div class="k">学习率</div><div class="v">0.0000</div></div>
-<div class="card"><div class="k">grad norm</div><div class="v">1.6560</div></div>
-<div class="card"><div class="k">可用内存</div><div class="v">55471 MB</div></div>
-<div class="card"><div class="k">nuclio 健康</div><div class="v">4 / 4</div></div></div>
+<div class="card"><div class="k">grad norm</div><div class="v">1.9770</div></div>
+<div class="card"><div class="k">GPU 利用率</div><div class="v">95.0 %</div></div>
+<div class="card"><div class="k">可用内存</div><div class="v">75930 MB</div></div>
+<div class="card"><div class="k">nuclio 健康</div><div class="v">4 / 4</div></div>
+<div class="card"><div class="k">CVAT 容器 Up</div><div class="v">19</div></div></div>
 <h2>Loss 曲线</h2>
-<figure><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 320" width="900" height="320"><rect width="900" height="320" fill="#ffffff"/><text x="40" y="24" font-size="14" fill="#111">pi0.5 3.6B loss · n=3 · min=0.4420 max=0.4740</text><polyline points="40.0,40.0 450.0,40.0 860.0,280.0" fill="none" stroke="#2563eb" stroke-width="1.5"/></svg></figure>
+<figure><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 320" width="900" height="320"><rect width="900" height="320" fill="#ffffff"/><text x="40" y="24" font-size="14" fill="#111">pi0.5 3.6B loss · n=11 · min=0.3100 max=0.4740</text><polyline points="40.0,40.0 122.0,40.0 204.0,86.8 286.0,138.0 368.0,184.9 450.0,211.2 532.0,180.5 614.0,220.0 696.0,272.7 778.0,280.0 860.0,246.3" fill="none" stroke="#2563eb" stroke-width="1.5"/></svg></figure>
 <h2>自变量消融设计（论文方法复现）</h2>
-<table><thead><tr><th>臂</th><th>自变量</th><th>对应方法</th></tr></thead><tbody><tr><td><code>A_ki</code></td><td>基线：Knowledge Insulation + QUANTILES</td><td>π0.5 原生 flow matching</td></tr>
-<tr><td><code>B_lm</code></td><td>解冻 VLM 语言模型</td><td>Knowledge Insulation 消融</td></tr>
-<tr><td><code>C_mstd</code></td><td>QUANTILES → MEAN_STD</td><td>openpi LIBERO 参考配方</td></tr>
-<tr><td><code>D_beta</code></td><td>Beta(1.5,1.0) → 均匀采样</td><td>π0 论文 §4 timestep sampling</td></tr></tbody></table>
+<table><thead><tr><th>臂</th><th>自变量</th><th>对应方法</th><th>状态</th></tr></thead><tbody><tr><td><code>A_ki</code></td><td>基线：Knowledge Insulation + QUANTILES</td><td>π0.5 原生 flow matching</td><td>待运行</td></tr>
+<tr><td><code>B_lm</code></td><td>解冻 VLM 语言模型</td><td>Knowledge Insulation 消融</td><td>待运行</td></tr>
+<tr><td><code>C_mstd</code></td><td>QUANTILES → MEAN_STD</td><td>openpi LIBERO 参考配方</td><td>待运行</td></tr>
+<tr><td><code>D_beta</code></td><td>Beta(1.5,1.0) → 均匀采样</td><td>π0 论文 §4 timestep sampling</td><td>待运行</td></tr></tbody></table>
 <div class="note"><b>边界声明：</b>8 小时只做少步数微调，<b>不复现论文榜单数值</b>。π0.5 论文第一阶段 FAST 预训练、
 部署期高层子任务推理、60k steps × batch 384 全量配方、RoboTwin 评测均未复现（开源仓库缺代码 / aarch64 无 SAPIEN wheel / 算力差约 90×）。
 loss / grad norm / lr 全部从训练日志正则解析，未插值、未伪造。</div>
+<section><h2>最近 6 次定时巡检</h2><table><thead><tr><th>时间</th><th>loss</th><th>最小 loss</th><th>步数</th><th>可用内存</th><th>nuclio</th></tr></thead><tbody><tr><td><code>2026-11-11 12:46:35</code></td><td>—</td><td>—</td><td>None</td><td>97893 MB</td><td>4 / 4</td></tr>
+<tr><td><code>2026-11-11 12:51:35</code></td><td>—</td><td>—</td><td>None</td><td>77617 MB</td><td>4 / 4</td></tr>
+<tr><td><code>2026-11-11 12:56:35</code></td><td>—</td><td>—</td><td>None</td><td>82222 MB</td><td>4 / 4</td></tr>
+<tr><td><code>2026-11-11 13:01:15</code></td><td>0.4420</td><td>0.4420</td><td>170</td><td>55471 MB</td><td>4 / 4</td></tr>
+<tr><td><code>2026-11-11 13:06:15</code></td><td>0.3780</td><td>0.3570</td><td>375</td><td>76029 MB</td><td>4 / 4</td></tr>
+<tr><td><code>2026-11-11 13:11:16</code></td><td>0.3330</td><td>0.3100</td><td>580</td><td>75930 MB</td><td>4 / 4</td></tr></tbody></table></section>
 
-<footer>生成于 2026-11-11 13:01:58 · 源数据 <code>/home/nvidia/vla-8h/reports/</code> ·
+
+<footer>生成于 2026-11-11 13:15:16 · 源数据 <code>/home/nvidia/vla-8h/reports/</code> ·
 仓库 <a href="https://github.com/lemonbaby2/pazhou-a-track-showcase">pazhou-a-track-showcase</a></footer>
 </div></body></html>
