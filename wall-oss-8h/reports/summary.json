@@ -1,0 +1,14 @@
+{
+  "model": "Wall-OSS-0.5 (4B, Qwen2.5-VL-3B backbone)",
+  "status": "interrupted",
+  "failed_at": "2026-11-12 13:21:33",
+  "steps_done": 2008,
+  "steps_planned": 4000,
+  "first_loss": 0.41351938247680664,
+  "last_loss": 0.008632508106529713,
+  "min_loss": 4.989836088498123e-05,
+  "max_loss": 0.6512525081634521,
+  "samples": 2009,
+  "root_cause": "NaN loss at epoch 0 step 16072 -> loss.backward() RuntimeError: element 0 of tensors does not require grad and does not have a grad_fn",
+  "checkpoint_saved": false
+}
