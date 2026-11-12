@@ -3,6 +3,31 @@
 > 把「夹空托盘 → 抓 2 瓶水装盘 → 端盘导航 → 逐份上桌 + 语音通知」做成分层、可恢复、可对接官方 SDK 的任务工程。
 > **没有机器人也能在本机完整跑通**（仿真后端），有机器人时只换适配器。
 
+## 2026-11-12 新增：π0.5 3.6B · 8 小时连续训练看板与全量归档
+
+> **状态：已完成。** 编排器 2026-11-11 20:23:14 结束，4 个消融臂全部跑完，GPU 已空闲。
+
+- **实时看板**：[π0.5 8h 连续训练看板](https://lemonbaby2.github.io/pazhou-a-track-showcase/vla-8h.html)（5 分钟自动刷新，站点导航已挂「π0.5 实时看板」入口）
+- **全量归档**：[`vla-8h/`](vla-8h/) —— 20 文件 / 1.47 MB，含实验协议、4 臂结果、逐条指标 `metrics.jsonl`、原始训练日志与 loss 曲线；逐字节镜像自 DGX `~/vla-8h/`，**只读拉取，未改动 DGX 任何进程或配置**
+- **完整说明与复现步骤**：[`vla-8h/README.md`](vla-8h/README.md)
+- **配套代码**：[`scripts/vla8h_orchestrator.py`](scripts/vla8h_orchestrator.py)（编排器）、[`scripts/vla8h_dashboard.py`](scripts/vla8h_dashboard.py)（看板生成 + 推送），均与运行版本 MD5 一致
+
+| 臂 | 自变量 | 终止码 | loss 首 → 末 | 完成步数 |
+|---|---|---:|---:|---:|
+| `A_ki` | 基线 Knowledge Insulation + QUANTILES | 0 | 0.463 → 0.210 | 4015 / 4015 |
+| `B_lm` | 解冻 VLM 语言模型 | **124** | 0.454 → 0.167 | **2974 / 4015（超时截断）** |
+| `C_mstd` | QUANTILES → MEAN_STD | 0 | 0.860 → 0.420 | 4015 / 4015 |
+| `D_beta` | Beta(1.5,1.0) → 均匀采样 | 0 | 0.449 → 0.224 | 4015 / 4015 |
+
+**边界**：8 小时只是少步数微调，**未复现论文榜单数值**；四臂 loss 起始值不同，不可横向比绝对值。
+`B_lm` 的 `rc=124` 是时间预算切断（非崩溃），其数据只作趋势参考。loss 全部由训练日志正则解析，原始日志已入库可复核。
+
+**看板访问排查**：若浏览器打不开，先直连验证服务端
+`curl --noproxy '*' -I https://lemonbaby2.github.io/pazhou-a-track-showcase/vla-8h.html`（返回 `200 OK` 即服务端正常）。
+本机浏览器打不开通常是缓存了已失效的本地代理端口，**先重启 Chrome**，再用临时 profile 复验；代理端口会变，不要写死。
+
+---
+
 ## 2026-11-07 公开资料包
 
 - **展示站：**[琶洲 A 赛道资料与验证面板](https://lemonbaby2.github.io/pazhou-a-track-showcase/)

@@ -1,0 +1,3 @@
+Fetching 7 files:   0%|          | 0/7 [00:00<?, ?it/s]Fetching 7 files:  14%|█▍        | 1/7 [00:00<00:04,  1.26it/s]Fetching 7 files:  29%|██▊       | 2/7 [00:02<00:05,  1.18s/it]Fetching 7 files:  43%|████▎     | 3/7 [00:03<00:04,  1.00s/it]Fetching 7 files:  57%|█████▋    | 4/7 [00:03<00:02,  1.12it/s]Fetching 7 files:  71%|███████▏  | 5/7 [00:06<00:03,  1.53s/it]Fetching 7 files:  86%|████████▌ | 6/7 [00:18<00:05,  5.08s/it]Fetching 7 files: 100%|██████████| 7/7 [02:57<00:00, 55.43s/it]Fetching 7 files: 100%|██████████| 7/7 [02:57<00:00, 25.35s/it]
+DOWNLOADED /home/nvidia/models/pi05_base
+RC=0

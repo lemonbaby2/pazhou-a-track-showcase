@@ -1,0 +1,46 @@
+Fetching 6 files:   0%|          | 0/6 [00:00<?, ?it/s]'[Errno -3] Temporary failure in name resolution' thrown while requesting HEAD https://hf-mirror.com/google/paligemma-3b-pt-224/resolve/35e4f46485b4d07967e7e9935bc3786aad50687c/special_tokens_map.json
+Retrying in 1s [Retry 1/5].
+Fetching 6 files:   0%|          | 0/6 [00:59<?, ?it/s]
+httpx.HTTPStatusError: Client error '403 Forbidden' for url 'https://hf-mirror.com/google/paligemma-3b-pt-224/resolve/35e4f46485b4d07967e7e9935bc3786aad50687c/added_tokens.json'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+
+The above exception was the direct cause of the following exception:
+
+huggingface_hub.errors.HfHubHTTPError: (Request ID: Root=1-6af3f158-7210e89c7d9b8c000e16a4af;7ac0383c-799f-4eb1-9ac5-f6f8c0bea375)
+
+403 Forbidden: Please enable access to public gated repositories in your fine-grained token settings to view this repository..
+Cannot access content at: https://hf-mirror.com/google/paligemma-3b-pt-224/resolve/35e4f46485b4d07967e7e9935bc3786aad50687c/added_tokens.json.
+Make sure your token has the correct permissions.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "<stdin>", line 2, in <module>
+  File "/home/nvidia/wallx-env/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 89, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/home/nvidia/wallx-env/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 266, in _inner
+    return fn(*args, **kwargs)
+  File "/home/nvidia/wallx-env/lib/python3.10/site-packages/huggingface_hub/_snapshot_download.py", line 532, in snapshot_download
+    hf_thread_map(
+  File "/home/nvidia/wallx-env/lib/python3.10/site-packages/huggingface_hub/utils/tqdm.py", line 441, in hf_thread_map
+    results[future_to_index[future]] = future.result()
+  File "/home/nvidia/.local/share/uv/python/cpython-3.10-linux-aarch64-gnu/lib/python3.10/concurrent/futures/_base.py", line 451, in result
+    return self.__get_result()
+  File "/home/nvidia/.local/share/uv/python/cpython-3.10-linux-aarch64-gnu/lib/python3.10/concurrent/futures/_base.py", line 403, in __get_result
+    raise self._exception
+  File "/home/nvidia/.local/share/uv/python/cpython-3.10-linux-aarch64-gnu/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/nvidia/wallx-env/lib/python3.10/site-packages/huggingface_hub/_snapshot_download.py", line 512, in _inner_hf_hub_download
+    hf_hub_download(  # type: ignore
+  File "/home/nvidia/wallx-env/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 89, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/home/nvidia/wallx-env/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 266, in _inner
+    return fn(*args, **kwargs)
+  File "/home/nvidia/wallx-env/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1026, in hf_hub_download
+    return _hf_hub_download_to_local_dir(
+  File "/home/nvidia/wallx-env/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1421, in _hf_hub_download_to_local_dir
+    _raise_on_head_call_error(head_call_error, force_download, local_files_only)
+  File "/home/nvidia/wallx-env/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1961, in _raise_on_head_call_error
+    raise LocalEntryNotFoundError(
+huggingface_hub.errors.LocalEntryNotFoundError: An error happened while trying to locate the file on the Hub and we cannot find the requested files in the local cache. Please check your connection and try again or make sure your Internet connection is on.
+RC=1

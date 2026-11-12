@@ -1,0 +1,22 @@
+{
+  "generated_at": "2026-11-12 15:07:24",
+  "phase": "done",
+  "arm": null,
+  "samples": 80,
+  "first_loss": 0.449,
+  "last_loss": 0.224,
+  "min_loss": 0.214,
+  "last_lr": 2.5e-06,
+  "last_grdn": 1.31,
+  "steps_current": 4015,
+  "steps_total": 4015,
+  "system": {
+    "mem_total_mb": 124610,
+    "mem_used_mb": 39339,
+    "mem_available_mb": 85271,
+    "load1": 7.47,
+    "nuclio_healthy": 4,
+    "cvat_up": 19
+  },
+  "alerts": []
+}
