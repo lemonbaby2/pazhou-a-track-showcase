@@ -34,8 +34,8 @@ footer{margin-top:36px;color:#6f7c9e;font-size:12px}
 <div class="bar">
   <span class="pill">阶段 <b>done</b></span>
   <span class="pill">当前臂 <b>—</b></span>
-  <span class="pill">快照 <b>2026-11-12 15:07:24</b></span>
-  <span class="pill">8h 进度 <b>1 min / 480 min · 0.4% · 预计 23:07</b></span>
+  <span class="pill">快照 <b>2026-11-13 10:28:13</b></span>
+  <span class="pill">8h 进度 <b>2 min / 480 min · 0.5% · 预计 18:28</b></span>
   <span class="pill">告警 <b>0</b></span>
 </div>
 <div class="grid"><div class="card"><div class="k">当前 loss</div><div class="v">0.2240</div></div>
@@ -45,7 +45,7 @@ footer{margin-top:36px;color:#6f7c9e;font-size:12px}
 <div class="card"><div class="k">学习率</div><div class="v">0.0000</div></div>
 <div class="card"><div class="k">grad norm</div><div class="v">1.3100</div></div>
 <div class="card"><div class="k">GPU 利用率</div><div class="v">0.0 %</div></div>
-<div class="card"><div class="k">可用内存</div><div class="v">85271 MB</div></div>
+<div class="card"><div class="k">可用内存</div><div class="v">106121 MB</div></div>
 <div class="card"><div class="k">nuclio 健康</div><div class="v">4 / 4</div></div>
 <div class="card"><div class="k">CVAT 容器 Up</div><div class="v">19</div></div></div>
 <h2>Loss 曲线</h2>
@@ -58,12 +58,12 @@ footer{margin-top:36px;color:#6f7c9e;font-size:12px}
 <div class="note"><b>边界声明：</b>8 小时只做少步数微调，<b>不复现论文榜单数值</b>。π0.5 论文第一阶段 FAST 预训练、
 部署期高层子任务推理、60k steps × batch 384 全量配方、RoboTwin 评测均未复现（开源仓库缺代码 / aarch64 无 SAPIEN wheel / 算力差约 90×）。
 loss / grad norm / lr 全部从训练日志正则解析，未插值、未伪造。</div>
-<section><h2>最近 6 次定时巡检</h2><table><thead><tr><th>时间</th><th>loss</th><th>最小 loss</th><th>步数</th><th>可用内存</th><th>nuclio</th></tr></thead><tbody><tr><td><code>2026-11-12 14:42:23</code></td><td>0.2240</td><td>0.2140</td><td>4015</td><td>105795 MB</td><td>4 / 4</td></tr>
-<tr><td><code>2026-11-12 14:47:24</code></td><td>0.2240</td><td>0.2140</td><td>4015</td><td>105705 MB</td><td>4 / 4</td></tr>
-<tr><td><code>2026-11-12 14:52:24</code></td><td>0.2240</td><td>0.2140</td><td>4015</td><td>105564 MB</td><td>4 / 4</td></tr>
-<tr><td><code>2026-11-12 14:57:24</code></td><td>0.2240</td><td>0.2140</td><td>4015</td><td>105469 MB</td><td>4 / 4</td></tr>
-<tr><td><code>2026-11-12 15:02:24</code></td><td>0.2240</td><td>0.2140</td><td>4015</td><td>105673 MB</td><td>4 / 4</td></tr>
-<tr><td><code>2026-11-12 15:07:24</code></td><td>0.2240</td><td>0.2140</td><td>4015</td><td>85271 MB</td><td>4 / 4</td></tr></tbody></table></section>
+<section><h2>最近 6 次定时巡检</h2><table><thead><tr><th>时间</th><th>loss</th><th>最小 loss</th><th>步数</th><th>可用内存</th><th>nuclio</th></tr></thead><tbody><tr><td><code>2026-11-13 10:03:12</code></td><td>0.2240</td><td>0.2140</td><td>4015</td><td>106261 MB</td><td>4 / 4</td></tr>
+<tr><td><code>2026-11-13 10:08:12</code></td><td>0.2240</td><td>0.2140</td><td>4015</td><td>85680 MB</td><td>4 / 4</td></tr>
+<tr><td><code>2026-11-13 10:13:12</code></td><td>0.2240</td><td>0.2140</td><td>4015</td><td>106101 MB</td><td>4 / 4</td></tr>
+<tr><td><code>2026-11-13 10:18:12</code></td><td>0.2240</td><td>0.2140</td><td>4015</td><td>106068 MB</td><td>4 / 4</td></tr>
+<tr><td><code>2026-11-13 10:23:12</code></td><td>0.2240</td><td>0.2140</td><td>4015</td><td>106122 MB</td><td>4 / 4</td></tr>
+<tr><td><code>2026-11-13 10:28:13</code></td><td>0.2240</td><td>0.2140</td><td>4015</td><td>106121 MB</td><td>4 / 4</td></tr></tbody></table></section>
 <section><h2>实验协议 · 论文方法复现边界</h2><pre># 8 小时连续训练实验协议（pi0.5 3.6B / DGX Spark GB10）
 
 生成时间：2026-11-11 13:25:22
@@ -130,6 +130,6 @@ loss / grad norm / lr / step time 全部从 `lerobot_train` 的 tqdm 日志正�
 8 小时只能做少步数微调，**未复现论文榜单数值**；未复现项详见 `PROTOCOL.md` 第 3 节。
 loss / grad norm / lr 均从训练日志正则解析，原始日志在 `logs/train_*.log`。
 </pre></section>
-<footer>生成于 2026-11-12 15:09:17 · 源数据 <code>/home/nvidia/vla-8h/reports/</code> ·
+<footer>生成于 2026-11-13 10:30:37 · 源数据 <code>/home/nvidia/vla-8h/reports/</code> ·
 仓库 <a href="https://github.com/lemonbaby2/pazhou-a-track-showcase">pazhou-a-track-showcase</a></footer>
 </div></body></html>
